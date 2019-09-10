@@ -1,5 +1,5 @@
 # this will be something like this
-[[_TOC_]]
+[[__TOC__]]
 
 # DHCP configuration for testing purposes #
 * platform used: *4.9.0-9-amd64 #1 SMP Debian 4.9.168-1+deb9u4 (2019-07-19) x86_64 GNU/Linux*
