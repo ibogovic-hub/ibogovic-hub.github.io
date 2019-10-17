@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : 3a99in5
   url       : https://3a99in5.github.io
-  avatar    : # path or url of avatar image (square)
+  avatar    : /assets/images/logo/3a99in5a.svg
   bio       : on my way up.
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
