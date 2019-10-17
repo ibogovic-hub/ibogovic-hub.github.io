@@ -57,7 +57,7 @@ repository_tree: master
 ##############################
 paths:
   root    : # title link url, "/" (default)
-  home    : # home layout url, "/" (default)
+  home    : /test/ # home layout url, "/" (default)
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 
@@ -189,15 +189,15 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  - /docs
+  # - /docs
   - /node_modules
-  - /screenshots
-  - /test
+  # - /screenshots
+  # - /test
   - /vendor
 
 defaults:
   - scope:
-      path: ""
+      path: "test"
       type: posts
     values:
       layout: article
