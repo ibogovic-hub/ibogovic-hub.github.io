@@ -21,6 +21,9 @@ highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tom
 url     : https://3a99in5.github.io
 baseurl : # does not include hostname
 title   : 3a99in5 small corner
+logo: assets/images/logo/3a99in5a.png
+favicon: assets/images/logo/facicon.ico
+cover: assets/images/wall/wall.jpeg
 description: > # this means to ignore newlines until "Language & timezone"
   working on this...
 
