@@ -183,21 +183,19 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - README-*.md
   - README.md
   - gulpfile.js
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  # - /docs
+  - /docs
   - /node_modules
-  # - /screenshots
-  # - /test
+  - /screenshots
   - /vendor
 
 defaults:
   - scope:
-      path: "test"
+      path: "_posts"
       type: posts
     values:
       layout: article
