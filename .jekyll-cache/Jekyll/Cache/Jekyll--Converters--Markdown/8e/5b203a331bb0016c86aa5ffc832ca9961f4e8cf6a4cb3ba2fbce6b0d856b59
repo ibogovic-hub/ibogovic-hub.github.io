@@ -1,0 +1,175 @@
+I"�<h1 id="dhcp-config-for-testing-purposes">DHCP config for testing purposes</h1>
+<ul>
+  <li>platform used: <em>4.9.0-9-amd64 #1 SMP Debian 4.9.168-1+deb9u4 (2019-07-19) x86_64 GNU/Linux</em></li>
+</ul>
+
+<ol>
+  <li>
+    <p>first we need to install <em>dhcp</em> and <em>vlan</em> packages
+copy paste the code:<br />
+<code class="highlighter-rouge">sudo apt install isc-dhcp-server vlan</code></p>
+  </li>
+  <li>
+    <p>now we need to edit two files that will allow us to use dhcp <strong><em>isc-dhcp-server</em> file and <em>dhcpd.conf</em> file</strong></p>
+    <h2 id="isc-dhcp-server"><em>isc-dhcp-server</em></h2>
+    <p><code class="highlighter-rouge">sudo vim /etc/default/isc-dhcp-server</code> - in my case I’m using <strong>enp0s31f6</strong> interface..<br />
+``` bash</p>
+    <h1 id="defaults-for-isc-dhcp-server-sourced-by-etcinitdisc-dhcp-server">Defaults for isc-dhcp-server (sourced by /etc/init.d/isc-dhcp-server)</h1>
+  </li>
+</ol>
+
+<h1 id="path-to-dhcpds-config-file-default-etcdhcpdhcpdconf">Path to dhcpd’s config file (default: /etc/dhcp/dhcpd.conf).</h1>
+<p>#DHCPDv4_CONF=/etc/dhcp/dhcpd.conf
+#DHCPDv6_CONF=/etc/dhcp/dhcpd6.conf</p>
+
+<h1 id="path-to-dhcpds-pid-file-default-varrundhcpdpid">Path to dhcpd’s PID file (default: /var/run/dhcpd.pid).</h1>
+<p>#DHCPDv4_PID=/var/run/dhcpd.pid
+#DHCPDv6_PID=/var/run/dhcpd6.pid</p>
+
+<h1 id="additional-options-to-start-dhcpd-with">Additional options to start dhcpd with.</h1>
+<h1 id="dont-use-options--cf-or--pf-here-use-dhcpd_conf-dhcpd_pid-instead">Don’t use options -cf or -pf here; use DHCPD_CONF/ DHCPD_PID instead</h1>
+<p>#OPTIONS=””</p>
+
+<h1 id="on-what-interfaces-should-the-dhcp-server-dhcpd-serve-dhcp-requests">On what interfaces should the DHCP server (dhcpd) serve DHCP requests?</h1>
+<h1 id="separate-multiple-interfaces-with-spaces-eg-eth0-eth1">Separate multiple interfaces with spaces, e.g. “eth0 eth1”.</h1>
+<p>INTERFACESv4=”enp0s31f6”
+INTERFACESv6=””</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+## *dhcp.conf*  
+`sudo vim /etc/dhcp/dhcpd.conf` - here we need to declare all networks that we are going to use.
+
+* in my case I'm using 172.100.100.0/24 as my ***default VLAN***
+* 172.100.10.0/24 as ***VLAN 10***  
+* 172.100.20.0/24 as ***VLAN 20***  
+```bash
+# dhcpd.conf
+#
+# Sample configuration file for ISC dhcpd
+#
+
+# option definitions common to all supported networks...
+option domain-name "jogmo.local";
+option domain-name-servers 8.8.8.8, 8.8.4.4;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+# The ddns-updates-style parameter controls whether or not the server will
+# attempt to do a DNS update when a lease is confirmed. We default to the
+# behavior of the version 2 packages ('none', since DHCP v2 didn't
+# have support for DDNS.)
+ddns-update-style none;
+deny duplicates;
+
+subnet 172.100.100.0 netmask 255.255.255.0 {
+interface enp0s31f6;
+
+option routers 172.100.100.1;
+option domain-name-servers 172.100.100.1;
+option subnet-mask 255.255.255.0;
+option broadcast-address 172.100.100.255;
+authoritative;
+pool{
+        range 172.100.100.10 172.100.100.15;
+}
+}
+
+
+#VLAN - 10
+
+subnet 172.100.10.0 netmask 255.255.255.0 {
+        option routers 172.100.10.1;
+        option subnet-mask 255.255.255.0;
+        option broadcast-address 172.100.10.255;
+        authoritative;
+        pool {
+                range 172.100.10.100 172.100.10.150;
+        }
+}
+
+#VLAN - 20
+
+subnet 172.100.20.0 netmask 255.255.255.0 {
+        option routers 172.100.20.1;
+        option subnet-mask 255.255.255.0;
+        option broadcast-address 172.100.20.255;
+        authoritative;
+        pool {
+                range 172.100.20.100 172.100.20.150;
+        }
+}
+
+# If this DHCP server is the official DHCP server for the local
+# network, the authoritative directive should be uncommented.
+authoritative;
+
+# Use this to send dhcp log messages to a different log file (you also
+# have to hack syslog.conf to complete the redirection).
+log-facility local7;
+
+# No service will be given on this subnet, but declaring it helps the
+# DHCP server to understand the network topology.
+
+---output omitted---
+</code></pre></div></div>
+
+<ul>
+  <li>if you want to enable logging it is necessary to uncomment line &lt;64&gt;<br />
+<code class="highlighter-rouge">#log-facility local7;</code></li>
+  <li>edit the line in <strong>rsyslog.conf and create log file</strong><br />
+–&gt; <code class="highlighter-rouge">sudo vim /etc/rsyslog.conf</code> - add <code class="highlighter-rouge">local7.* /var/log/dhcpd.log*</code><br />
+–&gt; <code class="highlighter-rouge">touch /var/log/dhcpd.log</code> - change permissions <code class="highlighter-rouge">sudo chmod 777 /var/log/dhcpd.log</code></li>
+</ul>
+
+<ol>
+  <li>next step is to configure local interface to support <strong>vlan tagging</strong><br />
+we already installed vlan package at the beginning, so now we need to assign IP’s and VLAN’s to the interfaces:<br />
+–&gt; add this lines to your networks file:<br />
+```bash
+iface enp0s31f6.10 inet static
+ address 172.100.10.1
+ netmask 255.255.255.0
+ vlan-raw-device enp0s31f6</li>
+</ol>
+
+<p>iface enp0s31f6.20 inet static
+    address 172.100.20.1
+    netmask 255.255.255.0
+    vlan-raw-device enp0s31f6</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--&gt; or copy paste this way (edit subnets and interfaces per your requirements):  
+```bash
+sudo ip addr add 172.100.10.1/24 dev enp0s31f6.10
+sudo ip addr add 172.100.20.1/24 dev enp0s31f6.20
+</code></pre></div></div>
+<p>–&gt; <strong>enable vlan tagging on virtual interfaces</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vconfig add enp0s31f6 10
+<span class="nb">sudo </span>vconfig add enp0s31f6 20
+</code></pre></div></div>
+
+<ul>
+  <li>I have USB and PCI network so I had to disable my USB network:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ifconfig enxc8f750a56483 172.100.100.1 down
+</code></pre></div>    </div>
+    <p>–&gt; now bring all your interfaces up:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ifconfig enp0s31f6 172.100.100.1 up
+<span class="nb">sudo </span>ifconfig enp0s31f6.10 172.100.10.1 up
+<span class="nb">sudo </span>ifconfig enp0s31f6.20 172.100.20.1 up
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<ol>
+  <li>now you are ready to enable isc-dhcp-server and start the service:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> /lib/systemd/systemd-sysv-install <span class="nb">enable </span>isc-dhcp-server
+<span class="nb">sudo </span>service isc-dhcp-server start
+</code></pre></div>    </div>
+    <p>–&gt; if everything is fine you should se something like this when you run <code class="highlighter-rouge">sudo service isc-dhcp-server status</code><br />
+<img src="uploads/28bad52dded29afd442f8c3a45bcd7ba/Selection_001.png" alt="Selection_001" /></p>
+  </li>
+</ol>
+
+<p>–&gt; also some logs should appear in <strong>/var/log/dhcpd.conf</strong><br />
+<img src="uploads/409a0434fbe5b0843685ae5bd7a42755/Selection_002.png" alt="Selection_002" /></p>
+:ET
