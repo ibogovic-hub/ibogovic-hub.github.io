@@ -136,6 +136,7 @@ log-facility local7;
 3. next step is to configure local interface to support **vlan tagging**  
 we already installed vlan package at the beginning, so now we need to assign IP's and VLAN's to the interfaces:  
 --> add this lines to your networks file:  
+  
 ```bash
 iface enp0s31f6.10 inet static
     address 172.100.10.1
@@ -146,18 +147,23 @@ iface enp0s31f6.20 inet static
     address 172.100.20.1
     netmask 255.255.255.0
     vlan-raw-device enp0s31f6
-```
+```  
+
 --> or copy paste this way (edit subnets and interfaces per your requirements):  
+
 ```bash
 sudo ip addr add 172.100.10.1/24 dev enp0s31f6.10
 sudo ip addr add 172.100.20.1/24 dev enp0s31f6.20
 ```
- --> **enable vlan tagging on virtual interfaces**  
- ```bash
-sudo vconfig add enp0s31f6 10
-sudo vconfig add enp0s31f6 20 
-```
+  
+--> **enable vlan tagging on virtual interfaces**  
 
+```bash
+sudo vconfig add enp0s31f6 10
+sudo vconfig add enp0s31f6 20
+```
+  
+  
 * I have USB and PCI network so I had to disable my USB network:  
 ```bash
 sudo ifconfig enxc8f750a56483 172.100.100.1 down
