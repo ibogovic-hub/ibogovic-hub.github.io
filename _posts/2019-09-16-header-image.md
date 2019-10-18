@@ -17,7 +17,7 @@ copy paste the code:
 2. now we need to edit two files that will allow us to use dhcp ***isc-dhcp-server* file and *dhcpd.conf* file**
 ## *isc-dhcp-server*  
 `sudo vim /etc/default/isc-dhcp-server` - in my case I'm using **enp0s31f6** interface..  
-```bash
+```bash  
 # Defaults for isc-dhcp-server (sourced by /etc/init.d/isc-dhcp-server)
 
 # Path to dhcpd's config file (default: /etc/dhcp/dhcpd.conf).
@@ -36,7 +36,8 @@ copy paste the code:
 #	Separate multiple interfaces with spaces, e.g. "eth0 eth1".
 INTERFACESv4="enp0s31f6"
 INTERFACESv6=""
-```
+```  
+
 
 
 ## *dhcp.conf*  
