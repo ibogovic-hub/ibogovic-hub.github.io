@@ -60,7 +60,7 @@ sudo vim /etc/dhcp/dhcpd.conf
 #
 
 # option definitions common to all supported networks...
-option domain-name "jogmo.local";
+option domain-name "3a99in5.local";
 option domain-name-servers 8.8.8.8, 8.8.4.4;
 
 default-lease-time 600;
