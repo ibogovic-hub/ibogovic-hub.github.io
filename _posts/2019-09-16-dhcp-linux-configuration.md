@@ -1,6 +1,10 @@
 ---
 title: Network test post
-tags: Network
+tags: Linux
+article_header:
+  type: cover
+  image:
+    src: /assets/images/wall/code2.jpg
 ---
 
 # DHCP config for testing purposes #
