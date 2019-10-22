@@ -1,3 +1,11 @@
+---
+title: sec service
+tags: linux
+article_header:
+  type: cover
+  image:
+    src: /assets/images/wall/30681.jpg
+---
 # Event triggered script # 
 >>>
 Purpose of this page is to explain how to configure SEC service to interact with DHCP event when new device is connected to the network.
