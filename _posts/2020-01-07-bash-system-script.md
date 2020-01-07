@@ -1,5 +1,5 @@
 >>>
-## **Next is the script that I created for system update and some installation**
+## **script that I created for system update and some installation**
 >>>  
 
 ```bash
