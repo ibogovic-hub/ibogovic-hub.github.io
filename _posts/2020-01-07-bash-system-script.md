@@ -1,4 +1,12 @@
->>>
+---
+title: system script
+tags: bash
+article_header:
+  type: cover
+  image:
+    src: /assets/images/wall/30681.jpg
+---
+>>>>
 ## **script that I created for system update and some installation**
 >>>  
 
