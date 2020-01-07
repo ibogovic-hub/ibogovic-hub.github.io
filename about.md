@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---  
 
-# Ivan Bogović:  
+Ivan Bogović
 
 #### E-mail:  
 bogovic@protonmail.com
