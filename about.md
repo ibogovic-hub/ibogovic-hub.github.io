@@ -39,16 +39,16 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
 
 ### Academic Profile:
     • Cisco CCNA - Honored with Outstanding Achievement Award by CISCO 
-    • School for Tourism and Hospitality
+    • School for Tourism and Hospitality  
 ### Language:
     • English – Excelent
-    • Deutsch – B1
+    • Deutsch – B1  
 ### Operating Systems:
     • Windows
     • Networking OS (Cisco IOS, PAN OS, FTOS, HP Airwave and ClearPass), 
-    • Linux (RH, Debian, Ubuntu, Kali, CentOS, Parrot etc).
+    • Linux (RH, Debian, Ubuntu, Kali, CentOS, Parrot etc).  
 ### Total IT Experience:
-    • 10+ Years
+    • 10+ Years  
 ### Technologies:
     • Microsoft Server (ent, hyper-v)
     • Server 2008, 2012 R2, 2016, Windows 7, 8 ,8.1,10
@@ -56,7 +56,7 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
     • Cisco (routers, switches, Meraki, AP...)
     • HP ClearPass, HP Airwave, HP IAP.
     • Symantec
-    • PRTG, FortiAnalyzer, Syslog, 
+    • PRTG, FortiAnalyzer, Syslog,  
 ### Technical Certifications:
     • CCNP Switching (300-115)
     • CISCO Voice
@@ -72,7 +72,7 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
     • Microsoft® Certified Professional (MCP)
     • Microsoft® Certified Solutions Associate (MCSA)
     • Microsoft® Certified IT Professional (MCITP)
-    • Microsoft® Certified Technology Specialist (MCTS)
+    • Microsoft® Certified Technology Specialist (MCTS)  
 ## Experience:
 ## Organization:  
 ###***Clear Group*** - Marienbergstr. 92, 90411 Nürnberg
