@@ -4,7 +4,7 @@ text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://3a99in5.github.io
 baseurl : # does not include hostname
-title   : 3a99in5 small corner
+title   : bogovic small corner
 logo: assets/images/logo/3a99in5a.png
 favicon: assets/images/logo/facicon.ico
 cover: assets/images/wall/wall.jpeg
@@ -22,16 +22,16 @@ timezone: Europe/Zagreb
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : 3a99in5
+  name      : bogovic
   url       : https://3a99in5.github.io
   avatar    : /assets/images/logo/3a99in5a.svg
   bio       : on my way up.
   email     :
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  facebook  : https://www.facebook.com/ivbogovic
+  twitter   : https://twitter.com/iBogovic
+  telegram  : https://t.me/ibogovic
+  linkedin  : https://www.linkedin.com/in/bogovic-consultant
+  github    : https://github.com/3a99in5
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
