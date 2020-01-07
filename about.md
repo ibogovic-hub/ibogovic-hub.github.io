@@ -24,7 +24,8 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-about
----
+---  
+
 # Ivan Bogović:  
 
 #### E-mail:  
