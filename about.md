@@ -78,33 +78,36 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
   
 ## Experience:  
   
-## Organization:    
+### ***Organization:***  
   
-###***Clear Group*** - Marienbergstr. 92, 90411 Nürnberg  
+### ***Clear Group***  
+Marienbergstr. 92, 90411 Nürnberg  
 *September 2019 – Current*  
-###**Role:** Consultant  
+### **Role:** Consultant  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Project – Network & Security at Siemens
   
-## Organization:  
-###***Jogmo World GmbH*** – Nordostpark 85, 90411 Nürnberg
+### ***Organization:***  
+### ***Jogmo World GmbH***  
+Nordostpark 85, 90411 Nürnberg  
 *July 2019 – September 2019 (2 months)*
   
-###**Role:** Network Specialist  
+### **Role:** Network Specialist  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Current projects involve planning and implementation of complete network infrastructure  
      in jogmo World HQ and all NHL Arenas (32 sites).
     • Automation of processes using BASH, Python and except scripts.
   
 ## Organization:  
-###***Hemmersbach GmbH & Co. KG*** - DE - 90489 Nürnberg  
+### ***Hemmersbach GmbH & Co. KG***  
+DE - 90489 Nürnberg  
 *September 2017 – Jun 2019 (1 year and 10 months)*
   
-###**Role:** Firewall Specialist  
+### **Role:** Firewall Specialist  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Network revision and new design planning.
     • Looking for security configuration problems and flaws.
     • Migration of Microsoft TMG server, Sophos firewall, OpenBSD and Proxy from existing environment to new Fortinet equipment.
@@ -112,12 +115,12 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
     • Performing security and penetration testing.
   
 ## Organization:  
-###***SPAN d.o.o.***  
+### ***SPAN d.o.o.***  
 *September 2015- September 2017 (2 years)*
   
-###**Role:** Network & Security Engineer  
+### **Role:** Network & Security Engineer  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Responsible for organizations complete Network and Security projects.
     • Implementation, upgrades, consultation and post-sales, 
     • Interacting with Vendors and customers, assisting sales team in technical evaluation of solutions, providing technical support and consultation to local and International Client/customers. 
@@ -128,34 +131,34 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
     • Securing network by developing network access, monitoring, control and evaluation, maintaining documentation.
   
 ## Organization:  
-###***SPAN d.o.o.***  
+### ***SPAN d.o.o.***  
 *July 2014 – September 2015 (1 year 3 months)*
   
-###**Role:** SOS Engineer  
+### **Role:** SOS Engineer  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Computer / Server maintenance
     • Exchange maintenance
     • Data protection / Backup
     • Onsite support
   
 ## Organization:  
-###***SPAN d.o.o.***    
+### ***SPAN d.o.o.***  
 *December 2012 – May 2013 (1 year 4 months)*
   
-###**Role:** SOS Technician  
+### **Role:** SOS Technician  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Maintainer of the information system and, in general,  
     solving problems related to software and hardware components.
   
 ## Organization:  
-###***SPAN d.o.o.***  
+### ***SPAN d.o.o.***  
 *July 2009 – December 2012  (3 years 6 months)*
   
-###**Role:** OpDesk Specijalist  
+### **Role:** OpDesk Specijalist  
   
-###**Responsibilities:**  
+### **Responsibilities:**  
     • Monitoring, registration, and resolving problems on the remote IT systems.  
     • Installation of personal computers, answering phone calls and emails from clients, and assist in resolving problems.
     • Perform various duties given the daily schedule.
