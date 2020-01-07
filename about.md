@@ -25,8 +25,7 @@ titles:
   # @end locale config
 key: page-about
 ---
-## Contact Details:  
-Ivan Bogović
+## Ivan Bogović:  
 
 #### E-mail:  
 bogovic@protonmail.com
