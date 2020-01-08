@@ -3,8 +3,6 @@ title: sec service
 tags: linux
 article_header:
   type: cover
-  image:
-    src: /assets/images/wall/30681.jpg
 ---
 # Event triggered script # 
 >>>
