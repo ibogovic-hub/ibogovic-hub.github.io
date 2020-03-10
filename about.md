@@ -53,13 +53,15 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
 #### Technologies:  
     • Microsoft Server (ent, hyper-v)
     • Server 2008, 2012 R2, 2016, Windows 7, 8 ,8.1,10
-    • Ubuntu, Fedora, RedHat
+    • Ubuntu, Fedora, RedHat, Debian
     • Cisco (routers, switches, Meraki, AP...)
     • HP ClearPass, HP Airwave, HP IAP.
     • Symantec
     • PRTG, FortiAnalyzer, Syslog,  
   
 #### Technical Certifications:  
+    • CompTia A+ CE
+    • CCNP Routing (300-101)
     • CCNP Switching (300-115)
     • CISCO Voice
     • CCNA Security
@@ -83,10 +85,11 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
 #### ***Clear Group***  
 Marienbergstr. 92, 90411 Nürnberg  
 *September 2019 – Current*  
-#### **Role:** Consultant  
+#### **Role:** IT Consultant in Siemens  
   
 #### **Responsibilities:**  
     • Project – Network & Security at Siemens
+    - Working on complete Siemens Healthineers Network  
   
 ### ***Organization:***  
 #### ***Jogmo World GmbH***  
