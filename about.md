@@ -32,7 +32,9 @@ Ivan Bogović
 bogovic@protonmail.com
 
 ##### Skype:  
-live:bogovic.ivan (bogovic.ivan@hotmail.com)
+live:bogovic.ivan 
+bogovic.ivan@hotmail.com
+
   
 #### Academic Profile:  
     • Cisco CCNA - Honored with Outstanding Achievement Award by CISCO 
@@ -58,6 +60,8 @@ live:bogovic.ivan (bogovic.ivan@hotmail.com)
     • HP ClearPass, HP Airwave, HP IAP.
     • Symantec
     • PRTG, FortiAnalyzer, Syslog,  
+    • Fortinet
+    • PaloAlto
   
 #### Technical Certifications:  
     • CompTia A+ CE
