@@ -32,7 +32,7 @@ Ivan Bogović
 bogovic@protonmail.com
 
 ##### Skype:  
-live:bogovic.ivan 
+live:bogovic.ivan  
 bogovic.ivan@hotmail.com
 
   
