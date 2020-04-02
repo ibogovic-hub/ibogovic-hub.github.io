@@ -2,7 +2,7 @@
 ##############################
 text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://3a99in5.github.io
+url     : https://ibogovic-hub.github.io
 baseurl : # does not include hostname
 title   : bogovic small corner
 logo: assets/images/logo/3a99in5a.png
@@ -23,7 +23,7 @@ timezone: Europe/Zagreb
 author:
   type      : # "person" (default), "organization"
   name      : bogovic
-  url       : https://3a99in5.github.io
+  url       : https://ibogovic-hub.github.io
   avatar    : /assets/images/logo/3a99in5a.svg
   bio       : on my way up.
   email     :
@@ -31,12 +31,12 @@ author:
   twitter   : iBogovic
   telegram  : ibogovic
   linkedin  : bogovic-consultant
-  github    : 3a99in5
+  github    : bogovic
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: 3a99in5/3a99in5.github.io
+repository: ibogovic-hub/ibogovic-hub.github.io
 repository_tree: master
 
 
