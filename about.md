@@ -31,7 +31,7 @@ Ivan Bogović
 ##### E-mail:  
 bogovic@protonmail.com
 
-##### Skype:  
+#####  Skype:  
 live:bogovic.ivan  
 bogovic.ivan@hotmail.com
 
