@@ -26,8 +26,7 @@ Point of this page is to quickly compare few protocols and solutions related to 
 
 Usability | Configuration | Security | Future Development
 :---: | :---: | :---: | :---:
- 4 | 2 | 1 | obsolete
-<sup>[1](#table)</sup>
+ 4<sup>[1](#table)</sup> | 2<sup>[1](#table)</sup> | 1 <sup>[1](#table)</sup>| obsolete 
 ---
 
 ## [IPSec / IKEv2](https://en.wikipedia.org/wiki/IPsec)  
@@ -80,8 +79,8 @@ IEEE | 802.3u Physical
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration 
 :---: | :---: | :---: | :---: | :---: | :---:
- 8 | 8 | 7 | Yes | -- | 1998 -->
-<sup>[1](#table)</sup>
+ 8<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | 7<sup>[1](#table)</sup> | Yes | -- | 1998 -->
+
 ---
     
 ## [OpenSSL](https://www.openssl.org/)  
@@ -114,8 +113,8 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration 
 :---: | :---: | :---: | :---: | :---: | :---:
-9 | 8 | 8 | Yes | OpenSSL / Apache 1,0 | 1998 --> 
-<sup>[1](#table)</sup>
+9<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | Yes | OpenSSL / Apache 1,0 | 1998 --> 
+
 ## [OpenVPN](https://en.wikipedia.org/wiki/OpenVPN)
 
 - **General:**
@@ -143,8 +142,8 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration 
 :---: | :---: | :---: | :---: | :---: | :---:
- 9 | 9 | 8 | Yes | GPL | 2001 --> 
-<sup>[1](#table)</sup>
+ 9<sup>[1](#table)</sup> | 9<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | Yes | GPL | 2001 --> 
+
 ---
     
 ## [WireGuard](https://www.wireguard.com/)  
@@ -200,8 +199,8 @@ More info related to WireGuard can be found [HERE](https://www.the-digital-life.
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration
 :---: | :---: | :---: | :---: | :---: | :---:
- 9 | 3 | 9 | Yes | GPLv2 / Apache 2.0 | 2016 -->
-<sup>[1](#table)</sup>
+ 9<sup>[1](#table)</sup> | 3<sup>[1](#table)</sup> | 9<sup>[1](#table)</sup> | Yes | GPLv2 / Apache 2.0 | 2016 -->
+
 ---  
 
 ## [strongSwan](https://www.strongswan.org/)
