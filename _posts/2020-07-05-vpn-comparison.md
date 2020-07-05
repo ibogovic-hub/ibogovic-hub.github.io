@@ -1,3 +1,5 @@
+> # Point of this page is to quickly compare few protocols and solutions related to VPN technology
+
 ## PPTP
 
 #### (+) "Pros"
@@ -10,9 +12,9 @@
     - Can be easily blocked
     - Not secure
 
-Usability | Configuration | Security  
---------- | ------------- | --------
- 6 | 3 | 2
+Usability | Configuration | Security | Future Development
+--------- | ------------- | -------- | ------------------
+ 6 | 3 | 2 | No ?
 
 ---
 
@@ -30,9 +32,9 @@ Usability | Configuration | Security
     - Could be exploited
     - Can be easily blocked
 
-Usability | Configuration | Security  
---------- | ------------- | --------
- 8 | 9 | 8
+Usability | Configuration | Security | Future Development
+--------- | ------------- | -------- | ------
+ 8 | 9 | 7 | Yes
 
 ---
     
@@ -51,13 +53,20 @@ Usability | Configuration | Security
     - A bit "manual work" to configure
     - Slower connection times that IKEv2
 
-Usability | Configuration | Security  
---------- | ------------- | --------
- 9 | 9 | 9
+Usability | Configuration | Security | Future Development
+--------- | ------------- | -------- | ------
+ 9 | 9 | 8 | Yes
 
 ---
     
-## WireGuard
+## WireGuard  
+
+- enterprise ready?  
+- WireGuard is currently the most interesting upcoming technology for VPN solutions.  
+- WireGuard is a new VPN protocol that aims to be a full replacement of OpenVPN and IPSec.  
+- It is based on established technologies and follows a modern and simple principle.
+
+More info related to WireGuard can be found [HERE](https://www.the-digital-life.com/en/wireguard-vs-openvpn-and-ipsec-which-one-is-the-best/)
 
 #### (+) "Pros"
     + Huge potential for Mobile (battery, better speed etc)
@@ -70,11 +79,8 @@ Usability | Configuration | Security
     - Limited supprot for VPNs
     - Not read for secure use...
     - May succomv to traffic shaping.
-    - no OS support
-    
---> enterprise ready?
---> WireGuard is currently the most interesting upcoming technology for VPN solutions.
+    - no OS support (at the moment.)
 
-Usability | Configuration | Security  
---------- | ------------- | --------
- 9 | 7 | 9
+Usability | Configuration | Security | Future Development
+--------- | ------------- | -------- | ------
+ 9 | 5 | 9 | Yes
