@@ -13,7 +13,7 @@
     - Not secure
 
 Usability | Configuration | Security | Future Development
---------- | ------------- | -------- | ------------------
+:---: | :---: | :---: | :---:
  6 | 3 | 2 | No ?
 
 ---
@@ -33,7 +33,7 @@ Usability | Configuration | Security | Future Development
     - Can be easily blocked
 
 Usability | Configuration | Security | Future Development
---------- | ------------- | -------- | ------
+:---: | :---: | :---: | :---:
  8 | 9 | 7 | Yes
 
 ---
@@ -54,7 +54,7 @@ Usability | Configuration | Security | Future Development
     - Slower connection times that IKEv2
 
 Usability | Configuration | Security | Future Development
---------- | ------------- | -------- | ------
+:---: | :---: | :---: | :---:
  9 | 9 | 8 | Yes
 
 ---
@@ -82,5 +82,5 @@ More info related to WireGuard can be found [HERE](https://www.the-digital-life.
     - no OS support (at the moment.)
 
 Usability | Configuration | Security | Future Development
---------- | ------------- | -------- | ------
+:---: | :---: | :---: | :---:
  9 | 5 | 9 | Yes
