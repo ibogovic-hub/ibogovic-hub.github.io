@@ -10,9 +10,9 @@
     - Can be easily blocked
     - Not secure
 
-Useability =        2  
-Configuration =     10  
-Security =          2  
+Usability | Configuration | Security  
+--------- | ------------- | --------
+ 6 | 3 | 2
 
 ---
 
@@ -24,16 +24,16 @@ Security =          2
     + Very fast!
     + Most operating system supports IKEv2
     
-#### (-) "Cons"
+#### (-) * Red "Cons"
     - Not every VPN supports IKEv2
     - Can be trickier to configure
     - Could be exploited
     - Can be easily blocked
 
-Useability =        2  
-Configuration =     10  
-Security =          2  
- 
+Usability | Configuration | Security  
+--------- | ------------- | --------
+ 8 | 9 | 8
+
 ---
     
 ## OpenVPN
@@ -51,9 +51,9 @@ Security =          2
     - A bit "manual work" to configure
     - Slower connection times that IKEv2
 
-Useability =        2  
-Configuration =     10  
-Security =          2  
+Usability | Configuration | Security  
+--------- | ------------- | --------
+ 9 | 9 | 9
 
 ---
     
@@ -75,6 +75,6 @@ Security =          2
 --> enterprise ready?
 --> WireGuard is currently the most interesting upcoming technology for VPN solutions.
 
-Useability =        2  
-Configuration =     10  
-Security =          2  
+Usability | Configuration | Security  
+--------- | ------------- | --------
+ 9 | 7 | 9
