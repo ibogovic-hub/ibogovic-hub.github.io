@@ -1,16 +1,16 @@
-##PPTP
+## PPTP
 
-####(+) "Pros"
+#### (+) "Pros"
     + Very fast
     + Native Windows Support
-
-####(-) "Cons"
-    - Not reliable connections
+    
+#### (-) "Cons"
+    - Not reliable connection
     - Issues with some routers
     - Can be easily blocked
     - Not secure
 
-##IPSec/IKEv2  
+## IPSec / IKEv2
 
 #### (+) "Pros"  
     + Very secure
