@@ -10,6 +10,12 @@
     - Can be easily blocked
     - Not secure
 
+Useability =        2  
+Configuration =     10  
+Security =          2  
+
+---
+
 ## IPSec / IKEv2
 
 #### (+) "Pros"  
@@ -23,6 +29,12 @@
     - Can be trickier to configure
     - Could be exploited
     - Can be easily blocked
+
+Useability =        2  
+Configuration =     10  
+Security =          2  
+ 
+---
     
 ## OpenVPN
 
@@ -38,6 +50,12 @@
     - Not supported completely on IOS
     - A bit "manual work" to configure
     - Slower connection times that IKEv2
+
+Useability =        2  
+Configuration =     10  
+Security =          2  
+
+---
     
 ## WireGuard
 
@@ -54,3 +72,9 @@
     - May succomv to traffic shaping.
     - no OS support
     
+--> enterprise ready?
+--> WireGuard is currently the most interesting upcoming technology for VPN solutions.
+
+Useability =        2  
+Configuration =     10  
+Security =          2  
