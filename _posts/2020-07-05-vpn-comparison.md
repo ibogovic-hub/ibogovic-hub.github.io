@@ -26,7 +26,8 @@ Point of this page is to quickly compare few protocols and solutions related to 
 
 Usability | Configuration | Security | Future Development
 :---: | :---: | :---: | :---:
- 4<sup>[1](#table)</sup> | 2<sup>[1](#table)</sup> | 1 <sup>[1](#table)</sup>| obsolete 
+ 4<sup>[1](#table)</sup> | 2<sup>[1](#table)</sup> | 1 <sup>[1](#table)</sup> | obsolete
+
 ---
 
 ## [IPSec / IKEv2](https://en.wikipedia.org/wiki/IPsec)  
@@ -82,7 +83,7 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
  8<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | 7<sup>[1](#table)</sup> | Yes | -- | 1998 -->
 
 ---
-    
+
 ## [OpenSSL](https://www.openssl.org/)  
 
 - **General:**  
