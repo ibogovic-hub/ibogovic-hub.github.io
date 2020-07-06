@@ -103,9 +103,8 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
 #### (+) "Pros"  
     + Identity Verification
     + Data Integrity
-    + Trust
-    + 
-    
+    + Trust 
+
 #### (-) "Cons"
     - HTTPS can cause delays (older hardware)
     - SSL certificate requirements
@@ -211,14 +210,14 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
     - strongSwan is a multiplatform IPsec implementation.
     - The focus of the project is on strong authentication mechanisms using X.509 public key certificates and optional secure storage of private keys and certificates on smartcards through a standardized PKCS#11 interface and on TPM 2.0.  
 #### (+) “Pros”
-    • Unlimited simultaneous connections
-    • Unusual multihop and split-tunneling tools
-    • Powerful IPSec policies
-    • Well-designed app
-    • supports IKEv1 and fully implements IKEv2
+    + Unlimited simultaneous connections
+    + Unusual multihop and split-tunneling tools
+    + Powerful IPSec policies
+    + Well-designed app
+    + supports IKEv1 and fully implements IKEv2
 #### (-) “Cons”
-    • Can be easily blocked
-    • heavily relies on Linux kernel modules
+    - Can be easily blocked
+    - heavily relies on Linux kernel modules
 
 Latest stabile release ==> v5.8.0 / May 20, 2019
 
@@ -235,24 +234,86 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
     - It uses the most secure defaults available and works with common cloud providers.  
     - Easy to deploy and distribute to the clients  
 #### (+) “Pros”  
-    • Supports only IKEv2
-    • Supports only a single cipher suite w/ AES-GCM, SHA2 HMAC, and P-256 DH
-    • Generates mobile config profiles to auto-configure Apple devices
-    • Provides helper scripts to add and remove users
-    • Blocks ads with a local DNS resolver and HTTP proxy
-    • Based on current versions of Ubuntu and strongSwan
-    • Installs to DigitalOcean, Amazon, Google, Azure or your own server
+    + Supports only IKEv2
+    + Supports only a single cipher suite w/ AES-GCM, SHA2 HMAC, and P-256 DH
+    + Generates mobile config profiles to auto-configure Apple devices
+    + Provides helper scripts to add and remove users
+    + Blocks ads with a local DNS resolver and HTTP proxy
+    + Based on current versions of Ubuntu and strongSwan
+    + Installs to DigitalOcean, Amazon, Google, Azure or your own server
 #### (-) “Cons”  
-    • Does not support legacy cipher suites nor protocols like L2TP, IKEv1, or RSA
-    • Does not install Tor, OpenVPN, or other risky servers
-    • Does not depend on the security of TLS
-    • Does not require client software on most platforms
-    • Does not claim to provide anonymity or censorship avoidance
-    • Does not claim to protect you from the FSB, MSS, DGSE, or FSM    
+    - Does not support legacy cipher suites nor protocols like L2TP, IKEv1, or RSA
+    - Does not install Tor, OpenVPN, or other risky servers
+    - Does not depend on the security of TLS
+    - Does not require client software on most platforms
+    - Does not claim to provide anonymity or censorship avoidance
+    - Does not claim to protect you from the FSB, MSS, DGSE, or FSM    
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration
 :---: | :---: | :---: | :---: | :---: | :---:
  9<sup>[1](#table)</sup> | 3<sup>[2](#conf)</sup> | 9<sup>[3](#sec)</sup> | Yes | AGPL-3.0 License | 2012   -->
+
+
+## [Citrix]()
+- **General**
+    - Citrix provides an all-in-one service as it is capable of handling the huge majority of things needed to create a fully working VPN.
+    - Citrix also produces applications that run on top of the VPN to provide more advanced features. VPN, at its basest, is only capable of providing file sharing services.  
+    - Citrix allows users from a remote location to run applications on the server and have access to resources as if they are located on the server itself.  
+    - Citrix simplifies and unifies the deployment of applications for the whole company as only the server needs to be updated when adding or upgrading your software.  
+    - In a standard VPN, you need to update each and every computer that uses the application.  
+
+
+#### (+) “Pros”  
+    + All in one solution
+    + Support
+#### (-) “Cons”  
+    - Complicated 
+    - expensive
+    
+## [Cisco Anyconnect](https://www.cisco.com/c/en/us/products/security/anyconnect-secure-mobility-client/index.html)
+- **General:**
+    - Very secure VPN from Cisco
+    - The main benefits of Cisco AnyConnect are its protection for all devices, unimpeded access, proactive threat defense, robust network security, and one agent management.
+    - Main features of Cisco AnyConnect are: Threat Defense, All-Around User Access, Single Agent Management, User & Endpoint Behavior Insights, Multiple Integrations
+
+
+#### (+) “Pros”  
+    + Fast
+    + Secure
+    + Easy to manage
+    + Support
+    + Granular integration
+#### (-) “Cons”  
+    - Harder to troubleshoot 
+    - Expensive
+    - Licensing
+    - Connection dropping if the broadband/wifi isn't strong enough - tricky in some APAC countries 
+
+## [Fortinet](https://www.fortinet.com/)
+- **Greneral:**
+    - Complete NGFW in relation what you pay.
+    - Great VPN possibilities in regards of simplicity and security.
+    - Integrated endpoint protection platform that provides automated next-generation threat protection, visibility and control of your software and hardware inventory across the entire security fabric.  
+    - Identify & remediate vulnerable or compromised hosts across your attack surface.  
+    - It Provides:  
+        - Endpoint Visibility & Compliance throughout security fabric
+        - Prevent Known Vulnerabilities from Being Exploited by Attackers
+        - Automated behaviour based protection against unknown threats
+        - Simplified Endpoint Management
+
+#### (+) “Pros”  
+    + Fast
+    + Secure
+    + Easy to manage
+    + Support
+    + Advanced troubleshooting
+#### (-) “Cons”  
+    - Kinda risky upgrades
+    - Reporting could be better
+    - Memory problems
+
+Detailed product matrix can be found [HERE](https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/Fortinet_Product_Matrix.pdf)
+
 
 
 <a name="table">1</a>: Scale goes from ***0:*** **Not realy usefull** <--> ***10:*** **Totaly Usefull**  
