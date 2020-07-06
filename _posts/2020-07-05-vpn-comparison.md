@@ -224,8 +224,35 @@ Latest stabile release ==> v5.8.0 / May 20, 2019
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration
 :---: | :---: | :---: | :---: | :---: | :---:
- 9<sup>[1](#table)</sup> | 5<sup>[2](#conf)</sup> | 9<sup>[3](#sec)</sup> | Yes | GPL | 2005 -->
+ 9<sup>[1](#table)</sup> | 5<sup>[2](#conf)</sup> | 9<sup>[3](#sec)</sup> | Yes | GPLv2 | 2005 -->
+
 - **Latest stabile release** ==> ***v5.8.0 / May 20, 2019***  
+
+## [AlgoVPN](https://github.com/trailofbits/algo)  
+
+- **General:**  
+    - Algo VPN is a set of Ansible scripts that simplify the setup of a personal WireGuard and IPsec VPN.  
+    - It uses the most secure defaults available and works with common cloud providers.  
+    - Easy to deploy and distribute to the clients  
+#### (+) “Pros”  
+    • Supports only IKEv2
+    • Supports only a single cipher suite w/ AES-GCM, SHA2 HMAC, and P-256 DH
+    • Generates mobile config profiles to auto-configure Apple devices
+    • Provides helper scripts to add and remove users
+    • Blocks ads with a local DNS resolver and HTTP proxy
+    • Based on current versions of Ubuntu and strongSwan
+    • Installs to DigitalOcean, Amazon, Google, Azure or your own server
+#### (-) “Cons”  
+    • Does not support legacy cipher suites nor protocols like L2TP, IKEv1, or RSA
+    • Does not install Tor, OpenVPN, or other risky servers
+    • Does not depend on the security of TLS
+    • Does not require client software on most platforms
+    • Does not claim to provide anonymity or censorship avoidance
+    • Does not claim to protect you from the FSB, MSS, DGSE, or FSM    
+
+Usability | Configuration | Security | Future Development | Licence | Project Duration
+:---: | :---: | :---: | :---: | :---: | :---:
+ 9<sup>[1](#table)</sup> | 3<sup>[2](#conf)</sup> | 9<sup>[3](#sec)</sup> | Yes | AGPL-3.0 License | 2012   -->
 
 
 <a name="table">1</a>: Scale goes from ***0:*** **Not realy usefull** <--> ***10:*** **Totaly Usefull**  
