@@ -26,7 +26,7 @@ Point of this page is to quickly compare few protocols and solutions related to 
 
 Usability | Configuration | Security | Future Development
 :---: | :---: | :---: | :---:
- 4<sup>[1](#table)</sup> | 2<sup>[1](#table)</sup> | 1 <sup>[1](#table)</sup> | obsolete
+ 4<sup>[1](#table)</sup> | 2<sup>[2](#table)</sup> | 1 <sup>[3](#table)</sup> | obsolete
 
 ---
 
@@ -80,7 +80,7 @@ IEEE | 802.3u Physical
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration 
 :---: | :---: | :---: | :---: | :---: | :---:
- 8<sup>[1](#table)</sup> | 7<sup>[1](#table)</sup> | 9<sup>[1](#table)</sup> | Yes | -- | 1998 -->
+ 8<sup>[1](#table)</sup> | 7<sup>[2](#table)</sup> | 9<sup>[3](#table)</sup> | Yes | -- | 1998 -->
 
 ---
 
@@ -114,7 +114,7 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration 
 :---: | :---: | :---: | :---: | :---: | :---:
-9<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | Yes | OpenSSL / Apache 1,0 | 1998 --> 
+9<sup>[1](#table)</sup> | 8<sup>[2](#table)</sup> | 8<sup>[3](#table)</sup> | Yes | OpenSSL / Apache 1,0 | 1998 --> 
 
 ## [OpenVPN](https://en.wikipedia.org/wiki/OpenVPN)
 
@@ -143,7 +143,7 @@ Usability | Configuration | Security | Future Development | Licence | Project Du
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration 
 :---: | :---: | :---: | :---: | :---: | :---:
- 9<sup>[1](#table)</sup> | 7<sup>[1](#table)</sup> | 8<sup>[1](#table)</sup> | Yes | GPL | 2001 --> 
+ 9<sup>[1](#table)</sup> | 7<sup>[2](#table)</sup> | 8<sup>[3](#table)</sup> | Yes | GPL | 2001 --> 
 
 ---
     
@@ -200,34 +200,34 @@ More info related to WireGuard can be found [HERE](https://www.the-digital-life.
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration
 :---: | :---: | :---: | :---: | :---: | :---:
- 9<sup>[1](#table)</sup> | 3<sup>[1](#conf)</sup> | 9<sup>[1](#sec)</sup> | Yes | GPLv2 / Apache 2.0 | 2016 -->
+ 9<sup>[1](#table)</sup> | 3<sup>[2](#conf)</sup> | 9<sup>[3](#sec)</sup> | Yes | GPLv2 / Apache 2.0 | 2016 -->
 
 ---  
 
 ## [strongSwan](https://www.strongswan.org/)
 
 - **General:**  
-    - the OpenSource IPsec-based VPN Solution  
-    - strongSwan is a multiplatform IPsec implementation.  
+    - the OpenSource IPsec-based VPN Solution
+    - strongSwan is a multiplatform IPsec implementation.
     - The focus of the project is on strong authentication mechanisms using X.509 public key certificates and optional secure storage of private keys and certificates on smartcards through a standardized PKCS#11 interface and on TPM 2.0.  
-    
-#### (+) "Pros"
-    + Unlimited simultaneous connections
-    + Unusual multihop and split-tunneling tools
-    + Poverfull IPSec policies
-    + Well-designed app
-    + supports IKEv1 and fully implements IKEv2
+#### (+) “Pros”
+    • Unlimited simultaneous connections
+    • Unusual multihop and split-tunneling tools
+    • Powerful IPSec policies
+    • Well-designed app
+    • supports IKEv1 and fully implements IKEv2
+#### (-) “Cons”
+    • Can be easily blocked
+    • heavily relies on Linux kernel modules
 
-#### (-) "Cons"
-    - 
-        
+Latest stabile release ==> v5.8.0 / May 20, 2019
 
 Usability | Configuration | Security | Future Development | Licence | Project Duration
 :---: | :---: | :---: | :---: | :---: | :---:
- 9<sup>[1](#table)</sup> | 5<sup>[1](#conf)</sup> | 9<sup>[1](#sec)</sup> | Yes | GPL | 2005 -->
-- **Latest stabile release** ==> ***v5.8.0 / May 20, 2019***
+ 9<sup>[1](#table)</sup> | 5<sup>[2](#conf)</sup> | 9<sup>[3](#sec)</sup> | Yes | GPL | 2005 -->
+- **Latest stabile release** ==> ***v5.8.0 / May 20, 2019***  
 
 
-<a name="table">1</a>: Scale goes from ***0:*** **Not realy usefull** to ***10:*** **Totaly Usefull**
-<a name="conf">2</a>: How hard is to install it: Scale goes from ***0:*** **Kid could do it!** to ***10:*** **Extreamly Hard to install.**
-<a name="sec">3</a>:
+<a name="table">1</a>: Scale goes from ***0:*** **Not realy usefull** <--> ***10:*** **Totaly Usefull**  
+<a name="conf">2</a>: How hard is to install it: Scale goes from ***0:*** **Kid could do it!** <--> ***10:*** **Extreamly Hard to install.**  
+<a name="sec">3</a>: How good is the security: ***0:*** **meeeh** <--> ***10:*** **Rock solid..**  
