@@ -20,6 +20,7 @@ SEC is an event correlation tool for advanced event processing which can be harn
   
   - create file *.rules (in my case **dhcp.rules**) and for testing purposes file is located in ***/home/ivan/Documents/***  
   - "our" configuration file (more info about rules [HERE](https://simple-evcorr.github.io/man.html#lbAK)):  
+  
 ```bash
 type=SingleWithScript  
 	ptype=RegExp  
