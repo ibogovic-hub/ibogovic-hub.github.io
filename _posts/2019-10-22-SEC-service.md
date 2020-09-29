@@ -5,10 +5,10 @@ article_header:
   type: cover
 ---
 # Event triggered script # 
->>>
+---
 Purpose of this page is to explain how to configure SEC service to interact with DHCP event when new device is connected to the network.
 simple event correlator - MAN Page [HERE](https://simple-evcorr.github.io/man.html)
->>>
+---
 
 ## sec - simple event correlator ##  
  - **DESCRIPTION**  
@@ -20,7 +20,7 @@ SEC is an event correlation tool for advanced event processing which can be harn
   
   - create file *.rules (in my case **dhcp.rules**) and for testing purposes file is located in ***/home/ivan/Documents/***  
   - "our" configuration file (more info about rules [HERE](https://simple-evcorr.github.io/man.html#lbAK)):
-```bash  
+```bash
 type=SingleWithScript  
 	ptype=RegExp  
 	pattern=DHCPACK.*Switch  
@@ -44,7 +44,7 @@ type=SingleWithScript
 	script=/home/ivan/Documents/logs/compare.sh  
 	desc=Check Switch-config S3900  
 	action=logonly check switch configuration S3900  
-```  
+```
   - this will check the pattern in the **dhcpd.log** file searching for 3 things  
        - if there is a new switch
        - if there is a existing switch with name FA-S5850  
@@ -62,10 +62,10 @@ type=SingleWithScript
   
 ## results of SEC service ##  
   
->>>
+---
 For every location we will have baseline configuration for every device - backup  
 This file will be used to check if the configuration is changed or it is current.
->>>
+---
   
 ###  1. first scenario: Existing Switch  
   - We have a Switch already named **"FS-S5850-SRV"** and when we plug it in to the network SEC service should check the Switch configuration.  

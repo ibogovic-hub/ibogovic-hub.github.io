@@ -50,7 +50,7 @@ These are the elements outlined in John Gruber’s original design document. All
 
 ### Image
 
-![alt text](image)
+![alt text](https://i.ytimg.com/vi/kO5_uqfisD0/maxresdefault.jpg)
 
 ## Extended Syntax
 
@@ -66,11 +66,10 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 ### Fenced Code Block
 
 ```
-{
   "firstName": "John",
   "lastName": "Smith",
   "age": 25
-}
+
 ```
 
 ### Footnote
