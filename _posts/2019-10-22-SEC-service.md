@@ -57,8 +57,7 @@ type=SingleWithScript
   
 ## initialisation of SEC service ##  
   
-  - after editing the service and restarting it we can see that now it takes our created rules and monitoring the ***"dhcpd.log"*** file:  
-   
+  - after editing the service and restarting it we can see that now it takes our created rules and monitoring the ***"dhcpd.log"*** file  
   - now we just need to wait for service to be triggered  
   
 ## results of SEC service ##  
