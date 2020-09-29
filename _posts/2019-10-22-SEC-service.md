@@ -15,11 +15,11 @@ simple event correlator - MAN Page [HERE](https://simple-evcorr.github.io/man.ht
 SEC is an event correlation tool for advanced event processing which can be harnessed for event log monitoring, for network and security management, for fraud detection, and for any other task which involves event correlation.  
   
 * **prerequisites**  
-  - we need to install SEC `sudo apt install sec`
+  - we need to install SEC `sudo apt install sec`  
   - run `sudo service sec restart && sudo service sec start` to make sure that service is up and running  
   
   - create file *.rules (in my case **dhcp.rules**) and for testing purposes file is located in ***/home/ivan/Documents/***  
-  - "our" configuration file (more info about rules [HERE](https://simple-evcorr.github.io/man.html#lbAK)):
+  - "our" configuration file (more info about rules [HERE](https://simple-evcorr.github.io/man.html#lbAK)):  
 ```bash
 type=SingleWithScript  
 	ptype=RegExp  
