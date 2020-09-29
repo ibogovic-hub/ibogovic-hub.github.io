@@ -50,7 +50,7 @@ These are the elements outlined in John Gruber’s original design document. All
 
 ### Image
 
-![alt text](image.jpg)
+![alt text](image)
 
 ## Extended Syntax
 

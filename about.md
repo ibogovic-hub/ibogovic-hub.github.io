@@ -45,16 +45,17 @@ bogovic.ivan@hotmail.com
     • Deutsch – B1  
   
 #### Operating Systems:  
-    • Windows
-    • Networking OS (Cisco IOS, PAN OS, FTOS, HP Airwave and ClearPass), 
+    • Windows (7, 8, 10)
+    • Windows Server (2008 - 2019)
+    • Networking OS (Cisco IOS, PAN OS, FTOS, HP Airwave and ClearPass, CheckPoint), 
     • Linux (RH, Debian, Ubuntu, Kali, CentOS, Parrot etc).  
   
 #### Total IT Experience:  
-    • 10+ Years  
+    • 11+ Years  
   
 #### Technologies:  
     • Microsoft Server (ent, hyper-v)
-    • Server 2008, 2012 R2, 2016, Windows 7, 8 ,8.1,10
+    • Server 2008, 2012 R2, 2016, 2019, Windows 7, 8 ,10
     • Ubuntu, Fedora, RedHat, Debian
     • Cisco (routers, switches, Meraki, AP...)
     • HP ClearPass, HP Airwave, HP IAP.
@@ -86,14 +87,15 @@ bogovic.ivan@hotmail.com
   
 ### ***Organization:***  
   
-#### ***Clear Group***  
+#### ***ALTEN GmbH***  
 Marienbergstr. 92, 90411 Nürnberg  
 *September 2019 – Current*  
-#### **Role:** IT Consultant in Siemens  
+#### **Role:** Network and Security Consultant in Siemens  
   
 #### **Responsibilities:**  
-    • Project – Network & Security at Siemens
-    - Working on complete Siemens Healthineers Network  
+    • Project – Network & Security at Siemens.
+    • VPN revision, plan / design new technology implementation, create project documentation.
+    • Working on complete Siemens Healthineers Network.  
   
 ### ***Organization:***  
 #### ***Jogmo World GmbH***  
