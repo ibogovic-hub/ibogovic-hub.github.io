@@ -4,9 +4,9 @@ tags: bash
 article_header:
   type: cover
 ---
->>>>
+>
 ## **script that I created for system update and some installation**
->>>  
+>  
 
 ```bash
 #!/bin/bash
