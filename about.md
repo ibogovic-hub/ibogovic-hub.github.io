@@ -42,7 +42,8 @@ bogovic.ivan@hotmail.com
   
 #### Language:  
     • English – Excelent
-    • Deutsch – B1  
+    • Deutsch – B1
+    • Croatian - Mother Language
   
 #### Operating Systems:  
     • Windows (7, 8, 10)
