@@ -33,16 +33,29 @@ bogovic@protonmail.com
 
 #####  Skype:  
 live:bogovic.ivan  
-bogovic.ivan@hotmail.com
+bogovic.ivan@hotmail.com  
+
+#### Brief description:
+Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.
+Professionally, I have been dealing with problems and tasks of network and information security since 2009.  
+First practically with the planning and realization of network-oriented security solutions, later conceptually in the development of IT security solutions and the implementation of IT security audits according to ISO Rules, IS027000, PCI or customer-specific specifications.
+IT professional with over eleven years of experience in managing various devices for top companies in Croatia and now in Germany, excellent interpersonal skills and great attention to detail.
 
   
 #### Academic Profile:  
     • Cisco CCNA - Honored with Outstanding Achievement Award by CISCO 
     • School for Tourism and Hospitality  
+
+#### Core competencies:
+    • Governance, Risk Management, and Compliance
+    • Firewall and network architecture management
+    • Information security, incl. auditing and training
+    • Setting up and managing tasks in difficult and stressful situations
+    • Organizational development and project management
   
 #### Language:  
-    • English – Excelent
-    • Deutsch – B1
+    • English - Excelent
+    • Deutsch - B1
     • Croatian - Mother Language
   
 #### Operating Systems:  
@@ -54,43 +67,94 @@ bogovic.ivan@hotmail.com
 #### Total IT Experience:  
     • 11+ Years  
   
-#### Technologies:  
-    • Microsoft Server (ent, hyper-v)
-    • Server 2008, 2012 R2, 2016, 2019, Windows 7, 8 ,10
-    • Ubuntu, Fedora, RedHat, Debian
-    • Cisco (routers, switches, Meraki, AP...)
-    • HP ClearPass, HP Airwave, HP IAP.
-    • Symantec
-    • PRTG, FortiAnalyzer, Syslog,  
-    • Fortinet
-    • PaloAlto
+#### Expertise  
+##### Hardware  
+    • HP Server
+    • Red Hat Server
+    • Networking:
+        o Cisco (Routers, Switches, AP’s)
+        o Hp (Routers, Switches, AP’s)
+        o Huawei
+        o Aruba (Wi-Fi, Airwave, ClearPass)
+        o Ruckus (Wi-Fi, Management)
+        o Mikrotik
+        o PaloAlto (Firewalls, Panorama)
+        o Fortigate (Fortigate, FortiAnalyzer, FortiManager, FortiWifi, FortiClient, FortiDDoS)
+        o CheckPoint
+        o Juniper
+    • Thin clients / Tablets
+    • Mobile devices
+##### Operating systems  
+    • Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
+    • Windows Server (2008 - 2019)
+    • Windows (7 - 10)
+    • MacOS
+##### Programming languages  
+    • csh und sh Script language
+    • Basic knowledge in Python
+##### Databases  
+    • Basic knowledge SQL
+##### Containers  
+    • Basic to middle level knowledge in Docker
+##### Virtualization  
+    • VMware vSphere
+    • Hyper-V
+    • KVM
+    • Oracle
+##### Backup-Software  
+    • Symantec Backup Exec
+    • Symantec NetBackup (Basics)
+    • Microsoft DPM
+    • Acronis
+##### Network  
+    • Routing
+    • Switching
+    • Troubleshooting
+    • Security
+##### Industry knowledge  
+    • Enterprise, mid and small business
+    • Online
+    • Hybrid – Cloud / On-premises
   
 #### Technical Certifications:  
-    • CompTia A+ CE
-    • CCNP Routing (300-101)
-    • CCNP Switching (300-115)
-    • CISCO Voice
-    • CCNA Security
-    • Cisco CCNA - Honored with Outstanding Achievement Award by CISCO
-    • Palo Alto - (PCNSE)
-    • Red Hat (EX200)
-    • Ruckus WiSE (WiFi)
-    • NSE 4 - FortiGate
-    • CompTia Server+
-    • CompTia A+
-    • Microsoft® Certified Solutions Expert (MCSE)
-    • Microsoft® Certified Professional (MCP)
-    • Microsoft® Certified Solutions Associate (MCSA)
-    • Microsoft® Certified IT Professional (MCITP)
-    • Microsoft® Certified Technology Specialist (MCTS)  
+    • 2020 Cisco Certified Specialist - Enterprise Core (CCS-ECore)
+    • 2020 CompTia A+ CE
+    • 2019 Cyber Security Certified - Network
+    • 2018 CCNP Switching.
+    • 2017 PCNSE Palo Alto Certified Network Security Engineer
+    • 2017 NSA4 Fortigate Network Administrator
+    • 2016 RHCSA Red Hat Certified System Administrator
+    • 2016 MCSE Cloud Platform and Infrastructure
+    • 2015 CCNA Security
+    • 2015 MCSE Enterprise
+    • 2014 CompTia Server+
+    • 2014 CompTia A+
+    • 2014 MCSE Server Infrastructure
+    • 2013 MCSA Windows Server
+    • 2013 MCP Microsoft Certified Professional
+    • 2012 CCNA Voice
+    • 2012 MCSA Windows Server
+    • 2011 MCITP Enterprise
+    • 2010 MCTS Windows Server
+    • 2009 CCNA Cisco Certified Network Administrator
   
 ## Experience:  
   
 ### ***Organization:***  
+#### ***Jogmo World GmbH***  
+Grünwalder Weg 28b, 82041 Oberhaching  
+*Noveber 2020 – Current*
   
+#### **Role:** Network Specialist  
+  
+#### **Responsibilities:**  
+    • Creating internal LAB for Network & Security testing
+    • Maintaining network/security infrastructure (CheckPoint, Fortigates, Juniper etc..)
+
+### ***Organization:***  
 #### ***ALTEN GmbH***  
 Marienbergstr. 92, 90411 Nürnberg  
-*September 2019 – Current*  
+*September 2019 – November 2020 (13 Months)*  
 #### **Role:** Network and Security Consultant in Siemens  
   
 #### **Responsibilities:**  
