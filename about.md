@@ -84,33 +84,41 @@ IT professional with over eleven years of experience in managing various devices
         o Juniper
     • Thin clients / Tablets
     • Mobile devices  
+
 ##### Operating systems  
     • Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
     • Windows Server (2008 - 2019)
     • Windows (7 - 10)
     • MacOS  
+
 ##### Programming languages  
     • csh und sh Script language
     • Basic knowledge in Python  
+
 ##### Databases  
     • Basic knowledge SQL  
+
 ##### Containers  
     • Basic to middle level knowledge in Docker  
+
 ##### Virtualization  
     • VMware vSphere
     • Hyper-V
     • KVM
     • Oracle  
+
 ##### Backup-Software  
     • Symantec Backup Exec
     • Symantec NetBackup (Basics)
     • Microsoft DPM
     • Acronis  
+
 ##### Network  
     • Routing
     • Switching
     • Troubleshooting
     • Security  
+
 ##### Industry knowledge  
     • Enterprise, mid and small business
     • Online
