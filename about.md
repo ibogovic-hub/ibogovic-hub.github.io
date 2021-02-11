@@ -243,4 +243,5 @@ DE - 90489 Nürnberg
 #### **Responsibilities:**  
     • Monitoring, registration, and resolving problems on the remote IT systems.  
     • Installation of personal computers, answering phone calls and emails from clients, and assist in resolving problems.
-    • Perform various duties given the daily schedule.
+    • Perform various duties given the daily schedule.  
+    
