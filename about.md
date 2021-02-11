@@ -83,38 +83,38 @@ IT professional with over eleven years of experience in managing various devices
         o CheckPoint
         o Juniper
     • Thin clients / Tablets
-    • Mobile devices
+    • Mobile devices  
 ##### Operating systems  
     • Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
     • Windows Server (2008 - 2019)
     • Windows (7 - 10)
-    • MacOS
+    • MacOS  
 ##### Programming languages  
     • csh und sh Script language
-    • Basic knowledge in Python
+    • Basic knowledge in Python  
 ##### Databases  
-    • Basic knowledge SQL
+    • Basic knowledge SQL  
 ##### Containers  
-    • Basic to middle level knowledge in Docker
+    • Basic to middle level knowledge in Docker  
 ##### Virtualization  
     • VMware vSphere
     • Hyper-V
     • KVM
-    • Oracle
+    • Oracle  
 ##### Backup-Software  
     • Symantec Backup Exec
     • Symantec NetBackup (Basics)
     • Microsoft DPM
-    • Acronis
+    • Acronis  
 ##### Network  
     • Routing
     • Switching
     • Troubleshooting
-    • Security
+    • Security  
 ##### Industry knowledge  
     • Enterprise, mid and small business
     • Online
-    • Hybrid – Cloud / On-premises
+    • Hybrid – Cloud / On-premises  
   
 #### Technical Certifications:  
     • 2020 Cisco Certified Specialist - Enterprise Core (CCS-ECore)
