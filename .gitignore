@@ -51,6 +51,9 @@ Thumbs.db
 *.key
 *.pem
 
+# ignore push file
+push.sh
+
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
