@@ -1,5 +1,6 @@
 ---
 title: sec service
+layout: page
 tags: linux
 article_header:
   type: cover

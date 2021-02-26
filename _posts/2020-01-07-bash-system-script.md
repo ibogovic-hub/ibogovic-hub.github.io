@@ -1,5 +1,6 @@
 ---
 title: system script
+layout: page
 tags: bash
 article_header:
   type: cover

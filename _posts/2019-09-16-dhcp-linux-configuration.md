@@ -1,5 +1,6 @@
 ---
 title: Network test post
+layout: page
 tags: Linux
 article_header:
   type: cover
