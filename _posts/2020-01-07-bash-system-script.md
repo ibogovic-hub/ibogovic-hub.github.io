@@ -1,6 +1,6 @@
 ---
 title: system script
-layout: articles
+layout: article
 tags: bash
 article_header:
   type: cover

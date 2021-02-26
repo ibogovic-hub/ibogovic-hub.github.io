@@ -1,7 +1,7 @@
 ---
-title: system script
+title: markdown cheat sheet
 layout: article
-tags: bash
+tags: markdown
 article_header:
   type: cover
 ---
