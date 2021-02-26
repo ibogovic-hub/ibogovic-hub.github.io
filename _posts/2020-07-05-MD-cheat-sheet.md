@@ -1,3 +1,11 @@
+---
+title: system script
+layout: article
+tags: bash
+article_header:
+  type: cover
+---
+
 # Markdown Cheat Sheet
 
 This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements.
