@@ -168,17 +168,21 @@ IT professional with over eleven years of experience in managing various devices
   
 ### ***Organization:***  
 
-#### ***Jogmo World GmbH***  
+#### ***IS4IT GmbH***  
 
 Grünwalder Weg 28b, 82041 Oberhaching  
 *Noveber 2020 – Current*
   
-#### **Role:** Network Specialist  
+#### **Role:** Senior Consultant - SEC-Security Infrastruktur  
   
 #### **Responsibilities:**  
 
     • Creating internal LAB for Network & Security testing
     • Maintaining network/security infrastructure (CheckPoint, Fortigates, Juniper etc..)
+    • SD-WAN architecture and intregration project for one of the biggest IS4IT customers  
+    • VPN migration from Juniper to Fortigate devices
+    • FortiAnalyzer and FortiManager support and maintenance
+    • Migration project from Juniper and CheckPoint to Fortigate
 
 ### ***Organization:***  
 
