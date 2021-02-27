@@ -15,7 +15,7 @@ article_header:
 [R3-config](/assets/images/Cisco/ipv6-and-ospfv3-r3.txt)  
 [R4-config](/assets/images/Cisco/ipv6-and-ospfv3-r4.txt)  
 
-```
+```bash
 conf t
 ipv6 unicast-routing
 interface s2/0
