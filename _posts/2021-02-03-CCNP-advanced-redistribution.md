@@ -10,10 +10,10 @@ article_header:
 
 ## create specific seed metric and tags EIGRP and OSPF
 
-[R1-config](/assets/images/Cisco/advanced_redistribution-R1.txt)
-[R2-config](/assets/images/Cisco/advanced_redistribution--R2.txt)
-[R3-config](/assets/images/Cisco/advanced_redistribution-R3.txt)
-[R4-congig](/assets/images/Cisco/advanced-redistribution-R4.txt)
+[R1-config](/assets/images/Cisco/advanced_redistribution-R1.txt)  
+[R2-config](/assets/images/Cisco/advanced_redistribution--R2.txt)  
+[R3-config](/assets/images/Cisco/advanced_redistribution-R3.txt)  
+[R4-config](/assets/images/Cisco/advanced-redistribution-R4.txt)  
 
 ```
 R2  
