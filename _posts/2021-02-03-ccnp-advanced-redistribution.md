@@ -15,8 +15,9 @@ article_header:
 [R3-config](/assets/images/Cisco/advanced_redistribution-R3.txt)  
 [R4-config](/assets/images/Cisco/advanced-redistribution-R4.txt)  
 
+- R2
+
 ```
-R2  
 router eigrp 100  
  network 10.1.23.0 0.0.0.255  
  network 10.1.24.0 0.0.0.255  
@@ -55,8 +56,9 @@ route-map EIGRP-TO-OSPF permit 40
 
 ## redistribute EIGRP to OSPF
 
+- R2
+
 ```
-R2
 conf t
 router ospf 1
 redistribute eigrp 100 subnets route-map EIGRP-TO-OSPF
@@ -64,8 +66,9 @@ redistribute eigrp 100 subnets route-map EIGRP-TO-OSPF
 
 ## OSPF routes redistibuted to EIGRP should have metric of
 
+- R2
+
 ```
-R2
 conf t
 route-map OSPF-TO-EIGRP
 set metric 400 20 255 1 1500
@@ -74,7 +77,9 @@ set tag 40
 
 ##  redistribute OSPF to EIGRP
 
-```bach
+- R2
+
+```
 conf t
 router eigrp 100
 redistribute ospf 1 route-map OSPF-TO-EIGRP
@@ -82,8 +87,9 @@ redistribute ospf 1 route-map OSPF-TO-EIGRP
 
 ## block subnets by tag
 
-```bash
-R2
+- R2
+
+```
 conf t
 route-map OSPF-TO-EIGRP deny 5
  match tag 10 20 30
@@ -94,8 +100,9 @@ route-map EIGRP-TO-OSPF deny 5
 
 ## force EIGRP better route
 
+- R2
+
 ```
-R2
 conf t
 router eigrp 100
  network 10.1.23.0 0.0.0.255
