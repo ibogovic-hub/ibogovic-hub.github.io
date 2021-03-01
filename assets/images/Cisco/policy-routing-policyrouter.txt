@@ -1,0 +1,224 @@
+POLICYROUTER
+Current configuration : 3025 bytes
+!
+! Last configuration change at 13:04:36 CET Tue Nov 12 2019
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname PolicyRouter
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+bsd-client server url https://cloudsso.cisco.com/as/token.oauth2
+clock timezone CET 1 0
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!         
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+cts logging verbose
+!
+!
+!
+redundancy
+!
+!
+track 1 ip sla 1 reachability
+!
+ip tcp synwait-time 5
+!         
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ ip policy route-map POLICY
+!
+interface Ethernet0/1
+ no ip address
+ shutdown
+!
+interface Ethernet0/2
+ no ip address
+ shutdown 
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ no ip address
+ shutdown
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+!
+interface Ethernet1/3
+ no ip address
+ shutdown
+!
+interface Serial2/0
+ ip address 200.1.1.1 255.255.255.0
+ serial restart-delay 0
+!
+interface Serial2/1
+ ip address 201.1.1.1 255.255.255.0
+ serial restart-delay 0
+!
+interface Serial2/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+router bgp 5500
+ bgp log-neighbor-changes
+ network 192.168.1.0
+ neighbor 200.1.1.2 remote-as 6500
+ neighbor 200.1.1.2 update-source Serial2/0
+ neighbor 201.1.1.2 remote-as 7500
+ neighbor 201.1.1.2 update-source Serial2/1
+!
+ip local policy route-map ROUTER_TRAFFIC
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+ip access-list extended CLIENT1
+ permit ip host 192.168.1.20 any
+ip access-list extended CLIENT2
+ permit tcp host 192.168.1.21 any eq telnet
+ permit tcp host 192.168.1.21 any eq 443
+ip access-list extended ROUTER
+ permit ip any any
+!
+ip sla 1
+ icmp-echo 200.1.1.2
+ threshold 2
+ timeout 1000
+ frequency 3
+ip sla schedule 1 life forever start-time now
+!
+route-map POLICY permit 10
+ match ip address CLIENT1
+ set ip next-hop 201.1.1.2
+!
+route-map POLICY permit 20
+ match ip address CLIENT2
+ set ip next-hop 200.1.1.2
+!
+route-map POLICY permit 30
+ set ip next-hop 201.1.1.2
+!
+route-map ROUTER_TRAFFIC permit 10
+ match ip address ROUTER
+ set ip next-hop verify-availability 200.1.1.2 10 track 1
+ set ip next-hop 201.1.1.2
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!         
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+ transport input none
+!
+!
+end
+
