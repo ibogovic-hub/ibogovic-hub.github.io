@@ -9,14 +9,13 @@ article_header:
 ![GNS3-config](/assets/images/Cisco/ospf-sa-config.png)
 
 [R1-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R2-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R3-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R4-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R5-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R5-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R6-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R7-config](/assets/images/Cisco/ospf-sa-R1.txt)  
-[R8-config](/assets/images/Cisco/ospf-sa-R1.txt)  
+[R2-config](/assets/images/Cisco/ospf-sa-R2.txt)  
+[R3-config](/assets/images/Cisco/ospf-sa-R3.txt)  
+[R4-config](/assets/images/Cisco/ospf-sa-R4.txt)  
+[R5-config](/assets/images/Cisco/ospf-sa-R5.txt)  
+[R6-config](/assets/images/Cisco/ospf-sa-R6.txt)  
+[R7-config](/assets/images/Cisco/ospf-sa-R7.txt)  
+[R8-config](/assets/images/Cisco/ospf-sa-R8.txt)  
 [virtual-link-config](/assets/images/Cisco/ospf-sa-R1.txt)  
 
 ## redistribute static as E1 routes

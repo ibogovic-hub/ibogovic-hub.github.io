@@ -9,9 +9,9 @@ article_header:
 ![GNS3-config](/assets/images/Cisco/policy-routing.png)
 
 [client1-config](/assets/images/Cisco/policy-routing-client1.txt)  
-[client2-config](/assets/images/Cisco/policy-routing-client1.txt)  
-[isp1-config](/assets/images/Cisco/policy-routing-client1.txt)  
-[isp2-config](/assets/images/Cisco/policy-routing-client1.txt)  
+[client2-config](/assets/images/Cisco/policy-routing-client2.txt)  
+[isp1-config](/assets/images/Cisco/policy-routing-isp1.txt)  
+[isp2-config](/assets/images/Cisco/policy-routing-isp2.txt)  
 [policy-router-config](/assets/images/Cisco/policy-routing-client1.txt)  
 
 ## route traffic from client 1 to ISP2
