@@ -237,3 +237,18 @@ set server-mode enable
 set interface <interface_list> 
 end
 ```
+### sd-wan config
+
+```bash
+config system virtual-wan-link
+    config members
+        edit 1
+            set interface <primary interface>
+        next
+        edit 2
+            set interface <secondary interface>
+            set priority 10
+        next
+    end
+end
+```
