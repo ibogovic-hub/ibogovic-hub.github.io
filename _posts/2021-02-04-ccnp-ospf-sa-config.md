@@ -16,7 +16,7 @@ article_header:
 [R6-config](/assets/images/Cisco/ospf-sa-R6.txt)  
 [R7-config](/assets/images/Cisco/ospf-sa-R7.txt)  
 [R8-config](/assets/images/Cisco/ospf-sa-R8.txt)  
-[virtual-link-config](/assets/images/Cisco/ospf-sa-R1.txt)  
+[virtual-link-config](/assets/images/Cisco/ospf-sa-virtual-link.txt)  
 
 ## redistribute static as E1 routes
 
