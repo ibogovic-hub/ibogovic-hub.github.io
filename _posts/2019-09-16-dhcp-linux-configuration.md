@@ -1,5 +1,5 @@
 ---
-title: Network test post
+title: linux dhcp config
 layout: article
 tags: Linux
 article_header:
