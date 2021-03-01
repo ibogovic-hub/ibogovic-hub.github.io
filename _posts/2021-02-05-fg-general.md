@@ -220,3 +220,20 @@ diag debug application fnbamd 7
 diag debug enable
 diag test authserver ldap adserv01-test utest0000 W@is4it=gr8!
 ```
+
+## nested groups filter
+
+```
+set group-filter   "(|(&(objectclass=group)(member:1.2.840.113556.1.4.1941:=%u))(&(objectClass=group)(member:1.2.840.113556.1.4.1941:=%pg)))"
+```
+
+### ntp config
+
+```bash
+diag sys ntp status 
+config system ntp 
+set ntpsyn enable 
+set server-mode enable 
+set interface <interface_list> 
+end
+```

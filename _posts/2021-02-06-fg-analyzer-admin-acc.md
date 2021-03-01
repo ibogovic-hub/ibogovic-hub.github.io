@@ -1,23 +1,16 @@
 ---
-title: create ldap accounts
+title: Analyzer and Manager "stuff"
 layout: article
 tags: Fortinet
 article_header:
   type: cover
 ---
 
-## reset settings on Analyzer
+# Manager
 
-```
-execute reset all-settings 
-execute reset all-except-ip erase all except IP and routes 
-execute format disk 
-```
-
-## config admin acc (ldap)
+## config admin acc Manager (ldap)
 
 ```bash
-# on manager
 config system admin ldap 
     edit "xxxxxxxxxx" 
         set server "xxxxxxx" 
@@ -32,8 +25,33 @@ config system admin ldap
             set adom "all_adoms" 
     next 
 end
+```
+### diagnose commands
 
-# on analyzer 
+```bash
+diagnose dvm check-integrity 
+diagnose cdb check objcfg-integrity 
+diagnose cdb check policy-assignment 
+diagnose pm2 check-integrity all 
+diagnose cdb check reference-integrity 
+diagnose cdb check policy-packages 
+diagnose cdb check adom-revision 
+diagnose cdb check adom-integrity 
+
+get system status 
+get system performance 
+execute top 
+execute iotop 
+diagnose fgfm session-list 
+diagnose dvm device list 
+diagnose debug crashlog read (Crash logs)
+```
+
+# Analyzer
+
+## config admin acc on analyzer (ldap)  
+
+```bash
 config system admin ldap 
     edit "servername" 
         set server "some IP" 
@@ -48,4 +66,12 @@ config system admin ldap
             set adom "all_adoms" 
     next 
 end
+```
+
+## reset settings on Analyzer
+
+```
+execute reset all-settings 
+execute reset all-except-ip erase all except IP and routes 
+execute format disk 
 ```
