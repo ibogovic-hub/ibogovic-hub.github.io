@@ -1,12 +1,16 @@
 ---
-title: .bashrs file
+title: .bashrc file
 layout: article
 tags: Linux
 article_header:
   type: cover
 ---
 
+---
+
 ## .bashrc file modified for my purposes
+
+---
 
 ```sh
 # ~/.bashrc: executed by bash(1) for non-login shells.
