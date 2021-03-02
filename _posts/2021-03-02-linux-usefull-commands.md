@@ -168,7 +168,7 @@ UUID=xxx /boot           ext2    defaults        0       2
 UUID="xxx" /xxx/xxx ext4 defaults,x-gvfs-show 0 0
 ```
 
-# Viber install
+### Viber install
 
 ```sh
 cd ~/Downloads && wget <http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu6.2_amd64.deb> && sudo dpkg -i libssl1.0.0_1.0.2n-1ubuntu6.2_amd64.deb
@@ -199,7 +199,7 @@ sudo apt install gns3-server gns3-gui gns3-iou
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50
 ```
 
-## cherrytree
+### cherrytree
 
 ```sh
 deb <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
