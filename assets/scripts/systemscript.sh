@@ -1,17 +1,3 @@
----
-title: system script
-layout: article
-tags: Linux
-article_header:
-  type: cover
----
->
-### **script for system update and some installation**
->  
-
-[Original-script](/assets/scripts/systemscript.sh)
-
-```sh
 #!/bin/bash
 
 #####################################################################################
@@ -157,9 +143,9 @@ clear
 echo
 echo -e "\t\t\tChoose your lucky number\n"
 echo -e "\t=================================================="
-echo -e "\t          learning script                         "
+echo -e "\t          Test script to learn                    "
 echo -e "\t          Created by: Ivan Bogovic                "
-echo -e "\t          mail: bogovic@protonmail.com            "
+echo -e "\t          mail: bogovic@protonmail.com          "
 echo -e "\t          Menu will change over time...           "
 echo -e "\t==================================================\n\n\n"
 echo -e "\ti. initial install"
@@ -206,4 +192,3 @@ while [[ 1 ]]; do
         read -n 1 line
 done
 clear
-```
