@@ -484,3 +484,24 @@ root@Linux-world:~# grep -A 4 "games" /etc/passwd
 ```sh
 root@Linux-world:~# grep -C 4 "games" /etc/passwd
 ```
+
+## VIM
+
+- Invoke external binaries from within vim  
+
+```sh
+:!r ip route show | grep default | cut -f 3 -d " "
+```
+
+- Insert existing file  
+
+```sh
+:r /etc/passwd
+```
+
+- Search and substitute (replace)  
+
+```sh
+:%s/old/new/g
+:%s/old/new/gc --> to be prompted for a change
+```
