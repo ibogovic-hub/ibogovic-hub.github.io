@@ -505,3 +505,100 @@ root@Linux-world:~# grep -C 4 "games" /etc/passwd
 :%s/old/new/g
 :%s/old/new/gc --> to be prompted for a change
 ```
+
+- ***h*** --> to move left
+- ***j*** --> to move down
+- ***k*** --> to move up
+- ***l*** --> to move right
+
+- ***e***
+  - When pressing the e key, we move to the end of the word, or the end of the next word, depending on where the cursor is.
+- ***b***
+  - When pressing the b key, we move to the start of the word, or the start of the previous word, depending on where the cursor is.
+- ***$***
+  - A dollar sign will move you all the way to the end of the line.
+- ***0***
+  - A zero will move you back, to the start of the line.
+  - Number before a move command
+  - If you write a number before the move command, Vim will execute the command the number of times you’ve entered.
+  - If you type 10e, Vim will move 10 words ahead. If you type 3j, Vim will move down 3 lines.
+- ***gg***
+  - This command will move you to the start of the document.
+- ***Shift+g***
+  - This command will move you to the last line of the document.
+- ***number + shift+G***
+  - Do you know which line number you’re moving to? Say you need to do some work at line 56. just type out 56, and press shift+G. Easy!
+- ***u***
+  - I wanted to show you this command first. This is equivalent to ctrl+z on Linux and Windows, and cmd+z on mac. Why it’s important is pretty self explanatory.
+- ***i***
+  - To enter Insert Mode, and start writing, we press i.
+- ***ctrl+r***
+  - Redo. Goes hand in hand with undo, or u.
+- ***daw***
+  - Stands for ‘delete a word’, and will delete the entire word.
+- ***ciw / caw***
+  - Stands for ‘change word’. the command deletes the word, and put you directly in Insert Mode. The difference between these commands, is that ciw will leave a space, while caw will will jump to the first character of the next word.
+  - Try it yourself. Write out two words. Jump back to the first word, and try out both commands. Which one do you like best? If you ask me, ciw is the way to go. It might be one of the most useful commands in Vim.
+- ***cw***
+  - This command deletes a word from the cursor, which means everything before the cursor will be left alone.
+
+```
+CONSIDER THIS TEXT:
+const newNumber;
+CURSOR ON N:
+const newNumber;
+         ^
+USE cw:
+const new
+```
+
+- As we can see from the example, the text got deleted at the cursor, and Vim put us in Insert Mode. as you may see, this makes for very quick text edits.
+- ***dd***
+  - This command will delete an entire line of text.
+- ***d$***
+  - This command will delete from the cursor, and to the end of the line.
+- ***d0***
+  - This command will delete from the cursor, and to the beginning of the line.
+- ***x***
+  - x will delete the character underneath the cursor.
+- ***di} di) di] di” di’***
+  - And so on, and so forth. These commands are very, very useful if you’re editing code. Think of it like this: ‘delete inside bracket’, ‘delete inside quotes’.
+
+```
+CONSIDER THIS MOCK VARIABLE
+const variable = {...something, id: newId};
+MOVE CURSOR SOMEWHERE INSIDE THE BRACKETS 
+const variable = {...something, id: newIid};
+                    ^
+TYPE ci} 
+const variable = {};
+The example above works with all types of brackets, single and double quotes. It is an amazing way to delete inside, and makes for very efficient text editing.
+```
+
+- ***yy***
+  - y stands for yank. This command will duplicate a whole line.
+- ***p***
+  - paste (put). If you use it after yy, you paste the line you just duplicated. This command also works with deletion of words. So if you need to delete a word and paste it in another place, you delete it, move the cursor to where you want to paste it in, and press p.
+- ***yw / yiw***
+  - Works the same as deleting words, except these commands will copy them. You may use p to paste them again.
+- ***o***
+  - o will enter Insert Mode on a new line, underneath the cursor.
+- ***O***
+  - O will enter Insert Mode on a new line, above the cursor.
+- ***r***
+  - replaces the character underneath the cursor.
+- ***.***
+  - This command will repeat the last change you’ve made.
+- ***v***
+  - v will enter Visual Mode from where the cursor is, and let you highlight text relative to the cursors position when you entered Visual Mode.
+- ***Shift + v***
+  - This will highlight line by line. This is a command I’m using all the time.
+  - It makes it very easy to select chunks of text.
+- ***/word-to-find***
+  - Search for text
+- ***:s/old-word/new-word***
+  - This command will replace the old word, with the new word, on the line which the cursor is currently on.
+- ***:%s/old-word/new-word/g***
+  - Note the percent character. This command will replace every old word with the new word, throughout the entire document.
+
+[ref article](https://medium.com/swlh/beginning-vim-and-using-vim-in-other-text-editors-724e8da32daa)
