@@ -47,8 +47,8 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 
 ### PIDGIN
 
-<https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/>
-<https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server>
+[Ling_to_site](<https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/>
+<https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server>)
 
 ### Youtube-dl
 
@@ -100,7 +100,7 @@ sudo apt-get install obs-studio
 
 ### FortiClient
 
-<https://hadler.me/linux/forticlient-sslvpn-deb-packages/>
+[Forticlient](<https://hadler.me/linux/forticlient-sslvpn-deb-packages/>)
 
 ### change default sudo permission
 
