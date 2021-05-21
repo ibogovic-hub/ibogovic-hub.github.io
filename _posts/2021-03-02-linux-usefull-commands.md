@@ -8,7 +8,7 @@ article_header:
 
 ---
 
-### collection of .....
+## collection of .....
 
 so...here is a bunch of linux commands that I have collected over the years
 I'm not quite sure how usefull is this here but...who knows. ;)
@@ -53,7 +53,7 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 ### GUI on rhel server
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
-### Youtube-dl
+## Youtube-dl
 
 ```sh
 sudo wget <https://yt-dl.org/downloads/latest/youtube-dl> -O /usr/local/bin/youtube-dl
@@ -85,14 +85,13 @@ youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
 youtube-dl -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/c/GreenDay/playlists?view=71&sort=dd&shelf_id=3"
 ```
 
-### simplescreenrecorder & L2tp-network manager
+## simplescreenrecorder
 
 ```sh
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
-sudo add-apt-repository ppa:nm-l2tp/network-manager-l2tp
 ```
 
-### OBS Studio
+## OBS Studio
 
 ```sh
 sudo apt-get install ffmpeg
@@ -119,13 +118,13 @@ w_scan -c HR -X > channels.conf
 # vlc channels.conf
 ```
 
-### Making a bootable installation disk 
+## Making a bootable installation disk 
 
 ```sh
 dd if=/path/to/<image_name> of=/dev/fd0 rawrite.exe
 ```
 
-### ffmpeg conversion
+## ffmpeg conversion
 
 ```sh
 ffmpeg -i input.wav -vn -ar 48000 -ac 2 -ab 320k -f mp3 output.mp3
@@ -185,7 +184,7 @@ sudo chmod +x viber.deb && sudo dpkg -i viber.deb
 sudo apt install -y python3-pip python3-pyqt5 python3-pyqt5.qtsvg python3-pyqt5.qtwebsockets qemu qemu-kvm qemu-utils libvirt-clients libvirt-daemon-system virtinst wireshark xtightvncviewer apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
 
-### gns3
+## gns3
 
 ```sh
 sudo add-apt-repository ppa:gns3/ppa
@@ -222,7 +221,7 @@ sudo reboot
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50
 ```
 
-### cherrytree
+## cherrytree
 
 ```sh
 # oficial repo for ubuntu
@@ -257,13 +256,13 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
   -dPDFSETTINGS=/default selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
 ```
 
-### install dictionaries
+## install dictionaries
 
 ```sh
 sudo apt install aspell-hr firefox-esr-l10n-hr hunspell-hr hyphen-hr libreoffice-l10n-hr myspell-hr aspell-de firefox-esr-l10n-de hunspell-de-de hyphen-de libreoffice-l10n-de
 ```
 
-### Mounting vmware folders
+## Mounting vmware folders
 
 ```sh
 sudo apt-get install open-vm-tools open-vm-tools-desktop
@@ -272,9 +271,13 @@ vmware-hgfsclient
 mkdir /mnt/hgfs/shared
 sudo vmhgfs-fuse .host:/shared /mnt/hgfs/shared -o allow_other -o uid=1000
 sudo nano /etc/fstab
-```
+.host:/shared  /mnt/hgfs/shared  fuse.vmhgfs-fuse  defaults,allow_other,uid=1000   0  0
 
-### Use shared folders between VMWare guest and host
+```
+[Link to the site](https://medium.com/@alexandrerosseto/vmware-linux-how-to-share-folder-between-host-and-vm-62e63419ecbb)
+
+
+## Use shared folders between VMWare guest and host
 
 ```sh
 .host:/shared  /mnt/hgfs/shared  fuse.vmhgfs-fuse  defaults,allow_other,uid=1000   0  0
