@@ -82,11 +82,10 @@ youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
 youtube-dl -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/c/GreenDay/playlists?view=71&sort=dd&shelf_id=3"
 ```
 
-### simplescreenrecorder & GNS3 repo
+### simplescreenrecorder & L2tp-network manager
 
 ```sh
 sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
-sudo add-apt-repository ppa:gns3/ppa
 sudo add-apt-repository ppa:nm-l2tp/network-manager-l2tp
 ```
 
@@ -186,12 +185,32 @@ sudo apt install -y python3-pip python3-pyqt5 python3-pyqt5.qtsvg python3-pyqt5.
 ### gns3
 
 ```sh
-deb <http://ppa.launchpad.net/gns3/ppa/ubuntu> bionic main
-deb-src <http://ppa.launchpad.net/gns3/ppa/ubuntu> bionic main
-deb <http://security.debian.org/debian-security> jessie/updates main contrib
+sudo add-apt-repository ppa:gns3/ppa
 sudo dpkg --add-architecture i386
-sudo apt update && sudo apt upgrade
-sudo apt install gns3-server gns3-gui gns3-iou
+sudo apt update
+sudo apt install gns3-gui gns3-server gns3-iou
+
+# if you want to add docker support
+# - Remove any old versions:
+sudo apt remove docker docker-engine docker.io
+# - install GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# - add repo:
+sudo add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) stable"
+## update and install docker
+sudo apt update
+sudo apt install docker-ce
+
+# add yourself to required groups and reboot:
+sudo usermod -aG ubridge <username> && \
+sudo usermod -aG libvirt <username> && \
+sudo usermod -aG kvm <username> && \
+sudo usermod -aG wireshark <username> && \
+sudo usermod -aG docker <username> && \
+sudo reboot
+
 ```
 
 ### add missing key
@@ -203,6 +222,10 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50
 ### cherrytree
 
 ```sh
+# oficial repo for ubuntu
+sudo add-apt-repository ppa:giuspen/ppa
+
+# for debian
 deb <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
 deb-src <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
 <https://packages.debian.org/stretch/amd64/python-gtksourceview2/download>
