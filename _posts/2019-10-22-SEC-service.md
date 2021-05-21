@@ -1,7 +1,7 @@
 ---
 title: sec service
 layout: article
-tags: linux
+tags: Linux
 article_header:
   type: cover
 ---

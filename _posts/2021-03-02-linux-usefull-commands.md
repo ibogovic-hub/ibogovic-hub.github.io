@@ -47,8 +47,8 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 
 ### PIDGIN
 
-[Ling_to_site](<https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/>
-<https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server>)
+[Ling_to_site for SIPE addin](https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/)  
+[Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
 ### Youtube-dl
 
