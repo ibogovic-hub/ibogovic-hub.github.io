@@ -8,9 +8,8 @@ article_header:
 
 ---
 
-## so...here is a bunch of linux commands that I have collected over the years
-
-## I'm not quite sure how usefull is this here but...who knows. ;)
+### so...here is a bunch of linux commands that I have collected over the years
+I'm not quite sure how usefull is this here but...who knows. ;)
 
 ---
 
@@ -47,7 +46,9 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 
 ### PIDGIN
 
-[Ling_to_site for SIPE addin](https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/)  
+[Ling_to_site for SIPE addin](https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/)
+
+### GUI on rhel server
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
 ### Youtube-dl
