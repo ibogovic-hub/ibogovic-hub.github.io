@@ -8,7 +8,9 @@ article_header:
 
 ---
 
-### so...here is a bunch of linux commands that I have collected over the years
+### collection of .....
+
+so...here is a bunch of linux commands that I have collected over the years
 I'm not quite sure how usefull is this here but...who knows. ;)
 
 ---
