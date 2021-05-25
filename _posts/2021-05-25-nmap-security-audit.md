@@ -116,9 +116,17 @@ You can use switch ***`--reason`*** to get more info about the port result
   
 ```
 These three scan types are exactly the same in behavior except for the TCP flags set in probe packets.  
-If a RST packet is received, the port is considered closed, while no response means it is open|filtered. The port is marked filtered if an ICMP unreachable error (type 3, code 0, 1, 2, 3, 9, 10, or 13) is received.
+If a RST packet is received, the port is considered closed, while no response means it is open|filtered.  
+The port is marked filtered if an ICMP unreachable error (type 3, code 0, 1, 2, 3, 9, 10, or 13) is received.
 
-The key advantage to these scan types is that they can sneak through certain non-stateful firewalls and packet filtering routers. Another advantage is that these scan types are a little more stealthy than even a SYN scan. Don't count on this though—most modern IDS products can be configured to detect them. The big downside is that not all systems follow RFC 793 to the letter. A number of systems send RST responses to the probes regardless of whether the port is open or not. This causes all of the ports to be labeled closed. Major operating systems that do this are Microsoft Windows, many Cisco devices, BSDI, and IBM OS/400. This scan does work against most Unix-based systems though. Another downside of these scans is that they can't distinguish open ports from certain filtered ones, leaving you with the response open|filtered.
+The key advantage to these scan types is that they can sneak through certain non-stateful firewalls and packet filtering routers.  
+Another advantage is that these scan types are a little more stealthy than even a SYN scan.  
+Don't count on this though—most modern IDS products can be configured to detect them.  
+The big downside is that not all systems follow RFC 793 to the letter.  A number of systems send RST responses to the probes regardless of whether the port is open or not.  
+This causes all of the ports to be labeled closed.  
+Major operating systems that do this are Microsoft Windows, many Cisco devices, BSDI, and IBM OS/400.  
+This scan does work against most Unix-based systems though.  
+Another downside of these scans is that they can't distinguish open ports from certain filtered ones, leaving you with the response open|filtered.
 ```  
 [source](https://nmap.org/book/man-port-scanning-techniques.html)
 
@@ -138,4 +146,16 @@ sudo nmap -sU -p <port> <host/network/domain>
 --> here is the example of mentioned scan:  
 ![UDP scan](/assets/images/nmap/udp-scan.png)  
 
-SCTP init scan
+### SCTP init scan
+***syntax:***
+```
+sudo nmap -sY <host/network/domain>
+```
+  - SCTP (Stream Control Transmission Protocol) designed to transport Public Telephone Network (PSTN) signaling messages over IP netowrks
+  - as per [rfc4960](https://datatracker.ietf.org/doc/html/rfc4960) this has wider applications
+  - this is relatively newer alternative to TCP and UDP protocols with newer features and characteristics of TCP & UDP
+  - like SYN scan it is stealth as it never completes the full handshake  
+
+--> here is the example of mentioned scan:  
+![SCTP scan](/assets/images/nmap/sctp-scan.png)  
+
