@@ -1,6 +1,6 @@
 ---
 title: nmap security audit
-layout: article
+layout: articles
 tags: nmap
 article_header:
   type: cover
