@@ -133,8 +133,9 @@ sudo nmap -sU -p <port> <host/network/domain>
     - SNMP (ports 161 / 162)
     - DHCP (ports 67 / 68)
   - UDP scan can be done along with TCP scan
-  - note that UDP scanning is time cunsuming and has to be used by specifying ports
+  - note that UDP scanning is time cunsuming and has to be used by specifying ports  
 
+--> here is the example of mentioned scan:  
+![UDP scan](/assets/images/nmap/udp-scan.png)  
 
-- SCTP init scan
-- 
+SCTP init scan
