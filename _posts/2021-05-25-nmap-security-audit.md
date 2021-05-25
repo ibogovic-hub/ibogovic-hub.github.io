@@ -61,14 +61,14 @@ data and the last packet contains the FIN flag.
 
 ## **nmap scan types**
 
-- TCP SYN scan (`-sS`)
+### - TCP SYN scan (`-sS`)
   - it is default scan type
   - it never completes the TCP handshake and so it is relatively faster and unobtrusive (***Half-Opnen scan***)  
 
 --> here is the example of TCP SYN scan:  
 ![TCP SYN scan](/assets/images/nmap/tcp-syn-scan.png)  
 
-- TCP CONNECT scan (`-sT`)
+### - TCP CONNECT scan (`-sT`)
   - default type when TCP SYN scan is unavailable
   - nmap is asking the operating system to initiate the connection to the remote machine
   - this scan option is performing the full TCP 3 way handshake with the remote system and it takes more time compared to SYN scan
