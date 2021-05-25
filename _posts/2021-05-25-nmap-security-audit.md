@@ -159,3 +159,14 @@ sudo nmap -sY <host/network/domain>
 --> here is the example of mentioned scan:  
 ![SCTP scan](/assets/images/nmap/sctp-scan.png)  
 
+### other interesting nmap scans
+
+| scan type | option | description |
+| - | - | - |
+| TCP ACK scan | -sA | useful for mapping firewall rulesets & tests for firewall statefulness and check for ports filtering status |
+| TCP Maimon scan | -sM | similar to NULL, FIN and XMAS scan except the probe is FIN/ACK. In such situations the response from remote systems should be RST for open or closed port. But some BSD based systems simply drop the packets if port is open |
+| IP protocol scan | -sO | allows us to determine which IP protocols (TCP, UDP, ICMP, IGMP etc...) are supported by remote system |
+
+--> ACK scan (difference with SYN scan):  
+![ACK scan](/assets/images/nmap/ack-scan.png)  
+
