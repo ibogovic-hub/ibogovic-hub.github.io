@@ -51,7 +51,7 @@ data and the last packet contains the FIN flag.
 ### **port status description**  
 
 | status | description |
-| - | - |
+| ----------- | ----------- |
 | **open** | appllication is actively responding to the connections |
 | **closed** | the port that responds to nmap probes but has no active service running |
 | **filtered** | nmap can't determine whether the porti is open because packet filters / firewall is preventing the probes from reaching to target port |
