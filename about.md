@@ -66,7 +66,7 @@ IT professional with over eleven years of experience in managing various devices
 | English | Excelent |
 | Deutsch | B2 |
 | Croatian | Mother Language |
----
+
 #### Operating Systems
 - Windows (7, 8, 10)
 - Windows Server (2008 - 2019)
