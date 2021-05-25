@@ -7,7 +7,7 @@ article_header:
 ---
 
 ---
-## tcp flags
+## **tcp flags**
 
 --> **Synchronization flag (SYN flag)**
 ```
@@ -38,3 +38,14 @@ when this flag bit is set to 1 by sender the ongoing connection breaks up
 ```
 when this flag is set to 1 it actually means that sender has finished sending all data and the last packet contains the FIN flag.
 ```
+
+## **understanding nmap results**
+
+| status | description
+|-|-|
+| open | port is open and listening |
+| closed | no service is running on this port |
+| filtered | firewall is running on this machine |
+
+![Port status](/assets/images/nmap/initial-scan.png)
+
