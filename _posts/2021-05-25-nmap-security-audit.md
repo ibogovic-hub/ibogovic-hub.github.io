@@ -59,3 +59,16 @@ data and the last packet contains the FIN flag.
 | **open / filtered** | whan an open port does not give any response, nmap is unable to determine the port state. may be a firewall might blocking the probes |
 | **closed / filtered** | in case nmap is unable to determine if port is closed or filtered |
 
+## **nmap scan types**
+
+- TCP SYN scan (`-sS`)
+  - it is default scan type
+  - it never completes the TCP handshake and so it is relatively faster and unobtrusive (***Half-Opnen scan***)  
+
+--> here is the example of TCP SYN scan:  
+![TCP SYN scan](/assets/images/nmap/tcp-syn-scan.png)  
+
+- TCP CONNECT scan
+- FIN, NULL, XMAS scans
+- UDP scan
+- SCTP init scan
