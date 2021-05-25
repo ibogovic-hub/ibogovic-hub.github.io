@@ -1,6 +1,6 @@
 ---
 title: python switch config
-layout: articles
+layout: article
 tags: Python
 article_header:
   type: cover

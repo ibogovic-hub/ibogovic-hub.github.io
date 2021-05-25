@@ -1,6 +1,6 @@
 ---
 title: vimrc file
-layout: articles
+layout: article
 tags: Linux
 article_header:
   type: cover

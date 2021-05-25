@@ -1,6 +1,6 @@
 ---
 title: .bashrc file
-layout: articles
+layout: article
 tags: Linux
 article_header:
   type: cover

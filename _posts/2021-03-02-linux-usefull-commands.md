@@ -1,6 +1,6 @@
 ---
 title: usefull linux commands
-layout: articles
+layout: article
 tags: Linux
 article_header:
  type: cover
