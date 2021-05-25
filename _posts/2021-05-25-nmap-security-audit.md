@@ -43,11 +43,18 @@ data and the last packet contains the FIN flag.
 
 ## **understanding nmap results**
 
+- in this example ports 80 and 81 are being scanned:
+
+
+![Port status](/assets/images/nmap/initial-scan.png)  
+
+### **port status description**
 | status | description
 |-|-|
-| open | port is open and listening |
-| closed | no service is running on this port |
-| filtered | firewall is running on this machine |
-
-![Port status](/assets/images/nmap/initial-scan.png)
+| **open** | appllication is actively responding to the connections
+| **closed** | the port that responds to nmap probes but has no active service running
+| **filtered** | nmap can't determine whether the porti is open because packet filters / firewall is preventing the probes from reaching to target port.
+| **unfiltered** | the port is accessible, but nmap is unable to determine if port is opened or closed
+| **open / filtered** | whan an open port does not give any response, nmap is unable to determine the port state. may be a firewall might blocking the probes
+| **closed / filtered** | in case nmap is unable to determine if port is closed or filtered  
 
