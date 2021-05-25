@@ -74,7 +74,7 @@ data and the last packet contains the FIN flag.
   - this scan option is performing the full TCP 3 way handshake with the remote system and it takes more time compared to SYN scan
   - connection requests are logged on the remote end  
 
---> here is the example of TCP SYN scan:  
+--> here is the example of TCP CONNECT scan:  
 ![TCP CONNECT scan](/assets/images/nmap/tcp-conn-scan.png)  
 
 - FIN, NULL, XMAS scans (`-sF` - FIN scan, `-sN` - NULL scan, `-sX` - XMAS scan)
