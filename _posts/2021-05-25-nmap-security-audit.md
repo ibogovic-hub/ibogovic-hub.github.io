@@ -21,7 +21,8 @@ a packet with ACK flag set to 1 serves as a confirmation of getting the packets 
 
 --> **Push flag (PSH flag)**
 ```
-when PSH is set to 1, the sending application will inform that the data is to be sent immediately and on the receiving end the TCP header will inform that data is to be pushed to the application immediately
+when PSH is set to 1, the sending application will inform that the data is to be sent immediately and on  
+the receiving end the TCP header will inform that data is to be pushed to the application immediately
 ```
 
 --> **Urgent flag (URG flag)**
@@ -36,7 +37,8 @@ when this flag bit is set to 1 by sender the ongoing connection breaks up
 
 --> **Finished flag (FIN flag)**
 ```
-when this flag is set to 1 it actually means that sender has finished sending all data and the last packet contains the FIN flag.
+when this flag is set to 1 it actually means that sender has finished sending all  
+data and the last packet contains the FIN flag.
 ```
 
 ## **understanding nmap results**
