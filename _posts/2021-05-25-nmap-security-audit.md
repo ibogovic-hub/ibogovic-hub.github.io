@@ -68,7 +68,16 @@ data and the last packet contains the FIN flag.
 --> here is the example of TCP SYN scan:  
 ![TCP SYN scan](/assets/images/nmap/tcp-syn-scan.png)  
 
-- TCP CONNECT scan
-- FIN, NULL, XMAS scans
+- TCP CONNECT scan (`-sT`)
+  - default type when TCP SYN scan is unavailable
+  - nmap is asking the operating system to initiate the connection to the remote machine
+  - this scan option is performing the full TCP 3 way handshake with the remote system and it takes more time compared to SYN scan
+  - connection requests are logged on the remote end  
+
+--> here is the example of TCP SYN scan:  
+![TCP CONNECT scan](/assets/images/nmap/tcp-conn-scan.png)  
+
+- FIN, NULL, XMAS scans (`-sF` - FIN scan, `-sN` - NULL scan, `-sX` - XMAS scan)
+  - 
 - UDP scan
 - SCTP init scan
