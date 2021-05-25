@@ -28,142 +28,158 @@ key: page-about
 
 Ivan Bogović
 
-##### E-mail  
+##### **E-mail**  
 
 bogovic@protonmail.com
 
-##### Skype  
+##### **Skype**  
 
 live:bogovic.ivan  
 bogovic.ivan@hotmail.com  
 
-#### Brief description
-
-Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.
+#### **Brief description**
+```
+Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.  
 Professionally, I have been dealing with problems and tasks of network and information security since 2009.  
-First practically with the planning and realization of network-oriented security solutions, later conceptually in the development of IT security solutions and the implementation of IT security audits according to ISO Rules, IS027000, PCI or customer-specific specifications.
+First practically with the planning and realization of network-oriented security solutions, later conceptually in the development of IT security solutions and the implementation of IT security audits according to ISO Rules, IS027000, PCI or customer-specific specifications.  
 IT professional with over eleven years of experience in managing various devices for top companies in Croatia and now in Germany, excellent interpersonal skills and great attention to detail.
+```
+---
+#### **Academic Profile**
+- Cisco CCNA - Honored with Outstanding Achievement Award by CISCO 
+- School for Tourism and Hospitality  
 
-#### Academic Profile  
+#### **Core competencies**
+- Governance, Risk Management, and Compliance
+- Firewall and network architecture management
+- Information security, incl. auditing and training
+- Setting up and managing tasks in difficult and stressful situations
+- Organizational development and project management
 
-    • Cisco CCNA - Honored with Outstanding Achievement Award by CISCO 
-    • School for Tourism and Hospitality  
+#### **Training**
+- 2009 - The training is in conjunction with my first job in Croatia. In the first year at the company, I specialized in network and security. 
 
-#### Core competencies
+#### **Language**
 
-    • Governance, Risk Management, and Compliance
-    • Firewall and network architecture management
-    • Information security, incl. auditing and training
-    • Setting up and managing tasks in difficult and stressful situations
-    • Organizational development and project management
+| Language | Proficiency |
+| - | - |
+| English | Excelent |
+| Deutsch | B2 |
+| Croatian | Mother Language |
+---
+#### Operating Systems
+- Windows (7, 8, 10)
+- Windows Server (2008 - 2019)
+- Networking OS (Cisco IOS, PAN OS, FTOS, HP Airwave and ClearPass, CheckPoint), 
+- Linux (RH, Debian, Ubuntu, Kali, CentOS, Parrot etc).  
   
-#### Language  
+#### Total IT Experience
 
-    • English - Excelent
-    • Deutsch - B1
-    • Croatian - Mother Language
+11+ Years  
   
-#### Operating Systems  
+#### Expertise
 
-    • Windows (7, 8, 10)
-    • Windows Server (2008 - 2019)
-    • Networking OS (Cisco IOS, PAN OS, FTOS, HP Airwave and ClearPass, CheckPoint), 
-    • Linux (RH, Debian, Ubuntu, Kali, CentOS, Parrot etc).  
-  
-#### Total IT Experience  
+##### Hardware
+- HP Server 
+- Red Hat Server
+- Networking:
+  - Cisco (Routers, Switches, AP’s)
+  - Hp (Routers, Switches, AP’s)
+  - Huawei
+  - Aruba (Wi-Fi, Airwave, ClearPass)
+  - Ruckus (Wi-Fi, Management)
+  - Mikrotik
+  - PaloAlto (Firewalls, Panorama)
+  - Fortigate (Fortigate, FortiAnalyzer, FortiManager, FortiWifi, FortiClient, FortiDDoS
+    - More than 7 years of experience with Fortinet
+  - CheckPoint
+  - Juniper
+- Thin clients / Tablets
+- Mobile Devices 
 
-    • 11+ Years  
-  
-#### Expertise  
+##### **Operating systems**
 
-##### Hardware  
+- Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
+- Windows Server (2008 - 2019)
+- Windows (7 - 10)
+- MacOS  
 
-    • HP Server
-    • Red Hat Server
-    • Networking:
-        o Cisco (Routers, Switches, AP’s)
-        o Hp (Routers, Switches, AP’s)
-        o Huawei
-        o Aruba (Wi-Fi, Airwave, ClearPass)
-        o Ruckus (Wi-Fi, Management)
-        o Mikrotik
-        o PaloAlto (Firewalls, Panorama)
-        o Fortigate (Fortigate, FortiAnalyzer, FortiManager, FortiWifi, FortiClient, FortiDDoS)
-        o CheckPoint
-        o Juniper
-    • Thin clients / Tablets
-    • Mobile devices  
+##### **Programming languages**  
 
-##### Operating systems  
+- csh und sh Script language
+- Basic knowledge in Python
 
-    • Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
-    • Windows Server (2008 - 2019)
-    • Windows (7 - 10)
-    • MacOS  
+##### **Databases**
 
-##### Programming languages  
+- Basic knowledge SQL
 
-    • csh und sh Script language
-    • Basic knowledge in Python  
+##### **Containers**
 
-##### Databases  
+- Basic to middle level knowledge in Docker
 
-    • Basic knowledge SQL  
+##### **Virtualization**
 
-##### Containers  
+- VMware vSphere
+- Hyper-V
+- KVM
+- VirtualBox
 
-    • Basic to middle level knowledge in Docker  
+##### **Backup-Software**
 
-##### Virtualization  
+- Symantec Backup Exec
+- Symantec NetBackup (Basics)
+- Microsoft DPM
+- Acronis  
 
-    • VMware vSphere
-    • Hyper-V
-    • KVM
-    • Oracle  
+##### **Network**
 
-##### Backup-Software  
+- Routing
+- Switching
+- Troubleshooting
+- Security
 
-    • Symantec Backup Exec
-    • Symantec NetBackup (Basics)
-    • Microsoft DPM
-    • Acronis  
+##### **Industry knowledge**
 
-##### Network  
+- Enterprise, mid and small business
+- Online
+- Hybrid – Cloud / On-premises
 
-    • Routing
-    • Switching
-    • Troubleshooting
-    • Security  
+#### **Industries**
+- Automotive
+- Banks
+- Service
+- Trade
+- Telecommunications
+- Industry
+- Associations & societies
+- Insurance
 
-##### Industry knowledge  
+#### **Technical Certifications**
 
-    • Enterprise, mid and small business
-    • Online
-    • Hybrid – Cloud / On-premises  
-  
-#### Technical Certifications  
+| Year | Name |
+| - | - |
+| 2021 | NSE4 Network Security Professional
+| 2020 | Cisco Certified Specialist - Enterprise Core (CCS-Ecore)
+| 2020 | CompTia A+ CE
+| 2019 | Cyber Security Certified - Network
+| 2018 | CCNP Switching.
+| 2017 | PCNSE Palo Alto Certified Network Security Engineer
+| 2017 | NSA4 Fortigate Network Administrator
+| 2016 | RHCSA Red Hat Certified System Administrator
+| 2016 | MCSE Cloud Platform and Infrastructure
+| 2015 | CCNA Security
+| 2015 | MCSE Enterprise
+| 2014 | CompTia Server+
+| 2014 | CompTia A+
+| 2014 | MCSE Server Infrastructure
+| 2013 | MCSA Windows Server
+| 2013 | MCP Microsoft Certified Professional
+| 2012 | CCNA Voice
+| 2012 | MCSA Windows Server
+| 2011 | MCITP Enterprise
+| 2010 | MCTS Windows Server
+| 2009 | CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO)
 
-    • 2020 Cisco Certified Specialist - Enterprise Core (CCS-ECore)
-    • 2020 CompTia A+ CE
-    • 2019 Cyber Security Certified - Network
-    • 2018 CCNP Switching.
-    • 2017 PCNSE Palo Alto Certified Network Security Engineer
-    • 2017 NSA4 Fortigate Network Administrator
-    • 2016 RHCSA Red Hat Certified System Administrator
-    • 2016 MCSE Cloud Platform and Infrastructure
-    • 2015 CCNA Security
-    • 2015 MCSE Enterprise
-    • 2014 CompTia Server+
-    • 2014 CompTia A+
-    • 2014 MCSE Server Infrastructure
-    • 2013 MCSA Windows Server
-    • 2013 MCP Microsoft Certified Professional
-    • 2012 CCNA Voice
-    • 2012 MCSA Windows Server
-    • 2011 MCITP Enterprise
-    • 2010 MCTS Windows Server
-    • 2009 CCNA Cisco Certified Network Administrator
-  
 ## Experience  
   
 ### ***Organization:***  
@@ -177,12 +193,19 @@ Grünwalder Weg 28b, 82041 Oberhaching
   
 #### **Responsibilities:**  
 
-    • Creating internal LAB for Network & Security testing
-    • Maintaining network/security infrastructure (CheckPoint, Fortigates, Juniper etc..)
-    • SD-WAN architecture and intregration project for one of the biggest IS4IT customers  
-    • VPN migration from Juniper to Fortigate devices
-    • FortiAnalyzer and FortiManager support and maintenance
-    • Migration project from Juniper and CheckPoint to Fortigate
+- Creating internal LAB for Network & Security testing
+- Maintaining network/security infrastructure (CheckPoint, Fortigates, Juniper etc..)
+- SD-WAN architecture and intregration project for one of the biggest IS4IT customers  
+- VPN migration from Juniper to Fortigate devices
+- FortiAnalyzer and FortiManager support and maintenance
+- Migration project from Juniper and CheckPoint to Fortigate
+- Market research
+- Security plan
+- Network architecture
+- Documentation
+- Revision
+- Firewall maintenance and revision
+- Working on SD-WAN implementation project in Phoenix Pharma
 
 ### ***Organization:***  
 
@@ -195,9 +218,9 @@ Marienbergstr. 92, 90411 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Project – Network & Security at Siemens.
-    • VPN revision, plan / design new technology implementation, create project documentation.
-    • Working on complete Siemens Healthineers Network.  
+- Project – Network & Security at Siemens.
+- VPN revision, plan / design new technology implementation, create project - documentation.
+- Working on complete Siemens Healthineers Network.  
   
 ### ***Organization:***  
 
@@ -210,9 +233,8 @@ Nordostpark 85, 90411 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Current projects involve planning and implementation of complete network infrastructure  
-     in jogmo World HQ and all NHL Arenas (32 sites).
-    • Automation of processes using BASH, Python and except scripts.
+- Current projects involve planning and implementation of complete network infrastructure in jogmo World HQ and all NHL Arenas (32 sites).
+- Automation of processes using BASH, Python and except scripts.
   
 ### Organization  
 
@@ -225,11 +247,11 @@ DE - 90489 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Network revision and new design planning.
-    • Looking for security configuration problems and flaws.
-    • Migration of Microsoft TMG server, Sophos firewall, OpenBSD and Proxy from existing environment to new Fortinet equipment.
-    • Maintain current network and security devices (HP SW, HP Aruba WiFI, Airwave, ClearPass, TMG, Sophos, Fortigate, Fortimanager, Fortianalyzer…etc.).
-    • Performing security and penetration testing.
+- Network revision and new design planning.
+- Looking for security configuration problems and flaws.
+- Migration of Microsoft TMG server, Sophos firewall, OpenBSD and Proxy from existing environment to new Fortinet equipment.
+- Maintain current network and security devices (HP SW, HP Aruba WiFI, Airwave, ClearPass, TMG, Sophos, Fortigate, Fortimanager, Fortianalyzer…etc.).
+- Performing security and penetration testing.
   
 ### Organization  
 
@@ -241,14 +263,14 @@ DE - 90489 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Responsible for organizations complete Network and Security projects.
-    • Implementation, upgrades, consultation and post-sales, 
-    • Interacting with Vendors and customers, assisting sales team in technical evaluation of solutions, providing technical support and consultation to local and International Client/customers. 
-    • Supervising/Advising customer’s and company on a new technologies, opportunities and best practices and providing guidance and taking full ownership on the same to validate and implement.
-    • Providing team members with full guidance and support at any time, level and maintaining a friendly and professional approach within team and organization.
-    • Planning and executing the selection, installation, configuration, and testing of equipment defining network policies and procedures, establishing connections and firewalls.
-    • Maintaining network performance by performing network monitoring and analysis, performance tuning, troubleshooting network problems and escalating to vendor.
-    • Securing network by developing network access, monitoring, control and evaluation, maintaining documentation.
+- Responsible for organizations complete Network and Security projects.
+- Implementation, upgrades, consultation and post-sales, 
+- Interacting with Vendors and customers, assisting sales team in technical evaluation of solutions, providing technical support and consultation to local and International Client/customers. 
+- Supervising/Advising customer’s and company on a new technologies, opportunities and best practices and providing guidance and taking full ownership on the same to validate and implement.
+- Providing team members with full guidance and support at any time, level and maintaining a friendly and professional approach within team and organization.
+- Planning and executing the selection, installation, configuration, and testing of equipment defining network policies and procedures, establishing connections and firewalls.
+- Maintaining network performance by performing network monitoring and analysis, performance tuning, troubleshooting network problems and escalating to vendor.
+- Securing network by developing network access, monitoring, control and evaluation, maintaining documentation.
   
 ### Organization  
 
@@ -260,10 +282,10 @@ DE - 90489 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Computer / Server maintenance
-    • Exchange maintenance
-    • Data protection / Backup
-    • Onsite support
+- Computer / Server maintenance
+- Exchange maintenance
+- Data protection / Backup
+- Onsite support
   
 ### Organization  
 
@@ -275,8 +297,7 @@ DE - 90489 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Maintainer of the information system and, in general,  
-    solving problems related to software and hardware components.
+Maintainer of the information system and, in general, solving problems related to software and hardware components.
   
 ### Organization  
 
@@ -288,6 +309,6 @@ DE - 90489 Nürnberg
   
 #### **Responsibilities:**  
 
-    • Monitoring, registration, and resolving problems on the remote IT systems.  
-    • Installation of personal computers, answering phone calls and emails from clients, and assist in resolving problems.
-    • Perform various duties given the daily schedule.  
+- Monitoring, registration, and resolving problems on the remote IT systems.  
+- Installation of personal computers, answering phone calls and emails from clients, and assist in resolving problems.
+- Perform various duties given the daily schedule.  
