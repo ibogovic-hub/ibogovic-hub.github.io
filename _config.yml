@@ -173,12 +173,33 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  - /docs
-  - /node_modules
-  - /screenshots
-  - /vendor
+  - /_data
+  - /_includes
+  - /_posts
+  - /index.html
+
+# defaults:
+#   - scope:
+#       path: "_posts"
+#       type: posts
+#     values:
+#       layout: article
+#       sharing: true
+#       license: true
+#       aside:
+#         toc: true
+#       show_edit_on_github: true
+#       show_subscribe: false
+#       pageview: true
 
 defaults:
+  ## home
+  - scope:
+      path: "/"
+    values:
+      articles:
+        excerpt_type: html
+  ## posts
   - scope:
       path: "_posts"
       type: posts
@@ -186,11 +207,13 @@ defaults:
       layout: article
       sharing: true
       license: true
+      category: post
       aside:
         toc: true
       show_edit_on_github: true
-      show_subscribe: false
+      show_subscribe: true
       pageview: true
+      # lightbox: true
 
 
 ## => Plugins
@@ -200,3 +223,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+data_dir: /docs/_data
