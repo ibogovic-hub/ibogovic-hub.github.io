@@ -1,6 +1,10 @@
 ---
 title: nmap security audit
 tags: nmap
+aside:
+  toc: true
+sidebar:
+  nav: layouts
 ---
 
 ## **tcp flags**
