@@ -7,7 +7,7 @@ article_header:
 aside:
   toc: true
 sidebar:
-  nav: layouts
+  nav: archive
 ---
 
 ## **tcp flags**
