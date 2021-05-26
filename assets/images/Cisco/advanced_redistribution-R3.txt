@@ -1,0 +1,190 @@
+R3
+Current configuration : 2527 bytes
+!
+upgrade fpd auto
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!         
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+redundancy
+!
+!
+ip tcp synwait-time 5
+! 
+!
+!
+!         
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ no ip address
+ shutdown
+ duplex auto
+!
+interface GigabitEthernet0/0
+ no ip address
+ shutdown
+ duplex full
+ speed 1000
+ media-type gbic
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface Serial2/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/2
+ ip address 10.1.23.3 255.255.255.0
+ serial restart-delay 0
+!
+interface Serial2/3
+ ip address 10.1.13.3 255.255.255.0
+ serial restart-delay 0
+!
+interface Serial2/4
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/5
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/6
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/7
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+!
+router eigrp 100
+ network 10.1.23.0 0.0.0.255
+ redistribute ospf 1 route-map OSPF-TO-EIGRP
+!
+router ospf 1
+ no auto-cost
+ redistribute eigrp 100 subnets route-map EIGRP-TO-OSPF
+ network 10.1.13.0 0.0.0.255 area 0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+!
+access-list 1 permit 10.4.0.0 0.0.0.255
+access-list 1 permit 10.4.1.0 0.0.0.255
+access-list 2 permit 10.4.2.0 0.0.0.255
+access-list 2 permit 10.4.3.0 0.0.0.255
+access-list 3 permit 10.4.4.0 0.0.0.255
+no cdp log mismatch duplex
+!
+route-map EIGRP-TO-OSPF deny 5
+ match tag 40
+!
+route-map EIGRP-TO-OSPF permit 10
+ match ip address 1
+ set metric 100
+ set tag 10
+!
+route-map EIGRP-TO-OSPF permit 20
+ match ip address 2
+ set metric 200
+ set tag 20
+!
+route-map EIGRP-TO-OSPF deny 30
+ match ip address 3
+!
+route-map EIGRP-TO-OSPF permit 40
+ set metric 300
+ set tag 30
+!
+route-map OSPF-TO-EIGRP deny 5
+ match tag 10 20 30
+!
+route-map OSPF-TO-EIGRP permit 10
+ set metric 400 20 255 1 1500
+ set tag 40
+!
+!
+!
+control-plane
+!
+!
+!
+mgcp profile default
+!
+!
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login    
+ transport input all
+!
+!
+end
+
