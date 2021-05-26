@@ -1,5 +1,4 @@
 #!/bin/bash
-
-git add --all
-git commit -a -m "new commit"
+git add .
+git commit -m "latest commit"
 git push --all

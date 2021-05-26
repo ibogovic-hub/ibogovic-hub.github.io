@@ -1,13 +1,12 @@
 ## => Site Settings
 ##############################
-text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://ibogovic-hub.github.io
 baseurl : # does not include hostname
 title   : bogovic small corner
 logo: assets/images/logo/3a99in5a.png
 favicon: assets/images/logo/facicon.ico
-cover: assets/images/wall/wall.jpeg
+profilepic: '/images/ivan-bogovic.jpg'
+bkimage: '/images/bk1.jpg'
 description: > # this means to ignore newlines until "Language & timezone"
   working on this...
 
@@ -38,15 +37,6 @@ author:
 ##############################
 repository: ibogovic-hub/ibogovic-hub.github.io
 repository_tree: master
-
-
-## => Paths
-##############################
-paths:
-  root    : # title link url, "/" (default)
-  home    : "/" # home layout url, "/" (default)
-  archive : # "/archive.html" (default)
-  rss     : # "/feed.xml" (default)
 
 
 ## => Post
@@ -213,7 +203,17 @@ defaults:
       pageview: true
       # lightbox: true
 
+sass:
+    sass_dir: _sass
+    style: compressed
 
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+  
+  
 ## => Plugins
 ##############################
 plugins:
@@ -221,5 +221,3 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-
-data_dir: /_data
