@@ -186,6 +186,7 @@ IT professional with over eleven years of experience in managing various devices
 | 2011 | MCITP Enterprise
 | 2010 | MCTS Windows Server
 | 2009 | CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO)
+
 ---
 ## Experience  
   
