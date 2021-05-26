@@ -1,13 +1,6 @@
 ---
 title: nmap security audit
-layout: article
 tags: nmap
-article_header:
-  type: cover
-aside:
-  toc: true
-sidebar:
-  nav: archive
 ---
 
 ## **tcp flags**
