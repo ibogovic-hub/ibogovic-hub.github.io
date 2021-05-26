@@ -174,9 +174,7 @@ exclude:
   - package-lock.json
   - package.json
   - /_data
-  - /_includes
-  - /_posts
-  - /index.html
+
 
 # defaults:
 #   - scope:
