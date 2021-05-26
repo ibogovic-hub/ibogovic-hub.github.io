@@ -4,9 +4,12 @@ layout: article
 tags: nmap
 article_header:
   type: cover
+aside:
+  toc: true
+sidebar:
+  nav: layouts
 ---
 
----
 ## **tcp flags**
 
 --> **Synchronization flag (SYN flag)**
