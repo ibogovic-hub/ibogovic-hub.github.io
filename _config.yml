@@ -7,7 +7,7 @@ logo: assets/images/logo/3a99in5a.png
 favicon: assets/images/logo/facicon.ico
 profilepic: '/images/ivan-bogovic.jpg'
 bkimage: '/images/bk1.jpg'
-theme: jekyll-theme-hacker
+theme: jekyll-theme-architect
 description: > # this means to ignore newlines until "Language & timezone"
   working on this...
 
