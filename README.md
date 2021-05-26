@@ -1,264 +1,89 @@
-# Jekyll blog theme
+# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
-Simple and nice blog theme based on Inclusion framework.
+[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
+[![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
+[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
+[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
+[![Tip Me via Bitcoin](https://img.shields.io/badge/Bitcoin-tip%20me-f7931a.svg?logo=bitcoin)](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg)
 
-Proudly built with [Jekyll](http://jekyllrb.com/) and [Grunt](http://gruntjs.com/), hosted on [Github](https://github.com).
-Compatible browsers: IE8+, Firefox, Chrome, Opera, Yandex.browser, Safari
+![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
-Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of this theme
+![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
 
----
+TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
-##Contents
-* [Requirements](#requirements)
-* [Structure](#structure)
-* [Development and blogging](#development-and-blogging)
-	- [Editorconfig](#editorconfig)
-	- [Grunt tasks](#grunt-tasks)
-	- [Data driven nav](#data-driven-nav)
-	- [Post creation](#post-creation)
-* [Changelog](#changelog)
-* [Credits](#credits)
-* [License](#license)
+**[Change Log](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/CHANGELOG.md)** | **[中文](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)**
 
-## Requirements:
+## Features
 
-- [Ruby](http://www.ruby-lang.org/)
-- [Node.js](http://nodejs.org/)
-- [Grunt](http://gruntjs.com/) (`npm install -g grunt-cli`)
-- [Bower](http://bower.io/) (`npm install -g bower`)
-- [Python](http://www.python.org/) with [pip](http://www.pip-installer.org/)
+- Responsive
+- Semantic HTML
+- Skins
+- Highlight Theme
+- Internationalization
+- Search
+- Table of contents
+- Authors
+- Additional styles (alert, tag, image, icon, button, grid, etc)
+- Extensions (audios, videos, slides, demos)
+- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
+- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
+- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
+- Pageview ([LeanCloud](https://leancloud.cn/))
+- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
+- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
 
-## Structure
-There are two branches: master branch and gh-pages. Master is a main develop branch.
-Project based on [Synteagle general project template](https://github.com/synteagle/se-general-template)
-```
-./
-├── .editorconfig
-├── Gruntfile.js
-├── package.json
-├── bower.json
-├── README.md
-├── CHANGELOG.md
-├── Rakefile
-├── Gemfile
-├── _config.yml
-├── post.sh
-├──grunt/                                      * grunt tasks
-|   ├── task.js
-│   └── aliases.yml 
-|
-├── dev/                                       * site source
-|   ├── coffee/                                * coffee scripts
-|	│   └── main/                              * main scripts
-|	│
-│   ├── images/                                * image sources
-|	│
-│   ├── jade/                                  * templates
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.jade
-|	│   ├── helpers/                           * helper mixins
-|	│   ├── vendor/                            * third-party code
-|	│   ├── layouts/                           * page layouts
-|	│   └── pages/                             * main pages templates
-|	│
-│   ├── js/                                    * compiled and source js
-|	|   ├── main/                              * main site scripts
-|	│   ├── ie/                                * ie compat scripts
-|	│   └── vendor/                            * vendor scripts
-|	│
-|	├── sass/                                  * sass preprocessor styles
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.sass
-|	│   ├── helpers/                           * mixins and vars
-|	│   ├── vendor/                            * third-party code
-|	│   └── screen.sass
-|	│
-│   ├── ruby/                                  * jekyll plugins
-|	│
-│   ├── helpers/                               * helper files
-|	│
-│   ├── fonts/                                 * font sources
-|	│
-│   └── devtools/                              * some dev tools
-│
-├── build/                                     * built source
-|	├── index.html
-|	├── _data/                                 * jekyll data (i18n, locales)
-|	|
-|	├── _drafts/                               * drafts
-|	|
-|	├── _layouts/                              * layouts for jekyll generation
-|	|
-|	├── _plugins/                              * jekyll plugins
-|	|
-|	├── _posts/                                * posts (*.md)
-|	|
-|	└── static/                                * static assets
-|		├── css/                               * minified styles
-|		|
-|		├── images/                            * minified images
-|		│
-|		├── js/                                * minified assembled js
-|		|
-|		└── fonts/                             * @font-face-ready webfonts
-│
-└── publ/                                      * generated website
-	├── _data/                                 * jekyll data (i18n, locales)
-	|
-	├── _drafts/                               * drafts
-	|
-	├── _posts/                                * posts (*.md)
-	|
-	└── static/                                * static assets
-		└── images/                            * post and pages images
+## Skins
 
-```
+TeXt has 6 built-in skins, you can also set up your own skin.
 
-Take a look at [this article](http://www.aymerick.com/2014/07/22/jekyll-github-pages-bower-bootstrap.html) about creating dev and deploy branches for your blog. 
+| `default` | `dark` | `forest` |
+| --- |  --- | --- |
+| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
 
-NOTE: this example use in _config.yml use baseurl option, so after domain there is path: /jekyll-inclusion. If you want to run this example on the local machine you should comment or remove this line in _config.yml file.
+| `ocean` | `chocolate` | `orange` |
+| --- |  --- | --- |
+| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
 
-## Development and blogging
+### Highlight Theme
 
-### Editorconfig
-This project contains .editorconfig file. It describes codestyle like indentation, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
+TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
 
-### Grunt tasks
-Here comes groups of grunt tasks with some explanations
+| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
+| --- |  --- | --- | --- |  --- |
+| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
 
-#### Start 
-`grunt start` - Install bower dependencies and place them to dev folders
-```
-- 'shell:bower'                          Install bower components
-- 'bower:ie'                             Copy ie components to js folder
-- 'bower:vendor'                         Copy vendor  components to js folder
-```
+## Documentation
 
-#### Dev
-`gulp dev` - Dev task with static server
-```
-- 'coffee:main'                          Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
-- 'sass'                                 Compile Sass stylesheets
-- 'jade'                                 Compile Jade templates
-- 'sync:imagesDev'                       Sync images
-- 'sync:fontsDev'                        Sync fonts
-- 'sync:helpersDev'                      Sync helpers and other assets
-- 'sync:rubyDev'                         Sync jekyll plugins
-- 'sync:mainPubl'                        Sync posts and pages from publ folder
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'browserSync:dev'                      Run dev server with watch option
-- 'watch:dev'                            Watch for changes and run dev task
-```
+### Start
 
-#### Build 
-`grunt build` - Build task
-```
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'imagemin'                             Minify images
-- 'cmq'                                  Combine media queries in css files
-- 'autoprefixer'                         Add vendor prefixes in css
-- 'csscomb'                              Applie styleguide to stylesheets
-- 'uglify'                               Minify javascript files
-- 'csso'                                 Minify stylesheets
-- 'processhtml'                          Replace assets paths in html
-- 'htmlmin'                              Minify html
-- 'clean:dev'                            Remove dev things
-- 'browserSync:test'                     Run test server without watch
-```
+- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+- [Update from 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-from-1-to-2)
 
-#### Rebuild 
-`grunt rebuild` - Regenerate and build project by running all tasks
-```
-- 'coffee:main'                          Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
-- 'sass'                                 Compile Sass stylesheets
-- 'jade'                                 Compile Jade templates
-- 'sync:imagesDev'                       Sync images
-- 'sync:fontsDev'                        Sync fonts
-- 'sync:helpersDev'                      Sync helpers and other assets
-- 'sync:rubyDev'                         Sync jekyll plugins
-- 'sync:mainPubl'                        Sync posts and pages from publ folder
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'imagemin'                             Minify images
-- 'cmq'                                  Combine media queries in css files
-- 'autoprefixer'                         Add vendor prefixes in css
-- 'csscomb'                              Applie styleguide to stylesheets
-- 'uglify'                               Minify javascript files
-- 'csso'                                 Minify stylesheets
-- 'processhtml'                          Replace assets paths in html
-- 'htmlmin'                              Minify html
-- 'clean:dev'                            Remove dev things
-```
+### Customization
 
-#### Theme
-`grunt theme` - Theme styles and scripts fixing
-```
-- 'coffee:main'                          Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
-- 'sass'                                 Compile Sass stylesheets
-- 'sync:cssTheme'                        Sync css with Jekyll generated assets
-- 'sync:jsTheme'                         Sync js with Jekyll generated assets
-- 'browserSync:theme'                    Run dev server with watch option
-- 'watch:theme'                          Watch for changes and run theme task
-```
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
+- [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
+- [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
+- [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
+- [Authors](https://tianqi.name/jekyll-TeXt-theme/docs/en/authors)
+- [Internationalization](https://tianqi.name/jekyll-TeXt-theme/docs/en/i18n)
 
-#### Template
-`grunt template` - Theme templates fixing
-```
-- 'jade'                                 Compile Jade templates
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-```
+### Content
 
-#### Publish
-`grunt publish` - Copy posts, pages and images and generates website
-```
-- 'sync:mainPubl'                        Copy posts, pages and images
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'processhtml'                          Replace assets paths in html
-- 'htmlmin'                              Minify html
-- 'clean:dev'                            Remove dev things
-```
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
+- [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
+- [Extensions](https://tianqi.name/jekyll-TeXt-theme/docs/en/extensions)
+- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
 
-#### Deploy 
-`grunt deploy` - Deploy project by running Rakefile: git or ftp push
-```
-- 'shell:deploy'                         Deploy generated site to gh-pahes
-```
+## Demo Pages
 
-#### Server 
-`grunt server` - Run server without watching for changes
-```
-- 'browserSync:test'                     Run test server without watch
-```
-
-### Data driven nav
-This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
-
-### Post creation
-There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in the root of the website, so just execute it, like `bash post.sh your-post-name` or `post.sh your-post-name` and it will create new *.md file at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
-
-## Changelog
-Youc can find full changelog [HERE](https://github.com/website-templates/jekyll-inclusion/blob/master/CHANGELOG.md)
-
-## Credits
-* [JADE bemto mixin](https://github.com/kizu/bemto)
-* [Lazy load plugin](http://www.appelsiini.net/projects/lazyload)
-* [Intense Image Viewer](http://tholman.com/intense-images/)
-* [Prism syntax highlighter](http://prismjs.com/download.html) 
-* [Detect Mobile Browsers](http://detectmobilebrowsers.com/)
-* [Clean blog jekyll theme](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)
-* [Strip.rb - strip newlines after for loop](https://github.com/aucor/jekyll-plugins)
-* [Tag pages generator](https://github.com/ilyakhokhryakov/jekyll-tagging-pagination)
-* [Tag and Category pages pagination](https://github.com/realjenius/realjenius.com/blob/master/_plugins/cat_and_tag_generator.rb)
-* [Jekyll i18n filter](https://github.com/gacha/gacha.id.lv/blob/master/_plugins/i18n_filter.rb)
+| Name | Description |
+| --- | --- |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | Archive page |
+| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
 
 ## License
-[MIT](http://opensource.org/licenses/MIT)
+
+TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
