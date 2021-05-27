@@ -1,7 +1,6 @@
 ---
 title: nmap security audit
 tags: nmap
-layout: page
 ---
 
 ## **tcp flags**
