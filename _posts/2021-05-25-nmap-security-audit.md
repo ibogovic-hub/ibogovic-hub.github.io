@@ -48,11 +48,11 @@ data and the last packet contains the FIN flag.
 
 | status | description |
 | ----------- | ----------- |
-| **open** | appllication is actively responding to the connections |
+| **open** | application is actively responding to the connections |
 | **closed** | the port that responds to nmap probes but has no active service running |
-| **filtered** | nmap can't determine whether the porti is open because packet filters / firewall is preventing the probes from reaching to target port |
+| **filtered** | nmap can't determine whether the port is open because packet filters / firewall is preventing the probes from reaching to target port |
 | **unfiltered** | the port is accessible, but nmap is unable to determine if port is opened or closed |
-| **open / filtered** | whan an open port does not give any response, nmap is unable to determine the port state. may be a firewall might blocking the probes |
+| **open / filtered** | when an open port does not give any response, nmap is unable to determine the port state. may be a firewall might blocking the probes |
 | **closed / filtered** | in case nmap is unable to determine if port is closed or filtered |
 
 ## **nmap scan types**
@@ -63,7 +63,7 @@ data and the last packet contains the FIN flag.
 sudo nmap -sS <host/network/domain>
 ```
   - it is default scan type
-  - it never completes the TCP handshake and so it is relatively faster and unobtrusive (***Half-Opnen scan***)  
+  - it never completes the TCP handshake and so it is relatively faster and unobtrusive (***Half-Open scan***)  
 
 --> here is the example of TCP SYN scan:  
 ![TCP SYN scan](/assets/images/nmap/tcp-syn-scan.png)  
@@ -96,7 +96,7 @@ sudo nmap -sX <host/network/domain>
 --> here is the example of mentioned scans:
 ![FIN, NULL and XMAS scans](/assets/images/nmap/fin-null-xmas.png)
 
-- it is usefull for firewall avoidance
+- it is useful for firewall avoidance
 - sending the packets without bit set
 
 You can use switch ***`--reason`*** to get more info about the port result
@@ -131,13 +131,13 @@ Another downside of these scans is that they can't distinguish open ports from c
 ```
 sudo nmap -sU -p <port> <host/network/domain>
 ```
-  - this scan uses UDP protocol and usefull to scan for devices with UDP services running
+  - this scan uses UDP protocol and useful to scan for devices with UDP services running
   - well-known services running on UDP like:
     - DNS (port 53)
     - SNMP (ports 161 / 162)
     - DHCP (ports 67 / 68)
   - UDP scan can be done along with TCP scan
-  - note that UDP scanning is time cunsuming and has to be used by specifying ports  
+  - note that UDP scanning is time consuming and has to be used by specifying ports  
 
 --> here is the example of mentioned scan:  
 ![UDP scan](/assets/images/nmap/udp-scan.png)  
@@ -147,7 +147,7 @@ sudo nmap -sU -p <port> <host/network/domain>
 ```
 sudo nmap -sY <host/network/domain>
 ```
-  - SCTP (Stream Control Transmission Protocol) designed to transport Public Telephone Network (PSTN) signaling messages over IP netowrks
+  - SCTP (Stream Control Transmission Protocol) designed to transport Public Telephone Network (PSTN) signaling messages over IP networks
   - as per [rfc4960](https://datatracker.ietf.org/doc/html/rfc4960) this has wider applications
   - this is relatively newer alternative to TCP and UDP protocols with newer features and characteristics of TCP & UDP
   - like SYN scan it is stealth as it never completes the full handshake  
@@ -166,3 +166,7 @@ sudo nmap -sY <host/network/domain>
 --> ACK scan (difference with SYN scan):  
 ![ACK scan](/assets/images/nmap/ack-scan.png)  
 
+## operating system detection
+- the nmap-os-db database has more than 2600+ known OS fingerprints
+- nmap performs extensive TCP ISN(Initial Sequence Numbers) sampling combined with various other parameters from the response and maps it with it database to give out details about the remote OS.
+- it is very useful for determining vulnerability of target hosts, tailoring exploits, network inventory & support, detecting unauthorized devices.
