@@ -201,19 +201,19 @@ sudo nmap -sY <host/network/domain>
 
 - syntax example:
   - sbm vulnerability  
-    ***syntax:***
+  ***syntax:***
     ```
     sudo nmap --script smb-vuln-ms17-010 -p 445 192.168.56.104
     ```
     ![smb-script](/assets/images/nmap/script-smb.png)
 
   - VSFTPD & UnrealIRCD backdoor check  
-    ***syntax:***
+  ***syntax:***
     ```
     sudo nmap -sV --script ftp-vsftpd-backdoor -p 21 192.168.56.103
     ```
     - vsftpd
-    ![vsftpd-script](/assets/images/nmap/scan-vsftpd.png)  
+    ![vsftpd-script](/assets/images/nmap/scan-vsftpd.png)
     ***syntax:***
     ```
     sudo nmap -sV --script ftp-vsftpd-backdoor -p 6667 192.168.56.103
@@ -234,21 +234,21 @@ sudo nmap -sY <host/network/domain>
 - some user and database data is required for this
 - this command will list all databases on SQL server
 
-### list databases syntax
+### list databases
 ***syntax:***
 ```
 nmap -p 3306 --script mysql-databases --script-args mysqluser=root,mysqlpass=password 192.168.56.103
 ```
 ![sql-databases-scan](/assets/images/nmap/scan-sql-databases.png)
 
-### list users syntax
+### list users
 ***syntax:***
 ```
 nmap -p 3306 --script mysql-users --script-args mysqluser=root,mysqlpass=password 192.168.56.103
 ```
 ![sql-users-scan](/assets/images/nmap/scan-sql-users.png)
 
-### bruteforcing the credencials on sql server syntax
+### bruteforcing the credencials on sql server
 ***syntax:***
 ```
 nmap -p 3306 --script mysql-brute 192.168.56.103
