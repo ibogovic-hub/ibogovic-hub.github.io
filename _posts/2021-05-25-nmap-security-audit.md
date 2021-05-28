@@ -111,7 +111,7 @@ You can use switch ***`--reason`*** to get more info about the port result
 - Sets the FIN, PSH, and URG flags, lighting the packet up like a Christmas tree.
 
 - These three scan types are exactly the same in behavior except for the TCP flags set in probe packets.
-- If a RST packet is received, the port is considered closed, while no response means it is open|filtered.
+- If a RST packet is received, the port is considered closed, while no response means it is open / filtered.
 - The port is marked filtered if an ICMP unreachable error (type 3, code 0, 1, 2, 3, 9, - 10, or 13) is received.
 
 - The key advantage to these scan types is that they can sneak through certain - non-stateful firewalls and packet filtering routers.
