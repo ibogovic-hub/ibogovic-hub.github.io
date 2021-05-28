@@ -221,3 +221,4 @@ sudo nmap -sY <host/network/domain>
 - here is the nmap script [source website](https://nmap.org/book/nse-scripts-list.html).
 
 - and useful guide [here](https://securitytrails.com/blog/nmap-scripts-nse) from securitytrails.
+
