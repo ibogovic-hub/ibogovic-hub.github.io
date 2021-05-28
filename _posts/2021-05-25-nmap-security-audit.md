@@ -284,3 +284,12 @@ nmap -sV -p 25 --script smtp-open-relay 192.168.56.103
 nmap -p 25 smtp-enum-users --script-args smtp-enum-users.method=VRFY,smtp-enum-users.domain=metasploitable.localdomain 192.168.56.103
 ```
 ![smtp-audit01](/assets/images/nmap/scan-smtp-audit02.png)
+
+## advanced script scans
+- next one is scanning port 80 with all scripts that are in the category "not exploit"  
+***syntax***
+```
+sudo nmap -sV --script "not exploit" -p 80 192.168.56.103
+```
+--> this will provide huge amount of information
+ 
