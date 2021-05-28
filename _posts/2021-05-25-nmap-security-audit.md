@@ -222,6 +222,10 @@ sudo nmap -sY <host/network/domain>
 
 - and useful guide [here](https://securitytrails.com/blog/nmap-scripts-nse) from securitytrails.
 
+**scripts can be found locally**
+- ***/usr/share/nmap/scripts/***
+- ***/usr/share/nmap/nselib/***
+
 ## SQL server auditing
 
 - some user and database data is required for this
@@ -244,3 +248,12 @@ nmap -p 3306 --script mysql-users --script-args mysqluser=root,mysqlpass=passwor
 nmap -p 3306 --script mysql-brute 192.168.56.103
 ```  
 ![sql-brute-scan](/assets/images/nmap/scan-sql-brute.png)
+
+- cis script for security audit of sql configuration
+***SQL security audit***
+```
+nmap -p 3306 --script mysql-audit --script-args mysql-audit.username=root,mysql-audit.password=password,mysql-audit.filename=/usr/share/nmap/nselib/data/mysql-vis.autit 192.168.56.103
+```  
+![sql-brute-scan](/assets/images/nmap/scan-sql-audit01.png)
+![sql-brute-scan](/assets/images/nmap/scan-sql-audit02.png)
+![sql-brute-scan](/assets/images/nmap/scan-sql-audit03.png)
