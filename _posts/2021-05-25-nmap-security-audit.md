@@ -188,6 +188,7 @@ sudo nmap -sY <host/network/domain>
 | -PE / -PP / -PM | ICMP ping - by default, nmap send icmp type 8 (echo request) pings to discover hosts. Other options with different ICMP types can also be sent if ICMP type 8 is blocked | nmap -sn -PE <target_IP> or namp -sn -PP <target_IP> or nmap -sn -PM <target_IP> |
 
 ### other useful options
+
 | Option | Information | Example syntax |
 | - | - | - |
 | --disable-arp-ping | additional option - nmap does ARP neighbor discovery of locally connected ethernet hosts, irrespective of any options provided. This option has to be explicitly used if we need to disable ARP-ND (neighbor discovery) | nmap -sn -PE <target_IP> --disable-arp-ping |
