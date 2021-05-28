@@ -234,26 +234,35 @@ sudo nmap -sY <host/network/domain>
 ### list databases syntax:
 ```
 nmap -p 3306 --script mysql-databases --script-args mysqluser=root,mysqlpass=password 192.168.56.103
-```  
+```
 ![sql-databases-scan](/assets/images/nmap/scan-sql-databases.png)
 
 ### list users syntax:
 ```
 nmap -p 3306 --script mysql-users --script-args mysqluser=root,mysqlpass=password 192.168.56.103
-```  
+```
 ![sql-users-scan](/assets/images/nmap/scan-sql-users.png)
 
 ### bruteforcing the credencials on sql server syntax
 ```
 nmap -p 3306 --script mysql-brute 192.168.56.103
-```  
+```
 ![sql-brute-scan](/assets/images/nmap/scan-sql-brute.png)
 
 - cis script for security audit of sql configuration
 ### SQL security audit
 ```
 nmap -p 3306 --script mysql-audit --script-args mysql-audit.username=root,mysql-audit.password=password,mysql-audit.filename=/usr/share/nmap/nselib/data/mysql-vis.autit 192.168.56.103
-```  
-![sql-brute-scan](/assets/images/nmap/scan-sql-audit01.png)
-![sql-brute-scan](/assets/images/nmap/scan-sql-audit02.png)
-![sql-brute-scan](/assets/images/nmap/scan-sql-audit03.png)
+```
+![sql-audit-scan1](/assets/images/nmap/scan-sql-audit01.png)
+![sql-audit-scan2](/assets/images/nmap/scan-sql-audit02.png)
+![sql-audit-scan3](/assets/images/nmap/scan-sql-audit03.png)
+
+## SMTP server audit
+- we will be performing SMTP server security audit
+- first one is to check SMTP open server which is high security issue.
+
+```
+nmap -sV -p 25 --script smtp-open-relay 192.168.56.103
+```
+![smtp-audit01](/assets/images/nmap/scan-smtp-audit01.png)
