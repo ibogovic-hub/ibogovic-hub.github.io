@@ -1,9 +1,6 @@
 ---
 title: aggregate interface
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 ## web-based manager

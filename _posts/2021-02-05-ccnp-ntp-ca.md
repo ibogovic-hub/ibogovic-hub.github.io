@@ -1,9 +1,6 @@
 ---
 title: ntp and ca config
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ![GNS3-confg](/assets/images/Cisco/ntp-ca.png)

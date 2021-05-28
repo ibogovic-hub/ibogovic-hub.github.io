@@ -1,9 +1,6 @@
 ---
 title: kvm & whonix
-layout: article
 tags: Linux
-article_header:
-  type: cover
 ---
 
 ### create vm

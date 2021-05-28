@@ -1,9 +1,6 @@
 ---
 title: grep, awk & sed
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## prvih par redova u logu

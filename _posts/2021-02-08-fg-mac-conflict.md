@@ -1,9 +1,6 @@
 ---
 title: mac address conflict
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 - Changing the HA group ID to avoid MAC address conflicts 

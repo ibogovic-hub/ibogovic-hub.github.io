@@ -1,9 +1,6 @@
 ---
 title: dnat configuration
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 ## Example multicast destination NAT (DNAT) configuration

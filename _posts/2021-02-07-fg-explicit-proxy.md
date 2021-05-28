@@ -1,9 +1,6 @@
 ---
 title: explicit proxy config
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 ## For enabling proxy

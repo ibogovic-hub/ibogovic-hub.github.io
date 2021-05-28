@@ -1,9 +1,6 @@
 ---
 title: processes
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 

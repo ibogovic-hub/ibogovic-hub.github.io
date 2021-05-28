@@ -1,9 +1,6 @@
 ---
 title: linux dhcp config
-layout: article
 tags: Linux
-article_header:
-  type: cover
 ---
 
 # DHCP config for testing purposes #

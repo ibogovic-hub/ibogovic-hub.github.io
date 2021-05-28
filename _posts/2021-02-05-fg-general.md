@@ -1,9 +1,6 @@
 ---
 title: Fortigate general commands
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 ## general fortigate stuff

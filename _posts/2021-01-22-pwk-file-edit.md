@@ -1,9 +1,6 @@
 ---
 title: File Edit
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## VIM

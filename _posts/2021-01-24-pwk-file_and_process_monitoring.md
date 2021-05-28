@@ -1,9 +1,6 @@
 ---
 title: File & Process monitoring
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## to check the file as it gets edited

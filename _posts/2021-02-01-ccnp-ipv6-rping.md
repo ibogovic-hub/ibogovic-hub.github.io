@@ -1,9 +1,6 @@
 ---
 title: ipv6 and ripng
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ![GNS3-congig](/assets/images/Cisco/ipv6-and-ripng.png)

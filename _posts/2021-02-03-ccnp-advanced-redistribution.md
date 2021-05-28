@@ -1,9 +1,6 @@
 ---
 title: Advanced redistribution
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ![GNS3 config](/assets/images/Cisco/advanced-redistribution-gns3.png)

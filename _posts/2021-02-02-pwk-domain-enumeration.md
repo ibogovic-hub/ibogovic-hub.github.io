@@ -1,9 +1,6 @@
 ---
 title: Domain Enumeration
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## to get users from a domain

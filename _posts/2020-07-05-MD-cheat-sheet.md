@@ -1,9 +1,6 @@
 ---
 title: markdown cheat sheet
-layout: article
 tags: markdown
-article_header:
-  type: cover
 ---
 
 # Markdown Cheat Sheet

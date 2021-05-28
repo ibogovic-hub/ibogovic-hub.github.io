@@ -1,9 +1,6 @@
 ---
 title: reverse proxy web caching
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 # reverse proxy web caching  

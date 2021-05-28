@@ -1,9 +1,6 @@
 ---
 title: Analyzer and Manager "stuff"
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 # Manager

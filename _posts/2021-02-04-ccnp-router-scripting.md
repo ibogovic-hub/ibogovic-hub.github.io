@@ -1,9 +1,6 @@
 ---
 title: router scripting
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ## TCL Script:

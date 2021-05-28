@@ -1,9 +1,6 @@
 ---
 title: python switch config
-layout: article
 tags: Python
-article_header:
-  type: cover
 ---
 
 ## Python script for automatic switch configuration

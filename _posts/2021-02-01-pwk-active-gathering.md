@@ -1,9 +1,6 @@
 ---
 title: Actve Gathering
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## DNS ENUMERATION

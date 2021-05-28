@@ -1,9 +1,6 @@
 ---
 title: sec service
-layout: article
 tags: Linux
-article_header:
-  type: cover
 ---
 # Event triggered script #
 

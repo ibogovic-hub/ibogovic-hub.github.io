@@ -1,9 +1,6 @@
 ---
 title: system script
-layout: article
 tags: Linux
-article_header:
-  type: cover
 ---
 >
 ### **script for system update and some installation**

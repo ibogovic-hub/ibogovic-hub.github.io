@@ -1,9 +1,6 @@
 ---
 title: usefull linux commands
-layout: article
 tags: Linux
-article_header:
- type: cover
 ---
 
 ---

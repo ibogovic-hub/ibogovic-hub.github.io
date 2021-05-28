@@ -1,9 +1,6 @@
 ---
 title: isp failover
-layout: article
 tags: Fortinet
-article_header:
-  type: cover
 ---
 
 ## Connect the two FortiGates on the wan2 port 

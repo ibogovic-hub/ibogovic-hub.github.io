@@ -1,9 +1,6 @@
 ---
 title: policy routing
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ![GNS3-config](/assets/images/Cisco/policy-routing.png)

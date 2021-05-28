@@ -1,9 +1,6 @@
 ---
 title: dhcp configuraion
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 

@@ -1,9 +1,6 @@
 ---
 title: bgp-extended
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ![GNS3 config](/assets/images/Cisco/bgp-att.png)

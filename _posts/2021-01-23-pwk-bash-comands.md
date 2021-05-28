@@ -1,9 +1,6 @@
 ---
 title: Bash Commands
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## list all running services

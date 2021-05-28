@@ -1,9 +1,6 @@
 ---
 title: OSPF special area configuration
-layout: article
 tags: CCNP
-article_header:
-  type: cover
 ---
 
 ![GNS3-config](/assets/images/Cisco/ospf-sa-config.png)

@@ -1,9 +1,6 @@
 ---
 title: practical examples
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 

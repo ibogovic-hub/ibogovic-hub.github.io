@@ -1,9 +1,6 @@
 ---
 title: port scanning
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 ## tcp scanning

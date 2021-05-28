@@ -1,9 +1,6 @@
 ---
 title: passive gathering
-layout: article
 tags: PWK
-article_header:
-  type: cover
 ---
 
 
