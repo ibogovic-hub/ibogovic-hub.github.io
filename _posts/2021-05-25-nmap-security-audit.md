@@ -200,14 +200,14 @@ sudo nmap -sY <host/network/domain>
 ## nmap scripts
 
 - syntax example:
-  - sbm vulnerability
-    ***syntax:*** 
+  - sbm vulnerability  
+    ***syntax:***
     ```
     sudo nmap --script smb-vuln-ms17-010 -p 445 192.168.56.104
     ```
     ![smb-script](/assets/images/nmap/script-smb.png)
 
-  - VSFTPD & UnrealIRCD backdoor check
+  - VSFTPD & UnrealIRCD backdoor check  
     ***syntax:***
     ```
     sudo nmap -sV --script ftp-vsftpd-backdoor -p 21 192.168.56.103
