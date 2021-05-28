@@ -218,3 +218,6 @@ sudo nmap -sY <host/network/domain>
     - vsftpd
     ![vsftpd-script](/assets/images/nmap/scan-irc.png)  
 
+- here is the nmap script [source website](https://nmap.org/book/nse-scripts-list.html).
+
+- and useful guide [here](https://securitytrails.com/blog/nmap-scripts-nse) from securitytrails.
