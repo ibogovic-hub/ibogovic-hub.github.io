@@ -186,3 +186,34 @@ sudo nmap -sY <host/network/domain>
 | -PA <port_list> | TCP ACK ping - similar to the TCP SYN ping. Only difference is that the TCP packet with ACK flag is set and sent. Probes with both -PS & -PA can be sent | nmap -PA <target_IP/range> or nmap -PA 21,22,53 <target_IP/range> or nmap -PS -PA <target_IP/range> |
 | -PU <port_list> | UDP ping - sends and empty UDP packet to port 40125. Such scan can bypass firewalls with strict TCP based filtering | nmap -PU <target_IP/range> |
 | -PE / -PP / -PM | ICMP ping - by default, nmap send icmp type 8 (echo request) pings to discover hosts. Other options with different ICMP types can also be sent if ICMP type 8 is blocked | nmap -sn -PE <target_IP> or namp -sn -PP <target_IP> or nmap -sn -PM <target_IP> |
+
+### other useful options
+| Option | Information | Example syntax |
+| - | - | - |
+| --disable-arp-ping | additional option - nmap does ARP neighbor discovery of locally connected ethernet hosts, irrespective of any options provided. This option has to be explicitly used if we need to disable ARP-ND (neighbor discovery) | nmap -sn -PE <target_IP> --disable-arp-ping |
+| --traceroute | trace route to host - works with all scan types except for -sT (connect scan) & -sl (idle scan) | nmap -sS <target_IP> --traceroute |
+| -n | no DNS resolution - tells nmap to not do DNS resolution on discovered hosts | nmap -PS -sn -n <target_IP> |
+| -R | do DNS resolution - this option will "always" perform a resolution against a discovered host | nmap -PS -sn -R <target_IP> |
+| --dns-servers server1,server2,...,serv... | use specified DNS servers - to speed up scans, we can explicitly set the use of DNS servers and bypassing the default system resolvers | nmap -PS -sn -R <target_IP> --dns-servers 8.8.8.8,1.1.1.1 |
+
+## nmap scripts
+
+- syntax example:
+  - sbm vulnerability
+    ```
+    sudo nmap --script smb-vuln-ms17-010 -p 445 192.168.56.104
+    ```
+    ![smb-script](/assets/images/nmap/script-smb.png)
+
+  - VSFTPD & UnrealIRCD backdoor check
+    ```
+    sudo nmap -sV --script ftp-vsftpd-backdoor -p 21 192.168.56.103
+    ```
+    - vsftpd
+    ![vsftpd-script](/assets/images/nmap/scan-vsftpd.png)  
+    ```
+    sudo nmap -sV --script ftp-vsftpd-backdoor -p 6667 192.168.56.103
+    ```
+    - vsftpd
+    ![vsftpd-script](/assets/images/nmap/scan-irc.png)  
+
