@@ -109,21 +109,20 @@ You can use switch ***`--reason`*** to get more info about the port result
 
 **Xmas scan (-sX)**
 - Sets the FIN, PSH, and URG flags, lighting the packet up like a Christmas tree.
-  
-```
-These three scan types are exactly the same in behavior except for the TCP flags set in probe packets.  
-If a RST packet is received, the port is considered closed, while no response means it is open|filtered.  
-The port is marked filtered if an ICMP unreachable error (type 3, code 0, 1, 2, 3, 9, 10, or 13) is received.
 
-The key advantage to these scan types is that they can sneak through certain non-stateful firewalls and packet filtering routers.  
-Another advantage is that these scan types are a little more stealthy than even a SYN scan.  
-Don't count on this though—most modern IDS products can be configured to detect them.  
-The big downside is that not all systems follow RFC 793 to the letter.  A number of systems send RST responses to the probes regardless of whether the port is open or not.  
-This causes all of the ports to be labeled closed.  
-Major operating systems that do this are Microsoft Windows, many Cisco devices, BSDI, and IBM OS/400.  
-This scan does work against most Unix-based systems though.  
-Another downside of these scans is that they can't distinguish open ports from certain filtered ones, leaving you with the response open|filtered.
-```  
+- These three scan types are exactly the same in behavior except for the TCP flags set in probe packets.
+- If a RST packet is received, the port is considered closed, while no response means it is open|filtered.
+- The port is marked filtered if an ICMP unreachable error (type 3, code 0, 1, 2, 3, 9, - 10, or 13) is received.
+
+- The key advantage to these scan types is that they can sneak through certain - non-stateful firewalls and packet filtering routers.
+- Another advantage is that these scan types are a little more stealthy than even a SYN scan.
+- Don't count on this though—most modern IDS products can be configured to detect them.
+- The big downside is that not all systems follow RFC 793 to the letter.  A number of systems send RST responses to the probes regardless of whether the port is open or not.  
+- This causes all of the ports to be labeled closed.
+- Major operating systems that do this are Microsoft Windows, many Cisco devices, BSDI, - and IBM OS/400.
+- This scan does work against most Unix-based systems though.
+- Another downside of these scans is that they can't distinguish open ports from certain - filtered ones, leaving you with the response open|filtered.
+
 [source](https://nmap.org/book/man-port-scanning-techniques.html)
 
 ### UDP scan
@@ -170,3 +169,17 @@ sudo nmap -sY <host/network/domain>
 - the nmap-os-db database has more than 2600+ known OS fingerprints
 - nmap performs extensive TCP ISN(Initial Sequence Numbers) sampling combined with various other parameters from the response and maps it with it database to give out details about the remote OS.
 - it is very useful for determining vulnerability of target hosts, tailoring exploits, network inventory & support, detecting unauthorized devices.
+
+## Host discovery
+- to scan every port of every IP address is rather unnecessary, inefficient & waste of time.
+- with proper host discovery for a target network we can narrow down our scope to the devices to be tested.
+- discovering hosts sometimes can be straightforward or complex, depending on the network being audited.
+- nmap offers lots of possible options for host discovery.
+- apart from the most basic ICMP pings, nmap employs different combination of TCP SYN/ACK UDP, SCTP INIT, ARP probes to locate hosts on a network.
+
+| Option | Information | Example syntax |
+| - | - | - |
+| -sL (list scan) | lists out each hos on the network with a reverse DNS resolution without sending any packet to the target host | nmap -sL <network_range> |
+| -sn (no port scan) | tells nmap not to perform any port scan after host discovery. This is also known as "ping scan". In older versions of nmap known as -sP | nmap -sn <network_range> |
+| -Pn (no ping) | nmap will skip the host discovery phase and directly start an active port scan against all the IPs in the range without confirming if the host is available or not. We ca skip the ping & port scan by using the options -sn & -Pn together | nmap -Pn <target_IP/range> |
+| -PS <port_list> | TCP SYN ping - sends an empty TCP packet with SYN flag set to default port 80. Alternate ports can be specified if needed | nmap -PS <target_IP/range> or nmap -PS 22,21,53 <target_range> |
