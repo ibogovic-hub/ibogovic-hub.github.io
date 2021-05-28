@@ -90,10 +90,10 @@ mathjax: true
 mathjax_autoNumber: true
 
 ## Mermaid
-mermaid: # true
+mermaid: true
 
 ## Chart
-chart: # true
+chart: true
 
 
 ## => Paginate
@@ -214,7 +214,7 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: true
-      show_subscribe: true
+      show_subscribe: false
       pageview: true
 
 
