@@ -116,12 +116,12 @@ You can use switch ***`--reason`*** to get more info about the port result
 
 - The key advantage to these scan types is that they can sneak through certain - non-stateful firewalls and packet filtering routers.
 - Another advantage is that these scan types are a little more stealthy than even a SYN scan.
-- Don't count on this though—most modern IDS products can be configured to detect them.
+- Don't count on this thoug, most modern IDS products can be configured to detect them.
 - The big downside is that not all systems follow RFC 793 to the letter.  A number of systems send RST responses to the probes regardless of whether the port is open or not.  
 - This causes all of the ports to be labeled closed.
 - Major operating systems that do this are Microsoft Windows, many Cisco devices, BSDI, - and IBM OS/400.
 - This scan does work against most Unix-based systems though.
-- Another downside of these scans is that they can't distinguish open ports from certain - filtered ones, leaving you with the response open|filtered.
+- Another downside of these scans is that they can't distinguish open ports from certain - filtered ones, leaving you with the response open / filtered.
 
 [source](https://nmap.org/book/man-port-scanning-techniques.html)
 
@@ -183,3 +183,6 @@ sudo nmap -sY <host/network/domain>
 | -sn (no port scan) | tells nmap not to perform any port scan after host discovery. This is also known as "ping scan". In older versions of nmap known as -sP | nmap -sn <network_range> |
 | -Pn (no ping) | nmap will skip the host discovery phase and directly start an active port scan against all the IPs in the range without confirming if the host is available or not. We ca skip the ping & port scan by using the options -sn & -Pn together | nmap -Pn <target_IP/range> |
 | -PS <port_list> | TCP SYN ping - sends an empty TCP packet with SYN flag set to default port 80. Alternate ports can be specified if needed | nmap -PS <target_IP/range> or nmap -PS 22,21,53 <target_range> |
+| -PA <port_list> | TCP ACK ping - similar to the TCP SYN ping. Only difference is that the TCP packet with ACK flag is set and sent. Probes with both -PS & -PA can be sent | nmap -PA <target_IP/range> or nmap -PA 21,22,53 <target_IP/range> or nmap -PS -PA <target_IP/range> |
+| -PU <port_list> | UDP ping - sends and empty UDP packet to port 40125. Such scan can bypass firewalls with strict TCP based filtering | nmap -PU <target_IP/range> |
+| -PE / -PP / -PM | ICMP ping - by default, nmap send icmp type 8 (echo request) pings to discover hosts. Other options with different ICMP types can also be sent if ICMP type 8 is blocked | nmap -sn -PE <target_IP> or namp -sn -PP <target_IP> or nmap -sn -PM <target_IP> |
