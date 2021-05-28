@@ -231,13 +231,13 @@ sudo nmap -sY <host/network/domain>
 - some user and database data is required for this
 - this command will list all databases on SQL server
 
-### list databases syntax:
+### list databases syntax
 ```
 nmap -p 3306 --script mysql-databases --script-args mysqluser=root,mysqlpass=password 192.168.56.103
 ```
 ![sql-databases-scan](/assets/images/nmap/scan-sql-databases.png)
 
-### list users syntax:
+### list users syntax
 ```
 nmap -p 3306 --script mysql-users --script-args mysqluser=root,mysqlpass=password 192.168.56.103
 ```
