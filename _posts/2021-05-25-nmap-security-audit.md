@@ -259,6 +259,7 @@ nmap -p 3306 --script mysql-audit --script-args mysql-audit.username=root,mysql-
 ![sql-audit-scan3](/assets/images/nmap/scan-sql-audit03.png)
 
 ## SMTP server audit
+### open SMTP server check
 - we will be performing SMTP server security audit
 - first one is to check SMTP open server which is high security issue.
 
@@ -266,3 +267,11 @@ nmap -p 3306 --script mysql-audit --script-args mysql-audit.username=root,mysql-
 nmap -sV -p 25 --script smtp-open-relay 192.168.56.103
 ```
 ![smtp-audit01](/assets/images/nmap/scan-smtp-audit01.png)
+
+### SMTP user enumeration
+- next one is user enum script that performs enumeration of existing users on SMTP server
+
+```
+nmap -p 25 smtp-enum-users --script-args smtp-enum-users.method=VRFY,smtp-enum-users.domain=metasploitable.localdomain 192.168.56.103
+```
+![smtp-audit01](/assets/images/nmap/scan-smtp-audit02.png)
