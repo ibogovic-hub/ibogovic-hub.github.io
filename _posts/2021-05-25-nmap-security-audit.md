@@ -39,7 +39,7 @@ data and the last packet contains the FIN flag.
 
 ## **understanding nmap results**
 
-- in this example ports 80 and 81 are being scanned:
+- in this example scan:
 
 
 ![Port status](/assets/images/nmap/initial-scan.png)  
