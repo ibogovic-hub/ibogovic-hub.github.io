@@ -39,7 +39,7 @@ data and the last packet contains the FIN flag.
 
 ## **understanding nmap results**
 
-- in this default scan:
+- example of a default scan:
 
 ![Port status](/assets/images/nmap/initial-scan.png)  
 
@@ -152,8 +152,7 @@ sudo nmap -sY <host/network/domain>
   - this is relatively newer alternative to TCP and UDP protocols with newer features and characteristics of TCP & UDP
   - like SYN scan it is stealth as it never completes the full handshake  
 
---> here is the example of mentioned scan:  
-![SCTP scan](/assets/images/nmap/sctp-scan.png)  
+--> currently I don't have a device to show the scan.  
 
 ### other interesting nmap scans
 
