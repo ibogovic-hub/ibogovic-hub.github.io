@@ -39,8 +39,7 @@ data and the last packet contains the FIN flag.
 
 ## **understanding nmap results**
 
-- in this example scan:
-
+- in this default scan:
 
 ![Port status](/assets/images/nmap/initial-scan.png)  
 
@@ -93,7 +92,7 @@ sudo nmap -sN <host/network/domain>
 : XMAS scan
 sudo nmap -sX <host/network/domain>
 ```  
---> here is the example of mentioned scans:
+--> here is the example of mentioned scans:  
 ![FIN scans](/assets/images/nmap/fin.png)
 ![NULL scans](/assets/images/nmap/null.png)
 ![XMAS scans](/assets/images/nmap/xmas.png)
