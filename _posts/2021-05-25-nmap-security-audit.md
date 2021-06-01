@@ -94,7 +94,9 @@ sudo nmap -sN <host/network/domain>
 sudo nmap -sX <host/network/domain>
 ```  
 --> here is the example of mentioned scans:
-![FIN, NULL and XMAS scans](/assets/images/nmap/fin-null-xmas.png)
+![FIN scans](/assets/images/nmap/fin.png)
+![NULL scans](/assets/images/nmap/null.png)
+![XMAS scans](/assets/images/nmap/xmas.png)
 
 - it is useful for firewall avoidance
 - sending the packets without bit set
