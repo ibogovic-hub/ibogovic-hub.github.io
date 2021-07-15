@@ -1,14 +1,3 @@
----
-title: system script
-tags: Linux
----
->
-### **script for system update and some installation**
->  
-
-[Original-script](/assets/scripts/systemscript.sh)
-
-```sh
 #!/bin/bash
 
 #####################################################################################
@@ -51,21 +40,36 @@ sudo apt -y install \
         xchm network-manager-vpnc network-manager-vpnc-gnome vpnc mencoder \
         transmission libreoffice nmap openconnect openvpn network-manager-openconnect \
         network-manager-openconnect-gnome qemu-kvm virt-manager virtinst bridge-utils screen ssh \
-        cryptsetup wireless-tools ufw gufw libavcodec-extra ffmpeg \
+        cryptsetup wireless-tools ufw gufw libavcodec-extra ffmpeg simplescreenrecorder cherrytree \
         dnsutils keepassxc apt-transport-https ca-certificates synaptic gnome-tweak-tool \
-#       comment restricted-extras if using debian 
-        ubuntu-restricted-extras \
+# comment restricted-extras if using debian 
+        ubuntu-restricted-extras gns3-gui gns3-server gns3-iou \
         nautilus-dropbox cups printer-driver-cups-pdf bleachbit libdrm-amdgpu1 \
-        xserver-xorg-video-amdgpu flameshot vlan net-tools expect alacarte aptitude tree ipcalc 
-#       uncomment if you plan to use it
-#       sudo snap install whatsdesk
+        xserver-xorg-video-amdgpu flameshot vlan net-tools expect alacarte aptitude tree ipcalc \
+	evolution evolution-ews evolution-indicator evolution-plugins-experimental evolution-plugin-spamassassin
+# uncomment if you plan to use it
+        sudo snap install whatsdesk
         cd /tmp
+# viber - uncomment if you don't want it
+        wget -O https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+# teamviewer - comment out if you don't want it        
         wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-#       uncomment for debian and you plan to use gns3
-#       wget http://ftp.de.debian.org/debian/pool/main/p/pygtksourceview/python-gtksourceview2_2.10.1-3_amd64.deb
+# telegram desktop comment out if you don't want it
+        wget "https://telegram.org/dl/desktop/linux"
+        tar -xf linux && cd Telegram && sudo cp * /usr/bin/ && cd ..
+# uncomment for debian and you plan to use gns3
+# wget http://ftp.de.debian.org/debian/pool/main/p/pygtksourceview/python-gtksourceview2_2.10.1-3_amd64.deb
+# skype - comment out if you don't want it
         wget https://go.skype.com/skypeforlinux-64.deb
+# youtube-dl - uncomment if you don't want it
         sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
         sudo chmod a+x /usr/local/bin/youtube-dl
+# signal desktop - comment out if you don't want it
+        wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+        cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+        echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+          sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+        sudo apt update && sudo apt install signal-desktop
         sudo chmod +x *.deb
         sudo dpkg -i *.deb
         sudo apt install -y -f
@@ -92,43 +96,19 @@ DELETE_FOLDERS () {
 
 #####################################################################################
 
-
-#####################################################################################
-####-Backup and add new repository links
-SOURCES () {
-        sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-        sudo rm /etc/apt/sources.list
-        sudo echo "
-
-# gns3
-deb http://ppa.launchpad.net/gns3/ppa/ubuntu eoan main
-deb-src http://ppa.launchpad.net/gns3/ppa/ubuntu eoan main
-
-# cherrytree
-deb http://ppa.launchpad.net/giuspen/ppa/ubuntu eoan main
-deb-src http://ppa.launchpad.net/giuspen/ppa/ubuntu eoan main
-
-### old debian security - uncomment for debian
-# deb http://security.debian.org/debian-security jessie/updates main contrib
-
-" >> lista1
-        cat /etc/apt/sources.list.backup >> sources.list
-        cat lista1 >> sources.list
-        sudo mv sources.list /etc/apt/sources.list
-        sudo rm lista1
-
-}
-
-#####################################################################################
-
 #####################################################################################
 ####-First install
 PRVO () {
         sudo dpkg --add-architecture i386
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A2E3EF7B
         sudo apt update && sudo apt upgrade
-        sudo apt install -y apt-transport-https ca-certificates libc6:i386 libstdc++6:i386 \
-        sudo vim gcc dkms aptitude dirmngr wget
+        sudo apt install -y apt-transport-https ca-certificates libc6:i386 libstdc++6:i386 
+    	sudo add-apt-repository -y ppa:giuspen/ppa
+    	sudo add-apt-repository -y ppa:gns3/ppa
+    	sudo add-apt-repository -y ppa:phoerious/keepassxc
+    	sudo add-apt-repository -y ppa:maarten-baert/simplescreenrecorder
+        sudo apt -y install vim gcc dkms aptitude dirmngr wget
+        sudo apt -y remove --purge aisleriot gnome-mahjongg gnome-sudoku aisleriot gnome-mahjongg gnome-sudoku
 }
 
 #####################################################################################
@@ -203,4 +183,3 @@ while [[ 1 ]]; do
         read -n 1 line
 done
 clear
-```
