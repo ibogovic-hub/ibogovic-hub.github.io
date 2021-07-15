@@ -45,7 +45,7 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 
 ### PIDGIN
 
-[Ling_to_site for SIPE addin](https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/)
+[Link_to_site for SIPE addin](https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/)
 
 ### GUI on rhel server
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
@@ -99,7 +99,8 @@ sudo apt-get install obs-studio
 
 ### FortiClient
 
-[Forticlient](<https://hadler.me/linux/forticlient-sslvpn-deb-packages/>)
+[Forticlient](<https://hadler.me/linux/forticlient-sslvpn-deb-packages/>) as a .deb package  
+- It is also awailable on official Forti site [HERE](https://www.fortinet.com/support/product-downloads)
 
 ### change default sudo permission
 
@@ -265,21 +266,14 @@ sudo apt install aspell-hr firefox-esr-l10n-hr hunspell-hr hyphen-hr libreoffice
 sudo apt-get install open-vm-tools open-vm-tools-desktop
 sudo apt-get install build-essential module-assistant linux-headers-virtual linux-image-virtual && dpkg-reconfigure open-vm-tools
 vmware-hgfsclient
-mkdir /mnt/hgfs/shared
-sudo vmhgfs-fuse .host:/shared /mnt/hgfs/shared -o allow_other -o uid=1000
+mkdir /mnt/hgfs/share
+sudo vmhgfs-fuse .host:/share /mnt/hgfs/share -o allow_other -o uid=1000
 sudo nano /etc/fstab
-.host:/shared  /mnt/hgfs/shared  fuse.vmhgfs-fuse  defaults,allow_other,uid=1000   0  0
+.host:/share  /mnt/hgfs/share  fuse.vmhgfs-fuse  defaults,allow_other,uid=1000   0  0
 
 ```
 [Link to the site](https://medium.com/@alexandrerosseto/vmware-linux-how-to-share-folder-between-host-and-vm-62e63419ecbb)
 
-
-## Use shared folders between VMWare guest and host
-
-```sh
-.host:/shared  /mnt/hgfs/shared  fuse.vmhgfs-fuse  defaults,allow_other,uid=1000   0  0
-<https://medium.com/@alexandrerosseto/vmware-linux-how-to-share-folder-between-host-and-vm-62e63419ecbb>
-```
 
 ## FIND
 
