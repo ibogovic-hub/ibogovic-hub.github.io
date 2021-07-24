@@ -30,3 +30,6 @@ key: page-about
 ## Senior Consultant
 
 My detailed CV will come here later...
+---
+
+some time later.. :-)
