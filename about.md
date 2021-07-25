@@ -49,53 +49,145 @@ IT professional with over eleven years of experience in managing various devices
 
 ### Training  
 
---> 2009 
-- The training is in conjunction with my first job in Croatia. In the first year at the company, I specialized in network and security.
+- **2009** 
+  - The training is in conjunction with my first job in Croatia. In the first year at the company, I specialized in network and security.
 
 ---
 
 ### Certificates  
-- 2021
+- **2021**
   - NSE4 Network Security Professional
-- 2020
+- **2020**
   - Cisco Certified Specialist - Enterprise Core (CCS-Ecore)
-- 2020
+- **2020**
   - CompTia A+ CE
-- 2019
+- **2019**
   - Cyber Security Certified - Network
-- 2018
+- **2018**
   - CCNP Switching
-- 2017
+- **2017**
   - PCNSE Palo Alto Certified Network Security Engineer
-- 2017
+- **2017**
   - NSA4 Fortigate Network Administrator
-- 2016
+- **2016**
   - RHCSA Red Hat Certified System Administrator
-- 2016
+- **2016**
   - MCSE Cloud Platform and Infrastructure
-- 2015
+- **2015**
   - CCNA Security
-- 2015
+- **2015**
   - MCSE Enterprise
-- 2014
+- **2014**
   - CompTia Server+
-- 2014
+- **2014**
   - CompTia A+
-- 2014
+- **2014**
   - MCSE Server Infrastructure
-- 2013
+- **2013**
   - MCSA Windows Server
-- 2013
+- **2013**
   - MCP Microsoft Certified Professional
-- 2012
+- **2012**
   - CCNA Voice
-- 2012
+- **2012**
   - MCSA Windows Server
-- 2011
+- **2011**
   - MCITP Enterprise
-- 2010
+- **2010**
   - MCTS Windows Server
-- 2009
+- **2009**
   - CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO)
 
 ---
+
+### Languages
+
+- **English** – Business level knowledge
+- **German** – B2
+- **Croatian** – Mother language
+
+---
+
+### Knowledge
+
+#### Hardware
+
+- HP Server
+- Red Hat Server
+- Networking:
+  - Cisco (Routers, Switches, AP’s)
+  - Hp (Routers, Switches, AP’s)
+  - Huawei
+  - Aruba (Wi-Fi, Airwave, ClearPass) o Ruckus (Wi-Fi, Management)
+  - Mikrotik
+  - PaloAlto (Firewalls, Panorama)
+  - Fortigate (Fortigate, FortiAnalyzer, FortiManager, FortiWifi, FortiClient, FortiDDoS)
+    - More than 7 years of experience with Fortinet
+  - CheckPoint
+  - Juniper
+- Thin clients / Tablets
+- Mobile Devices
+
+#### Operating systems
+
+- Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
+- Windows Server (2008 - 2019)
+- Windows (7 - 10)
+- MacOS
+
+#### Programming languages
+
+- csh und sh Script language
+- Basic knowledge in Python
+
+#### Databases
+
+- Basic knowledge SQL Containers
+- Basic to middle level knowledge in Docker
+
+#### Virtualization
+
+- VMware vSphere
+- Hyper-V
+- KVM
+- Oracle
+
+#### Backup-Software
+
+- Symantec Backup Exec
+- Symantec NetBackup (Basics)
+- Microsoft DPM
+- Acronis
+
+
+##### Network
+
+- Routing
+- Switching
+- Troubleshooting
+- Security
+
+
+#### Industry knowledge
+
+- Enterprise, mid and small business
+- Online
+- Hybrid – Cloud (basic knowledge) / On-premise
+
+ 
+#### Industries
+- Automotive
+- Banks
+- Service
+- Trade
+- Telecommunications
+- Industry
+- Associations & societies
+- Insurance
+
+---
+
+## Project experience 1 – Phoenix Pharma
+'''
+blah blah
+'''
