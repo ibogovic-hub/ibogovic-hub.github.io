@@ -29,7 +29,73 @@ key: page-about
 # Ivan Bogović
 ## Senior Consultant
 
-My detailed CV will come here later...
+---
+### Summary  
+
+Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.
+Professionally, I have been dealing with problems and tasks of network and information security since 2009. First practically with the planning and realization of network-oriented security solutions, later conceptually in the development of IT security solutions and the implementation of IT security audits according to ISO Rules, IS027000, PCI or customer-specific specifications.
+IT professional with over eleven years of experience in managing various devices for top companies in Croatia and now in Germany, excellent interpersonal skills and great attention to detail.  
+
 ---
 
-some time later.. :-)
+### Expert Focus
+- Governance, Risk Management, and Compliance.  
+- Firewall and network architecture management.  
+- Information security, incl. auditing and training.  
+- Setting up and managing tasks in difficult and stressful situations.  
+- Organizational development and project management.  
+
+---
+
+### Training  
+
+--> 2009 
+- The training is in conjunction with my first job in Croatia. In the first year at the company, I specialized in network and security.
+
+---
+
+### Certificates  
+- 2021
+  - NSE4 Network Security Professional
+- 2020
+  - Cisco Certified Specialist - Enterprise Core (CCS-Ecore)
+- 2020
+  - CompTia A+ CE
+- 2019
+  - Cyber Security Certified - Network
+- 2018
+  - CCNP Switching
+- 2017
+  - PCNSE Palo Alto Certified Network Security Engineer
+- 2017
+  - NSA4 Fortigate Network Administrator
+- 2016
+  - RHCSA Red Hat Certified System Administrator
+- 2016
+  - MCSE Cloud Platform and Infrastructure
+- 2015
+  - CCNA Security
+- 2015
+  - MCSE Enterprise
+- 2014
+  - CompTia Server+
+- 2014
+  - CompTia A+
+- 2014
+  - MCSE Server Infrastructure
+- 2013
+  - MCSA Windows Server
+- 2013
+  - MCP Microsoft Certified Professional
+- 2012
+  - CCNA Voice
+- 2012
+  - MCSA Windows Server
+- 2011
+  - MCITP Enterprise
+- 2010
+  - MCTS Windows Server
+- 2009
+  - CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO)
+
+---
