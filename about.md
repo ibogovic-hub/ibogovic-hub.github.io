@@ -188,6 +188,8 @@ IT professional with over eleven years of experience in managing various devices
 ---
 
 ## Project experience 1 – Phoenix Pharma
-'''
-blah blah
-'''
+
+| Project Role | Time Span | Customer |
+| - | - | - |
+| Senior Consultant | 02/2021 - current | Phoenix Pharma |
+
