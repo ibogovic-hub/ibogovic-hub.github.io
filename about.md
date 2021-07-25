@@ -187,7 +187,7 @@ IT professional with over eleven years of experience in managing various devices
 
 ---
 
-## Project experience 1 – Phoenix Pharma
+## Project experience 1 – **Phoenix Pharma**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
@@ -197,17 +197,17 @@ IT professional with over eleven years of experience in managing various devices
 
 > The main responsibility for this client is to implement the SD-WAN solution in all locations.  
 
-- Results achieved.
+- **Results achieved:**
   - Project roll-out in progress, preparing the pilot sites and writing project documentation.
   - Testing devices and configuring for the roll-out.
   - Complete network and security revision of all affected points in this project.
 
-- Used tools:
+> **Used tools:**
   - Internal Phoenix Tools, Putty, Linux, Windows Server/Client, Cisco devices, Fortigate, FortiManager, FortiAnalyzer, Ansible...
 
 ---
 
-## Project experience 2 - Alten / Clear Group
+## Project experience 2 - **Alten / Clear Group**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
@@ -217,7 +217,7 @@ IT professional with over eleven years of experience in managing various devices
 
 > The main responsibility for this client was the support of the entire network.  
 
-- Results achieved.
+- **Results achieved:**
   - The maintenance of all Siemens customer sites and equipment.
   - Focus on existing locations and in communication with Siemens customers and build a new
 location.
@@ -225,10 +225,11 @@ location.
   - For the VPN migration, a market research and investigation of current top tier solutions that could be implemented / upgraded into the Siemens VPN solution was required.
   - After completion of the project, 5 top-tier VPN solutions were proposed, and project documentation was prepared.
 
-- Used tools:
+> **Used tools:**
   - Internal Siemens-Tools, Putty, Linux, Windows Server/Client, Cisco devices...
 
-## Project experience 3 - Jogmo GmbH
+---
+## Project experience 3 - **Jogmo GmbH**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
@@ -238,7 +239,7 @@ location.
 
 > Network revision, reconfiguration and new architecture.  
 
-- Results achieved.
+- **Results achieved:**
   - Complete network revision, as only one subnet was used.
   - New network segmentation and security architecture.
   - New firewall implementation and VPN creation.
@@ -249,11 +250,11 @@ replace or reconfigure equipment.
 of an existing unit in case of misconfiguration or error.
   - Vlan's created for each department, device network completely isolated, guest network separate.
 
-- Used tools:
+> **Used tools:**
   - Linux, OpnSense, Windows, Bash, Python, Except, Wi-Fi, Thin clients, Raspberry Pi, FS Networks, Cisco, HP...
 
-
-## Project experience 4 - Hemmersbach
+---
+## Project experience 4 - **Hemmersbach**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
@@ -263,7 +264,7 @@ of an existing unit in case of misconfiguration or error.
 
 > Network, firewall and Wi-Fi revision, new architecture and design.  
 
-- Results achieved.
+- **Results achieved:**
   - A complete network audit was carried out in Hemmersbach.
   - New network and security design and architecture planned and implemented.
   - Microsoft TMG, Sophos and OpenBSD migrated to new Fortigate units.
@@ -276,10 +277,11 @@ of an existing unit in case of misconfiguration or error.
   - WiFi authentication set up on ClearPass in combination with AD.
   - Further training of colleagues with regard to new design and devices.
 
-- Used tools:
+> **Used tools:**
   - Linux, Windows, Bash, Wi-Fi, Cisco, HP (Switches, Airwave, ClearPass), Fortigate, FortiAnalyzer, FortiManager, Microsoft TMG, Sophos, OpenBSD...
 
-## Project experience 5 – Span d.o.o
+---
+## Project experience 5 – **Span d.o.o**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
@@ -289,7 +291,7 @@ of an existing unit in case of misconfiguration or error.
 
 > End user support, network maintenance, security maintenance, server maintenance, etc.
 
-- Results achieved.
+- **Results achieved:**
   - During this period, various tasks were carried out for all Span customers worldwide.
   - Maintenance of the server infrastructure (AD, DHCP, Hyper-V, Exchange etc.)
   - End-user support and handling of all inquiries including proactive support.
@@ -309,33 +311,33 @@ defining network policies and procedures, as well as setting up connections and 
 optimization, troubleshooting of network problems and escalation to the provider.
   - Securing the network by developing network access, monitoring, control and evaluation,
 maintaining documentation.
-- Largest SPAN customers that I was working on:
-  - McDonalds (the entire world scale)
+> Largest SPAN customers that I was working on:
+  - **McDonalds** (the entire world scale)
     - Network and server maintenance
-  - John Deere
+  - **John Deere**
     - Network and server maintenance
-  - Atlantic Group (the entire world scale)
+  - **Atlantic Group** (the entire world scale)
     - The main objective of this project was to replace a Cisco ASA and Sophos appliances, which were already limited and overloaded, with a variety of Palo Alto Networks appliances (PA-200, PA-500 and PA-3020) equipped with URL Filtering, Threat Prevention, Brightcloud, GlobalProtect and Wildfire are licensed.  These appliances are installed in active-passive high availability, enable all security profiles, enable vpn's site-to-site and client-to-site and are integrated with active directory.
     - There were 8 sites planned for implementation.
     - When the project was finished, all sites were connected and integrated with AD.
     - All units were on the latest software versions.
-  - Croatian Airport
+  - **Croatian Airport**
     - End-user support, server maintenance, network maintenance and taking care of all customer needs.
-  - OptimaPharm
+  - **OptimaPharm**
     - Implementation and subsequent support of an FG60D to their existing system instead of Symantec AV.
-  - Croatian Post
+  - **Croatian Post**
     - Maintenance, support and troubleshooting for any problems or questions the customer may have.  
   Two PA-500D units in HA mode with latest software version
-  - Ministry of Architecture
+  - **Ministry of Architecture**
     - Maintenance, support and troubleshooting for any problems or questions the customer may have. PA-500D unit with latest software version.
-  - Unikomerc
+  - **Unikomerc**
     - Implementation of two FG-30E devices in HA, replacing two ASA firewalls. Migration of all policies and VPN-s.
-  - Croatian Highways
+  - **Croatian Highways**
     - Maintenance and support of the FG60D
-  - KBC Clinical Hospital
+  - **KBC Clinical Hospital**
     - Migration from ASA Firewall and ACS to Fortigate FG-800D in HA mode
-  - Diners Croatia
+  - **Diners Croatia**
     - Migration of Cisco Ironport WSA and ESA from S170 to S190 including Virtual 100.
 
-- Used tools:
+> **Used tools:**
   - Linux/UNIX, MAC, Windows Server, Windows 7-10, Cisco, Huawei, Hp, Ruckus, Mikrotik, Bluecoat, Baracuda, Symantec, Windows DPM, VBA, Shell, PaloAlto, Fortinet, VoIP, SCOM...
