@@ -193,3 +193,16 @@ IT professional with over eleven years of experience in managing various devices
 | - | - | - |
 | Senior Consultant | 02/2021 - current | Phoenix Pharma |
 
+### Task
+
+> The main responsibility for this client is to implement the SD-WAN solution in all locations.  
+
+- Results achieved.
+  - Project roll-out in progress, preparing the pilot sites and writing project documentation.
+  - Testing devices and configuring for the roll-out.
+  - Complete network and security revision of all affected points in this project.
+
+- Used tools:
+  - Internal Phoenix Tools, Putty, Linux, Windows Server/Client, Cisco devices, Fortigate, FortiManager, FortiAnalyzer, Ansible...
+
+---
