@@ -25,8 +25,6 @@ titles:
   # @end locale config
 key: page-about
 ---
-
-# Ivan Bogović
 ## Senior Consultant
 
 ---
