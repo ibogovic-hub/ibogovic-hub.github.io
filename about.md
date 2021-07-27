@@ -54,7 +54,6 @@ IT professional with over eleven years of experience in managing various devices
 ---
 
 ### Certificates
-```
 - **2021**
   - NSE4 Network Security Professional
 - **2020**
@@ -97,7 +96,8 @@ IT professional with over eleven years of experience in managing various devices
   - MCTS Windows Server
 - **2009**
   - CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO)
-```
+
+
 ---
 
 ### Languages
@@ -111,7 +111,7 @@ IT professional with over eleven years of experience in managing various devices
 ### Knowledge
 
 #### Hardware
-
+```
 - HP Server
 - Red Hat Server
 - Networking:
@@ -127,14 +127,14 @@ IT professional with over eleven years of experience in managing various devices
   - Juniper
 - Thin clients / Tablets
 - Mobile Devices
-
+```
 #### Operating systems
-
+```
 - Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
 - Windows Server (2008 - 2019)
 - Windows (7 - 10)
 - MacOS
-
+```
 #### Programming languages
 
 - csh und sh Script language
