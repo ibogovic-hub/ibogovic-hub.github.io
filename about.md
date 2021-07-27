@@ -30,7 +30,7 @@ key: page-about
 ---
 ### Summary  
 
-Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.
+> Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.
 Professionally, I have been dealing with problems and tasks of network and information security since 2009. First practically with the planning and realization of network-oriented security solutions, later conceptually in the development of IT security solutions and the implementation of IT security audits according to ISO Rules, IS027000, PCI or customer-specific specifications.
 IT professional with over eleven years of experience in managing various devices for top companies in Croatia and now in Germany, excellent interpersonal skills and great attention to detail.  
 
