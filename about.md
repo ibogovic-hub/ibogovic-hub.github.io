@@ -39,12 +39,13 @@ IT professional with over eleven years of experience in managing various devices
 ---
 
 ### Expert Focus
+```
 - Governance, Risk Management, and Compliance.  
 - Firewall and network architecture management.  
 - Information security, incl. auditing and training.  
 - Setting up and managing tasks in difficult and stressful situations.  
 - Organizational development and project management.  
-
+```
 ---
 
 ### Training  
@@ -54,7 +55,8 @@ IT professional with over eleven years of experience in managing various devices
 
 ---
 
-### Certificates  
+### Certificates
+```
 - **2021**
   - NSE4 Network Security Professional
 - **2020**
@@ -97,7 +99,7 @@ IT professional with over eleven years of experience in managing various devices
   - MCTS Windows Server
 - **2009**
   - CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO)
-
+```
 ---
 
 ### Languages
