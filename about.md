@@ -141,41 +141,44 @@ IT professional with over eleven years of experience in managing various devices
 - Basic knowledge in Python
 
 #### Databases
-
+```
 - Basic knowledge SQL Containers
 - Basic to middle level knowledge in Docker
-
+```
 #### Virtualization
-
+```
 - VMware vSphere
 - Hyper-V
 - KVM
 - Oracle
-
+```
 #### Backup-Software
 
+```
 - Symantec Backup Exec
 - Symantec NetBackup (Basics)
 - Microsoft DPM
 - Acronis
+```
 
 
 ##### Network
-
+```
 - Routing
 - Switching
 - Troubleshooting
 - Security
-
+```
 
 #### Industry knowledge
-
+```
 - Enterprise, mid and small business
 - Online
 - Hybrid – Cloud (basic knowledge) / On-premise
-
+```
  
 #### Industries
+```
 - Automotive
 - Banks
 - Service
@@ -184,7 +187,7 @@ IT professional with over eleven years of experience in managing various devices
 - Industry
 - Associations & societies
 - Insurance
-
+```
 ---
 
 ## Project experience 1 – **Phoenix Pharma**
