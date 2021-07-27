@@ -136,10 +136,10 @@ IT professional with over eleven years of experience in managing various devices
 - MacOS
 ```
 #### Programming languages
-
+```
 - csh und sh Script language
 - Basic knowledge in Python
-
+```
 #### Databases
 ```
 - Basic knowledge SQL Containers
