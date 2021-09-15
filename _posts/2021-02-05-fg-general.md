@@ -1,81 +1,14 @@
 ---
-title: Fortigate general commands
+title: Forti general commands
 tags: Fortinet
 ---
+---
+# FORTIGATE
 
-## general fortigate stuff
+## DIAGNOSE COMMANDS AND DEBUG
 
-- commands to troubleshoot vpn tunnel
-
-```
-diagnose debug console
-diagnose debug enable
-diagnose debug application ike -1
-diagnose debug application ssld -1
-diagnose debug application sslvpn -1
-diagnose vpn tunnel list
-diagnose debug flow
-```
-
-- ping from the xxx source address
-
-```
-execute ping-options source x.x.x.x
-execute ping 
-```
-
-- reset the debugging
-
-```
-diagnose debug disable
-diagnose debug reset
-```
-
-```
-show full-configuration
-```
-
-> To troubleshoot tunnel mode connections shutting down after a few seconds:  
-> This might occur if there are multiple interfaces connected to the Internet, for example, SD-WAN. This can cause the session to become “dirty”.  
-> To allow multiple interfaces to connect, use the following CLI commands.
-
-### If you are using a FortiOS 6.0.1 or later:
-
-```
-config system interface
-  edit <name>
-    set preserve-session-route enable
-  next
-end
-```
-
-### If you are using a FortiOS 6.0.0 or earlier:
-
-```
- config vpn ssl settings
-   set route-source-interface enable
-end
-```
-
-> It is possible to identify a PSK mismatch using the following combination of CLI commands:
-
-```
-diagnose vpn ike log filter name <phase1-name> 
-diagnose debug app ike -1
-diagnose debug enable
-```
-
-> This will provide you with clues as to any PSK or other proposal  issues.  
-> If it is a PSK mismatch, you should see something similar  to the following output:
-
-```
-ike 0:TRX:322: PSK auth failed: probable pre-shared key mismatch
-ike Negotiate SA Error:
-```
-
-### general
-
-```bash
+### system info
+```sh
 get system interface physical
 #overview of hardware interfaces
 get hardware nic <nic-name>
@@ -104,8 +37,113 @@ diagnose test application dnsproxy 6
 #shows the IP addresses of FQDN objects
 diagnose debug crashlog read
 #shows crashlog, a status of 0 indicates a normal close of a process!
+
+get hardware nic <interface_name>
+get system arp
 ```
 
+### CPU
+```sh
+get system performance status
+diagnose sys top
+# → to sort by cpu shift + p
+# → to sort by ram shift + m
+execute top (lists high CPU or MEM usage)
+execute iotop (list high I/O usage)
+```
+### Firmware & Hardware
+```sh
+diagnose hardware test suite all
+
+# disk partitions and layout
+diagnose system print df
+diagnose system print partitions
+```
+### routing
+```
+diagnose firewall proute list
+```
+### FGFM tunnel diagnose
+```
+diagnose debug application fgfmd 255
+diagnose debug enable
+
+diagnose fgfm session-list
+diagnose dvm device list
+```
+### Crash logs
+```
+diagnose debug crashlog read
+diagnose debug crashlog history
+diagnose debug crashlog read
+```
+### commands to troubleshoot vpn tunnel
+
+```
+diagnose debug console
+diagnose debug enable
+diagnose debug application ike -1
+diagnose debug application ssld -1
+diagnose debug application sslvpn -1
+diagnose vpn tunnel list
+diagnose debug flow
+```
+
+### ping from the xxx source address
+
+```
+execute ping-options source x.x.x.x
+execute ping 
+```
+
+### reset the debugging
+
+```
+diagnose debug disable
+diagnose debug reset
+```
+
+```
+show full-configuration
+```
+
+> To troubleshoot tunnel mode connections shutting down after a few seconds:  
+This might occur if there are multiple interfaces connected to the Internet, for example, SD-WAN. This can cause the session to become “dirty”.  
+To allow multiple interfaces to connect, use the following CLI commands.
+
+### If you are using a FortiOS 6.0.1 or later:
+
+```
+config system interface
+  edit <name>
+    set preserve-session-route enable
+  next
+end
+```
+
+### If you are using a FortiOS 6.0.0 or earlier:
+
+```
+ config vpn ssl settings
+   set route-source-interface enable
+end
+```
+
+> It is possible to identify a PSK mismatch using the following combination of CLI commands:
+
+```
+diagnose vpn ike log filter name <phase1-name> 
+diagnose debug app ike -1
+diagnose debug enable
+```
+
+> This will provide you with clues as to any PSK or other proposal  issues.  
+If it is a PSK mismatch, you should see something similar  to the following output:
+
+```
+ike 0:TRX:322: PSK auth failed: probable pre-shared key mismatch
+ike Negotiate SA Error:
+```
 ### network
 
 ```bash
@@ -123,7 +161,33 @@ execute traceroute <hostname|ip>
 execute traceroute-options ?
 ```
 
-### Routing
+### web-based manager
+
+1. Go to Network > Interface and select Create New > then Interfaces
+2. Enter the Name as Aggregate.
+3. For the Type, select 802.3ad Aggregate.
+
+- If this option does not appear, your FortiGate unit does not support aggregate interfaces.
+
+4. In the Physical Interface Members click to add interfaces, select port 4, 5 and 6.
+5. Select the Addressing Mode of Manual.
+6. Enter the IP address for the port of eq. 10.13.101.100/24.
+7. For Administrative Access select HTTPS and SSH.
+8. Select OK.
+
+### To create aggregate interface - CLI
+
+```
+config system interface
+edit Aggregate
+set type aggregate
+set member port4 port5 port6
+set vdom root
+set ip 172.20.120.100/24
+set allowaccess https ssh
+end
+```
+### routing
 
 ```bash
 get router info6 routing-table
@@ -218,7 +282,7 @@ diag debug enable
 diag test authserver ldap adserv01-test utest0000 W@is4it=gr8!
 ```
 
-## nested groups filter
+### nested groups filter
 
 ```
 set group-filter   "(|(&(objectclass=group)(member:1.2.840.113556.1.4.1941:=%u))(&(objectClass=group)(member:1.2.840.113556.1.4.1941:=%pg)))"
@@ -248,4 +312,223 @@ config system virtual-wan-link
         next
     end
 end
+```
+
+---
+HA CONFIG  
+
+---  
+### session pickup 
+```
+config system ha
+set session-pickup enable
+end
+```
+### session pickup udp & icmp
+```
+config system ha
+set session-pickup enable
+set session-pickup-connectionless enable
+end
+```
+### session pickup multicast
+```
+config system ha
+set multicast-ttl <5 - 600 sec>
+end
+```
+### diagnose commands
+```
+diagnose sys ha status → check HA status
+diagnose sys ha checksum → must be the same on all peers
+```
+### to manage a HA system
+```
+execute ha manage <cluster_id> <admin_username>
+→ execute ha manage 1 <username>
+```
+### failover
+```
+execute ha failover set <cluster_id>
+execute ha failover set 1
+```
+### status
+```
+get system ha status
+→ to stop the failover status
+execute ha failover unset 1
+```
+
+### to check serial numbers
+```
+get sys central-management
+```
+
+### HA Failure checks
+```sh
+# verify TCP port 5199 connectivity
+diagnose sniffer packet <port> ‘port 5199’ <level>
+```
+### debug on HA daemon
+```
+diagnose debug application ha 255
+diagnose debug enable
+```
+
+### check if there is pending synced data
+```
+diagnose ha status
+```
+
+### force resync
+```
+diagnose ha force-resync
+```
+### to enable web-proxy
+```
+config firewall policy
+    edit <firewall policy number>
+        set inspection-mode proxy
+        set http-policy-redirect enable
+    next
+end
+```
+---
+# Authentication
+
+### Authentication Schemes
+- ***negotiate*** = negotiate the method with the web client (kerberos, ntlm, basic and so on)
+```
+config authentication scheme
+    edit <scheme-name>
+        set method [ basic | digest | ntlm | form | negotiate | fsso | rsso | ssh-publickey]
+        set user-database [ local | <ldap-server> | <radius-server> | <fsso-name> | <rsso-name> | <tacacs+-server>]
+        set require-tfa [ enable | disable ]
+        set fsso-guest [ enable | disable ]
+end
+```
+
+### Authentication Rule
+```
+config authentication rule
+    edit <rule-name>
+        set protocol [ http | ftp | socks | ssh] 
+        set status [ enable | disable ]
+        set srcaddr <addr-name or addrgrp-name>
+        set ip-based [ enable | disable ]
+        set sso-auth-method <scheme-name>
+        set active-auth-method <scheme-name>
+    next
+end
+```
+
+### Authentication Settings
+```
+config authentication setting
+    set sso-auth-scheme <scheme-name>
+    set active-auth-scheme <scheme-name>
+end
+```
+---
+# FORTIMANAGER
+
+### reset all configuration except interface and routing configuration
+```sh
+execUte reset all-settings
+execute reset all-except-ip
+
+
+execute format { disk | disk-ext3 | disk-ext4} <RAID-level> deep-erase <erase-count>
+
+# reset all settings will:
+#   → reset fortimanager to factory default settings
+#   → erase the configuration on flash, including IP address and routes
+#   → disconnect all the sessions and reboot fortimanager
+# format command will:
+#   → deleta all databases and logs and partitions hard disk
+```
+
+## ADOM
+
+- each ADOM has its own system templates
+
+### to export a profile:
+```markdown
+→ execute fmprofile export-profile <ADOM name> <profile name> <output file name>  
+```
+###  to import a profile:
+```markdown
+→ execute fmprofile import-profile <ADOM name> <profile name> <full path of exported profile>
+```
+example:
+[test](/assets/images/fortigate/adom-export.png)  
+
+
+## FGFM Tunnel
+
+### to see the cluster members
+```
+diagnose dvm device list
+```
+### check the FGFM tunnels for all managed devices
+```
+diagnose fgfm session-list
+```
+### FGFM diagnose
+```
+diagnose debug application fgfmsd 255
+diagnose debug enable
+```
+
+## Hardware
+```
+diagnose system fsck harddisk
+```
+### to enable scripting
+```
+config system admin setting
+set show_tcl_script enable
+end
+```
+
+## DEBUG
+
+```sh
+# first always run diagnose debug reset
+
+# Enable debug output on SSH/Telnet session
+diagnose debug enable
+
+# enable timestamp in the debug output
+diagnose debug timestamp enable
+
+# debug device-level operations: registering, deleting, refresh, auto-updates, resync process
+diagnose debug application dmapi 255
+diagnose dvm debug enable all
+
+# debug ADOM to device database copy process and import policy packages
+diagnose debug application securityconsole 255
+
+# debug the registration process and install process, including CLI scripts run directly on devices, retrieves, and revision history
+diagnose debug application depmanager 255
+diagnose debug dpm conf-trace enable
+```
+
+## DATABASE INTEGRITY
+
+```sh
+# verify and correct parts of the device manager databases)
+diagnose dvm check-integrity
+
+# object config database intergrity - perform a check to see if upgrade and repair is nevessary
+diagnose cdb check adom-integrity
+
+# update device info by directly change DB
+diagnose cdb check adom-revision
+
+# internally upgrades existing ADOMs to the same ADOM version in order to clan up and correct the ADOM syntax
+diagnose cdb check policy-packages
+
+# verifies and checks dynamic mappings, and removes invalid dynamic mappings
+diagnose cdb check update-devinfo
 ```
