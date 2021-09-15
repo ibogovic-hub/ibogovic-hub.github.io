@@ -312,12 +312,11 @@ config system virtual-wan-link
         next
     end
 end
-```
+```  
 
 ---
-HA CONFIG  
+# HA CONFIG
 
----  
 ### session pickup 
 ```
 config system ha
