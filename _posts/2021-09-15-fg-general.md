@@ -460,7 +460,7 @@ execute format { disk | disk-ext3 | disk-ext4} <RAID-level> deep-erase <erase-co
 → execute fmprofile import-profile <ADOM name> <profile name> <full path of exported profile>
 ```
 example:
-[test](/assets/images/fortigate/adom-export.png)  
+![test](/assets/images/fortigate/adom-export.png)
 
 
 ## FGFM Tunnel
