@@ -519,6 +519,16 @@ get fmupdate publicnetwork
 config fmupdate service
 get
 
+# show update version, last update, contract
+get system fortiguard-service status
+
+# check realtime update
+diagnose debug application update -1
+diagnose debug enable
+execute update-now
+```
+![debug_update](/)
+```sh
 # troubleshooting fortiguard connectivity
 diagnose fmupdate view-serverlist <fds|fct|fgd|fgc|fmtr>
 ```
