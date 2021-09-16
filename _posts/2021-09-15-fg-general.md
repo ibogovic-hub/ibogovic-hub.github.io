@@ -511,7 +511,18 @@ diagnose debug application securityconsole 255
 # debug the registration process and install process, including CLI scripts run directly on devices, retrieves, and revision history
 diagnose debug application depmanager 255
 diagnose debug dpm conf-trace enable
+
+# check if communication to public network is enabled
+get fmupdate publicnetwork
+
+# check update service
+config fmupdate service
+get
+
+# troubleshooting fortiguard connectivity
+diagnose fmupdate view-serverlist <fds|fct|fgd|fgc|fmtr>
 ```
+![update](assets/../../assets/images/fortigate/fmg-update.png)  
 
 ## DATABASE INTEGRITY
 
