@@ -527,8 +527,6 @@ diagnose debug application update -1
 diagnose debug enable
 execute update-now
 ```
-![debug_update](/)
-```sh
 # troubleshooting fortiguard connectivity
 diagnose fmupdate view-serverlist <fds|fct|fgd|fgc|fmtr>
 ```
