@@ -19,4 +19,3 @@ The topology below shows two clusters. The Cluster_1 internal interfaces and the
 
 > Example HA topology with possible MAC address conflicts:
 
-![topology1](/assets/images/Cisco/mac-address-conflict.png)

@@ -27,8 +27,6 @@ FGT-3 is the RP for the clean networks, 239.254.0.0/16.
 
 - Example multicast DNAT topology:
 
-![DNAT](/assets/images/Cisco/fortigate-dnat-config.png)
-
 - To configure FGT-2 for DNAT multicast
 
 > Add a loopback interface. In the example, the loopback interface is named loopback.

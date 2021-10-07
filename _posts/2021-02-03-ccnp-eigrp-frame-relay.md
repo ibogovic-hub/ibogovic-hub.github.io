@@ -3,12 +3,6 @@ title: eigrp frame relay
 tags: CCNP
 ---
 
-![GNS3-config](/assets/images/Cisco/eigrp-frame-relay.png)  
-
-[WEST-config](/assets/images/Cisco/eigrp-frame-relay.west.txt)  
-[EAST-config](/assets/images/Cisco/eigrp-frame-relay.east.txt)  
-[HQ-config](/assets/images/Cisco/eigrp-frame-relay.hq.txt)  
-
 ```
 conf t
 int loo0

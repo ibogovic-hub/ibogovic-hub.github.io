@@ -7,10 +7,6 @@ tags: CCNP
 
 ## configure OSPFv3 on routers  
 
-[R1-config](/assets/images/Cisco/ipv6-and-ospfv3-r1.txt)  
-[R2-config](/assets/images/Cisco/ipv6-and-ospfv3-r2.txt)  
-[R3-config](/assets/images/Cisco/ipv6-and-ospfv3-r3.txt)  
-[R4-config](/assets/images/Cisco/ipv6-and-ospfv3-r4.txt)  
 
 ```bash
 conf t

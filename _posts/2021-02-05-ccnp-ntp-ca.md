@@ -3,8 +3,6 @@ title: ntp and ca config
 tags: CCNP
 ---
 
-![GNS3-confg](/assets/images/Cisco/ntp-ca.png)
-
 ## R2 → as the CA Server
 
 # Sync the time first / Set local time zone

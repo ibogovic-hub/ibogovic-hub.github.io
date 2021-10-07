@@ -9,7 +9,6 @@ tags: PWK
 
 - filter for wireshark so we can capture only interesting traffic
 
-![Wireshark](/assets/images/pwk/wireshark-capture.png)
 
 ```bash
 host 10.11.0.18 and not arp

@@ -3,12 +3,6 @@ title: ipv6 and ripng
 tags: CCNP
 ---
 
-![GNS3-congig](/assets/images/Cisco/ipv6-and-ripng.png)
-[R1-config](/assets/images/Cisco/ipv6-and-ripng-r1.txt)  
-[R2-config](/assets/images/Cisco/ipv6-and-ripng-r2.txt)  
-[R3-config](/assets/images/Cisco/ipv6-and-ripng-r3.txt)  
-[R4-config](/assets/images/Cisco/ipv6-and-ripng-r4.txt)  
-
 ## ipv6 interface configuration  
 
 ```bash

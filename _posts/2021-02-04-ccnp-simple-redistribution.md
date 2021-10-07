@@ -3,12 +3,6 @@ title: simple redistribution
 tags: CCNP
 ---
 
-![GNS3-config](/assets/images/Cisco/simple-redistribution.png)
-
-[R1-config](/assets/images/Cisco/simple_redistribution-R1.txt)  
-[R2-config](/assets/images/Cisco/simple_redistribution-R2.txt)  
-[R3-config](/assets/images/Cisco/simple_redistribution-R3.txt)  
-
 ## enable full redistribution EIGRP - OSPF
 
 ```

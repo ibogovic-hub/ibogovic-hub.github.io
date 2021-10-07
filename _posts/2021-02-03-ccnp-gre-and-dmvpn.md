@@ -3,14 +3,9 @@ title: gre and dmvpn
 tags: CCNP
 ---
 
-![GNS3-config](/assets/images/Cisco/gre&dmvpn.png)
-
 ## configure GRE and DMVPN on three sites
 
-[ISP-config](/assets/images/Cisco/gre-dmvpn-isp.txt)  
-[R1-hub-config](/assets/images/Cisco/gre-dmvpn-r1-hub.txt)  
-[R2-spoke-config](/assets/images/Cisco/gre-dmvpn-r2-spoke.txt)  
-[R3-spoke-config](/assets/images/Cisco/gre-dmvpn-r3-spoke.txt)  
+
 
 - HUB  
 

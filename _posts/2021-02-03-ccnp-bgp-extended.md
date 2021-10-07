@@ -3,16 +3,6 @@ title: bgp-extended
 tags: CCNP
 ---
 
-![GNS3 config](/assets/images/Cisco/bgp-att.png)
-
-[R1-config](/assets/images/Cisco/bgp-att-R1.txt)  
-[R2-config](/assets/images/Cisco/bgp-att-R2.txt)  
-[R3-config](/assets/images/Cisco/bgp-att-R3.txt)  
-[R4-config](/assets/images/Cisco/bgp-att-R4.txt)  
-[R5-config](/assets/images/Cisco/bgp-att-R5.txt)  
-[R6-config](/assets/images/Cisco/bgp-att-R6.txt)  
-[R7-config](/assets/images/Cisco/bgp-att-R7.txt)  
-
 ## ***weight configuration***
 
 - R1  

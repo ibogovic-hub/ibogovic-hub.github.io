@@ -3,12 +3,6 @@ title: eigrp
 tags: CCNP
 ---
 
-![GNS3-config](/assets/images/Cisco/eigrp.png)
-
-[BB-config](/assets/images/Cisco/eigrp-bb.txt)  
-[R1-config](/assets/images/Cisco/eigrp-R1.txt)  
-[R2-config](/assets/images/Cisco/eigrp-R2.txt)  
-
 ## see all messages (u all - to cancel)
 
 ```
