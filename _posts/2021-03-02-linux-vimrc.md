@@ -160,6 +160,16 @@ noremap <c-right> <c-w><
 nnoremap <F3> :NERDTreeToggle<cr>
 
 let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_math = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_autowrite = 1
+let g:vim_markdown_edit_url_in = 'tab'
+let g:vim_markdown_follow_anchor = 1
+
 
 set statusline=
 set statusline+=\ %F\ %M\ %Y\ %R
@@ -168,13 +178,15 @@ set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
 call plug#begin()
-  Plug 'junegunn/vim-plug'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'preservim/nerdtree'
-  Plug 'rafi/awesome-vim-colorschemes'
-  Plug 'itchyny/lightline.vim'
-  Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'junegunn/vim-plug'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'preservim/nerdtree'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'itchyny/lightline.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 ```
+
