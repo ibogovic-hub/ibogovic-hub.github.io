@@ -5,6 +5,7 @@ tags: Linux
 
 ---
 
+# Linux
 ## vimrc file modified for my purposes
 
 ---
@@ -85,4 +86,93 @@ set foldmethod=indent
 if filereadable("/etc/vim/vimrc.local") 
   source /etc/vim/vimrc.local 
 endif
+```
+
+# MAC
+## vimrc file modified for my purposes
+
+```sh
+syntax enable
+colorscheme molokai
+set syntax=on
+set cursorline
+set cursorcolumn
+set nocompatible
+set autoindent
+set nomodeline
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=4
+set shiftround
+set hidden
+set number
+set relativenumber
+set nowrap
+set ruler
+set colorcolumn=100
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set splitbelow
+set splitright
+set showcmd
+set showmatch
+set showmode
+set autowrite
+set mouse=a
+set cursorline
+set wildmenu
+set lazyredraw
+set backspace=indent,eol,start
+set scrolloff=15
+set history=1000
+set wildmode=list:longest
+set autoread
+set mouse=a
+
+inoremap jj <Esc>
+
+nnoremap <space> :
+
+nnoremap o o<esc>
+nnoremap O O<esc>
+
+nnoremap n nzz
+nnoremap N Nzz
+
+nnoremap Y y$
+
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+noremap <c-up> <c-w>+
+noremap <c-down> <c-w>-
+noremap <c-left> <c-w>>
+noremap <c-right> <c-w><
+
+nnoremap <F3> :NERDTreeToggle<cr>
+
+let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
+
+set statusline=
+set statusline+=\ %F\ %M\ %Y\ %R
+set statusline+=%=
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+set laststatus=2
+
+call plug#begin()
+  Plug 'junegunn/vim-plug'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'preservim/nerdtree'
+  Plug 'rafi/awesome-vim-colorschemes'
+  Plug 'itchyny/lightline.vim'
+  Plug 'JamshedVesuna/vim-markdown-preview'
+call plug#end()
 ```
