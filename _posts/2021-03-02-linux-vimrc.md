@@ -93,7 +93,7 @@ endif
 
 - I'm using molokai color theme so [this](https://www.vim.org/scripts/script.php?script_id=2340) is needed and copy it to your local folder ***(eq. ~/.vim/colors)***.
  
-```sh
+```bash
 syntax enable
 colorscheme molokai
 set syntax=on
