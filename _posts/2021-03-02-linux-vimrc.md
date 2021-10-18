@@ -94,71 +94,39 @@ endif
 - I'm using molokai color theme so [this](https://www.vim.org/scripts/script.php?script_id=2340) is needed and copy it to your local folder ***(eq. ~/.vim/colors)***.
  
 ```bash
+set nocompatible
 syntax enable
 colorscheme molokai
-set syntax=on
-set cursorline
-set cursorcolumn
-set nocompatible
+filetype off
+filetype plugin indent on
 set autoindent
-set nomodeline
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=4
-set shiftround
-set hidden
-set number
-set relativenumber
-set nowrap
-set ruler
+set backspace=indent,eol,start
 set colorcolumn=100
-set incsearch
+set cursorcolumn
+set cursorline
+set expandtab
+set hidden
+set history=1000
 set hlsearch
 set ignorecase
-set smartcase
-set splitbelow
-set splitright
-set showcmd
+set incsearch
+set mouse=a
+set nofoldenable
+set nowrap
+set number
+set ruler
 set showmatch
-set showmode
-set autowrite
-set mouse=a
-set cursorline
+set smartcase
+set softtabstop=2
+set spell
+set tabstop=2
+set title
 set wildmenu
-set lazyredraw
-set backspace=indent,eol,start
-set scrolloff=15
-set history=1000
 set wildmode=list:longest
-set autoread
-set mouse=a
-
-inoremap jj <Esc>
 
 nnoremap <space> :
 
-nnoremap o o<esc>
-nnoremap O O<esc>
-
-nnoremap n nzz
-nnoremap N Nzz
-
-nnoremap Y y$
-
-
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-noremap <c-up> <c-w>+
-noremap <c-down> <c-w>-
-noremap <c-left> <c-w>>
-noremap <c-right> <c-w><
-
 nnoremap <F3> :NERDTreeToggle<cr>
-
 let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 let g:vim_markdown_conceal = 2
 let g:vim_markdown_conceal_code_blocks = 0
@@ -169,8 +137,6 @@ let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_autowrite = 1
 let g:vim_markdown_edit_url_in = 'tab'
 let g:vim_markdown_follow_anchor = 1
-
-
 set statusline=
 set statusline+=\ %F\ %M\ %Y\ %R
 set statusline+=%=
@@ -189,4 +155,3 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 call plug#end()
 ```
-
