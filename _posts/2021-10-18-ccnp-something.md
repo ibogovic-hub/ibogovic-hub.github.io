@@ -11,7 +11,6 @@ notes from ENARSI and ENCORE sessions
 #### how to configure NAT on the router
 
 ![config](/assets/images/cisco/NTP.png)
-img[alt=config] { width: 50px; }
 
 - configure inside interface  
 
