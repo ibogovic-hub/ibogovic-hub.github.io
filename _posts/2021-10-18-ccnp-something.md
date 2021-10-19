@@ -9,9 +9,10 @@ notes from ENARSI and ENCORE sessions
 ### NAT and PAT  
 
 #### how to configure NAT on the router
-- configure inside interface
 
-![config](/assets/images/cisco/NAT.png)
+![config](/assets/images/cisco/NTP.png)
+
+- configure inside interface  
 
 ```sh
 conf t
