@@ -203,5 +203,5 @@ show vrrp brief    # check VRRP status
 
 ---
 
-![setup](../assets/images/cisco/network-commands.png)
+![setup](/assets/images/cisco/network-commands.png)
 
