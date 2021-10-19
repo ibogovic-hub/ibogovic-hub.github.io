@@ -4,7 +4,7 @@ tags: CCNP
 ---
 
 ---
-**Notes from ENARSI and ENCORE sessions**  
+# **Notes from ENARSI and ENCORE sessions**  
 
 ---  
 
@@ -67,11 +67,11 @@ show ip nat translations
 ```
 
 ---
-***NTP***
+# ***NTP***
 
 ---
 
-```bash
+```sh
 # router - internet
 conf t
   clock set 18:00:00 April 20 2021
@@ -91,7 +91,8 @@ wr
 
 ## NTP security
 
-- password authentication
+- password authentication  
+
 ```sh
 # Internet Router
 conf t
@@ -132,13 +133,13 @@ wr
 
 ### check NTP
 
-```bash
+```sh
 show ntp status # to check the status of the sync
 show ntp config # to check settings of NTP
 ```
 
 ---
-***HSRP & VRRP***
+# ***HSRP & VRRP***
 
 ---
 
@@ -146,7 +147,7 @@ show ntp config # to check settings of NTP
 
 ![HSRP01](../assets/images/cisco/HSRP01.png)
 
-```bash
+```sh
 # R1
 
 conf t
