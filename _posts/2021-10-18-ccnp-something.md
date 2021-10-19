@@ -3,7 +3,10 @@ title: ENARSI & ENCORE notes
 tags: CCNP
 ---
 
-## NAT and PAT  
+---
+notes from ENARSI and ENCORE sessions
+
+### NAT and PAT  
 
 #### how to configure NAT on the router
 - configure inside interface
@@ -58,7 +61,7 @@ conf t
 show ip nat translations
 ```
 
-#### setting up NTP  
+### NTP  
 
 ```bash
 # router - internet
@@ -77,3 +80,12 @@ conf t
   end
 wr
 ```
+
+#### check NTP time
+
+```bash
+show ntp status # to check the status of the sync
+show ntp config # to check settings of NTP
+```
+
+### HSRP & VRRP
