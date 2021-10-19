@@ -10,7 +10,7 @@ notes from ENARSI and ENCORE sessions
 
 #### how to configure NAT on the router
 
-![config](/assets/images/cisco/NTP.png){:height="20%" width="20%"}
+![config](/assets/images/cisco/NTP.png) { width: 100px; }
 
 - configure inside interface  
 
