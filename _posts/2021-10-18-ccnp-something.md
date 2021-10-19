@@ -145,7 +145,7 @@ show ntp config # to check settings of NTP
 
 ## HSRP
 
-![HSRP01](../assets/images/cisco/HSRP01.png)
+![HSRP01](/assets/images/cisco/HSRP01.png)
 
 ```sh
 # R1
@@ -199,6 +199,9 @@ show vrrp brief    # check VRRP status
 ```
 
 ---
-***MULTICAST***  
+# ***NETWORK MANAGEMENT***  
 
 ---
+
+![setup](../assets/images/cisco/network-commands.png)
+
