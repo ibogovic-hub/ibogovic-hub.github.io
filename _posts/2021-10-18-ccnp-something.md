@@ -168,6 +168,28 @@ conf t
 wr
 ```
 
+- adjust timers
+```sh
+conf t
+  int gig 0/1
+  standby version 2
+  standby timers msec 50 msec 200
+  end
+wr
+
+# debug command
+debug standby terse
+
+# tracking if internet interface is down
+conf t
+  int gig 0/1
+    standby 10 track 1 decrement 20
+    exit
+  track 1 interface gig 0/2 line-protocol
+    end
+wr
+```
+
 ## VRRP
 
 ```sh
@@ -203,5 +225,57 @@ show vrrp brief    # check VRRP status
 
 ---
 
-![setup](/assets/images/cisco/network-commands.png)
+## SNMP
 
+```sh
+# ver 2c
+conf t
+  snmp-server community COMUNITYro ro
+  snmp-server community COMUNITYrw rw
+  snmp-server location world, WO
+  snmp-server contact daffy duck
+  snmp-server host 3.3.3.3 version 2c COMUNITYsrv
+  !
+  snmp-server enable traps
+  end
+wr
+```
+```sh
+# ver 3
+conf t
+  snmp-server engineID local 123456789
+  snmp-server group DEMO-GROUP v3 priv
+  snmp-server user DEMO-USER DEMO-GROUP v3 auth sha Password priv aes 256 Password
+  end
+wr
+```
+
+## SYSLOG
+
+```sh
+conf t
+  logging 2.2.2.2
+  logging trap 5 # notifications
+  end
+wr
+```
+
+## NETFLOW
+
+```sh
+conf t
+  int gig 0/1
+  ip flow ingress
+  int gig 0/2
+  ip flow ingress
+  exit
+  ip flow-export source gig 0/1
+  ip flow-export version 5
+  ip flow-export destination 192.168.1.50 9995
+  end
+wr
+```
+- to check the flow
+```sh
+show ip cache flow
+```
