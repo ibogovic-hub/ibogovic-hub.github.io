@@ -11,6 +11,8 @@ notes from ENARSI and ENCORE sessions
 #### how to configure NAT on the router
 - configure inside interface
 
+![config](/assets/images/cisco/NAT.png)
+
 ```sh
 conf t
   interface gig 0/1
