@@ -84,6 +84,47 @@ conf t
 wr
 ```
 
+#### NTP security
+
+- password authentication
+```sh
+# Internet Router
+conf t
+  ntp authentication-key 1 md5 Password
+  ntp trusted key 1
+  ntp authenticate
+  end
+wr
+
+# R1
+conf t
+  ntp authentication-key 1 md5 Password
+  ntp trusted key 1
+  ntp authenticate
+  end
+wr
+```
+- access list authentication
+
+```sh
+# Internet router
+conf t
+  ip access-list standard NTP-CLIENT
+    permit 172.16.1.1
+  ntp access-group serve-only NTP-CLIENT
+  end
+wr
+
+# R1
+conf t
+  ip access-list standard NTP-SERVER
+    permit 1.1.1.1
+    exit
+  ntp access-group peer NTP-SERVER
+  end
+wr
+```
+
 #### check NTP time
 
 ```bash
@@ -91,4 +132,61 @@ show ntp status # to check the status of the sync
 show ntp config # to check settings of NTP
 ```
 
-### HSRP & VRRP
+---
+HSRP & VRRP
+
+#### basic configuration
+
+![HSRP01](../assets/images/cisco/HSRP01.png)
+
+```bash
+# R1
+
+conf t
+  int gig 0/1
+    standby 10 ip 10.1.1.1
+    standby 10 preempt
+    standby 10 priority 110
+  end
+wr
+
+# R2
+
+conf t
+  int gig 0/1
+    standby 10 ip 10.1.1.1
+    standby 10 preempt
+  end
+wr
+```
+
+#### VRRP
+
+```sh
+# R1
+
+conf t
+  int gig 0/1
+  vrrp 10 ip 10.1.1.1
+  vrrp 10 priority 110
+  end
+wr
+
+# R2
+
+conf t
+  int gig 0/1
+  vrrp 10 ip 10.1.1.1
+  vrrp 10 priority 110
+  end
+wr
+```
+
+
+#### check status
+
+```sh
+show standby brief # check HSRP status
+show vrrp brief    # check VRRP status
+```
+
