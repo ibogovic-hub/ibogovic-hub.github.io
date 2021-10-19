@@ -4,11 +4,13 @@ tags: CCNP
 ---
 
 ---
-**Notes from ENARSI and ENCORE sessions**
+**Notes from ENARSI and ENCORE sessions**  
 
-### NAT and PAT  
+---  
 
-#### how to configure NAT on the router
+# NAT and PAT  
+
+## how to configure NAT
 
 ![config](/assets/images/cisco/NTP.png)
 
@@ -27,7 +29,7 @@ conf t
 end
 ```
 
-#### dynamic NAT  
+## dynamic NAT  
 
 ```sh
 conf t
@@ -44,7 +46,7 @@ end
 wr
 ```
 
-#### PAT configuration  
+## PAT configuration  
 
 ```sh
 conf t
@@ -58,13 +60,16 @@ conf t
   ip nat inside source list 1 interface gig0/2 overload
 ```
 
-#### command to check the translations
+### command to check the translations
 
 ```sh
 show ip nat translations
 ```
 
-### NTP  
+---
+***NTP***
+
+---
 
 ```bash
 # router - internet
@@ -84,7 +89,7 @@ conf t
 wr
 ```
 
-#### NTP security
+## NTP security
 
 - password authentication
 ```sh
@@ -125,7 +130,7 @@ conf t
 wr
 ```
 
-#### check NTP time
+### check NTP
 
 ```bash
 show ntp status # to check the status of the sync
@@ -135,7 +140,9 @@ show ntp config # to check settings of NTP
 ---
 ***HSRP & VRRP***
 
-#### basic configuration
+---
+
+## HSRP
 
 ![HSRP01](../assets/images/cisco/HSRP01.png)
 
@@ -160,7 +167,7 @@ conf t
 wr
 ```
 
-#### VRRP
+## VRRP
 
 ```sh
 # R1
@@ -183,7 +190,7 @@ wr
 ```
 
 
-#### check status
+### check status
 
 ```sh
 show standby brief # check HSRP status
@@ -191,6 +198,6 @@ show vrrp brief    # check VRRP status
 ```
 
 ---
-***MULTICAST***
+***MULTICAST***  
 
-### Unicast
+---
