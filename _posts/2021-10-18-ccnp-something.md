@@ -1,11 +1,13 @@
 ---
-title: Cisco ccnp commands
+title: ENARSI & ENCORE notes
 tags: CCNP
 ---
 
-## NAT and PAT
+## NAT and PAT  
+
 #### how to configure NAT on the router
 - configure inside interface
+
 ```sh
 conf t
   interface gig 0/1
@@ -13,13 +15,14 @@ conf t
 
   interface gig 0/2
   ip nat outside
-exit
+  exit
 
-ip nat inside source static 192.168.1.100 172.16.1.100
+  ip nat inside source static 192.168.1.100 172.16.1.100
 end
 ```
 
-#### dynamic NAT
+#### dynamic NAT  
+
 ```sh
 conf t
   interface gig 0/1
@@ -34,7 +37,8 @@ conf t
 end
 wr
 ```
-#### PAT configuration
+
+#### PAT configuration  
 
 ```sh
 conf t
@@ -52,4 +56,24 @@ conf t
 
 ```sh
 show ip nat translations
+```
+
+#### setting up NTP  
+
+```bash
+# router - internet
+conf t
+  clock set 18:00:00 April 20 2021
+  clock timezone UTC +1
+  ntp master 3
+  end
+wr
+
+# router R1
+conf t
+  ntp server 1.1.1.1
+  clock timezone UTC +1
+  clock summer-time EDT recurring
+  end
+wr
 ```
