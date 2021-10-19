@@ -4,7 +4,7 @@ tags: CCNP
 ---
 
 ---
-notes from ENARSI and ENCORE sessions
+**Notes from ENARSI and ENCORE sessions**
 
 ### NAT and PAT  
 
@@ -133,7 +133,7 @@ show ntp config # to check settings of NTP
 ```
 
 ---
-HSRP & VRRP
+***HSRP & VRRP***
 
 #### basic configuration
 
@@ -190,3 +190,7 @@ show standby brief # check HSRP status
 show vrrp brief    # check VRRP status
 ```
 
+---
+***MULTICAST***
+
+### Unicast
