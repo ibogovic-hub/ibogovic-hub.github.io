@@ -279,3 +279,21 @@ wr
 ```sh
 show ip cache flow
 ```
+
+# ***SPAN, RSPAN & ERSPAN***
+
+## SPAN
+
+![sample](/assets/images/cisco/cisco-span.png)
+
+```sh
+# SW01
+conf t
+  monitor session 1 source interface gig 0/1 - 2
+  monitor session 1 destination interface gig 0/3
+```
+
+```sh
+# check the status
+show monitor session 1
+```

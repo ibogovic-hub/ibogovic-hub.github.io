@@ -653,4 +653,4 @@ Confirm Password:
   [✓] New password set
 ```
 
-- reference article ![HERE](https://www.osradar.com/install-pihole-on-ubuntu-20-04/)
+- reference article [HERE](https://www.osradar.com/install-pihole-on-ubuntu-20-04/)
