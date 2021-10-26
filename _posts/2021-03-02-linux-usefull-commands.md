@@ -260,6 +260,13 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 sudo apt install aspell-hr firefox-esr-l10n-hr hunspell-hr hyphen-hr libreoffice-l10n-hr myspell-hr aspell-de firefox-esr-l10n-de hunspell-de-de hyphen-de libreoffice-l10n-de
 ```
 
+### Fix missing printer driver on ubuntu
+- have it all :)
+
+```sh
+sudo apt install -y printer-driver-all-enforce printer-driver-all printer-driver-brlaser printer-driver-c2050 printer-driver-c2esp printer-driver-cjet printer-driver-cups-pdf printer-driver-dymo printer-driver-escpr printer-driver-foo2zjs-common printer-driver-foo2zjs printer-driver-fujixerox printer-driver-gutenprint printer-driver-hpcups printer-driver-hpijs printer-driver-indexbraille printer-driver-m2300w printer-driver-min12xxw printer-driver-oki printer-driver-pnm2ppa printer-driver-postscript-hp printer-driver-ptouch printer-driver-pxljr printer-driver-sag-gdi printer-driver-splix
+```
+
 ## Mounting vmware folders
 
 ```sh
