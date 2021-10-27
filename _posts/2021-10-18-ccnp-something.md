@@ -282,9 +282,10 @@ show ip cache flow
 
 # ***SPAN, RSPAN & ERSPAN***
 
-## SPAN
 
 ![sample](/assets/images/cisco/cisco-span.png)
+
+## SPAN
 
 ```sh
 # SW01
@@ -296,4 +297,17 @@ conf t
 ```sh
 # check the status
 show monitor session 1
+```
+
+## RSPAN
+
+```sh
+# SW01
+conf t
+  monitor session 1 type rspan-source
+    no shutdown
+    source interface gig 2
+    destination
+      erspan-id 1
+      ip address 10.1.1.2
 ```

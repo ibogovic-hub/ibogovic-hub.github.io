@@ -630,6 +630,10 @@ The example above works with all types of brackets, single and double quotes. It
 
 [ref article](https://medium.com/swlh/beginning-vim-and-using-vim-in-other-text-editors-724e8da32daa)
 
+## Scan from PI
+```sh
+sudo scanimage --format=jpeg --resolution=300 -p > output.jpg
+```
 ## Install Pi-Hole
 
 ```sh
