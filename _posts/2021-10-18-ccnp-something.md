@@ -346,3 +346,18 @@ conf t
 # check the ip sla
 show ip sla statistics
 ```
+
+![ip-sla01](/assets/images/cisco/ip-sla01.png)
+
+```sh
+# R1
+conf t
+  ip sla 1
+    icmp-echo 203.0.113.5 source-ip 192.0.2.1
+      frequency 5
+      threshold 100
+      exit
+  ip sla schedule 1 life forever start-time now
+  track 1 ip sla 1
+    delay down 10 up 10
+```
