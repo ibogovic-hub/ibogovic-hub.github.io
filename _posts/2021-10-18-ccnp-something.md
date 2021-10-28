@@ -299,10 +299,10 @@ conf t
 show monitor session 1
 ```
 
-## RSPAN
+## ERSPAN
 
 ```sh
-# SW01
+# R2
 conf t
   monitor session 1 type rspan-source
     no shutdown
@@ -310,4 +310,39 @@ conf t
     destination
       erspan-id 1
       ip address 10.1.1.2
+      origin ip address 30.1.1.2
+      end
+
+# R1
+conf t
+  monitor session 1 type erspan-destination
+    no shutdown
+    destination interface gig 2
+    source
+      erspan-id 1
+      ip address 10.1.1.2
+      end
+
+# chect the session
+show monitor session 1
+```
+---
+# IP SLA
+
+![ip-sla](/assets/images/cisco/ip-sla.png)
+
+
+```sh
+# R1 [example]
+conf t
+  ip sla 1
+    udp-jitter 203.0.113.2 16384 codec g729a
+    tos 184
+    frequency 5
+    exit
+  ip sla schedule 1 start-time now life forever
+  end
+
+# check the ip sla
+show ip sla statistics
 ```
