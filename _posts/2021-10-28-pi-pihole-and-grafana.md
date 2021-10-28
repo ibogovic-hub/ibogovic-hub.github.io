@@ -150,3 +150,5 @@ scrape_configs:
   static_configs:
     - targets: ["localhost:9798"]
 ```
+
+- reference article [HERE](https://docs.miguelndecarvalho.pt/projects/speedtest-exporter/)
