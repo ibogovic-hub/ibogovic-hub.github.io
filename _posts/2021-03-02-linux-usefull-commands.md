@@ -634,27 +634,3 @@ The example above works with all types of brackets, single and double quotes. It
 ```sh
 sudo scanimage --format=jpeg --resolution=300 -p > output.jpg
 ```
-## Install Pi-Hole
-
-```sh
-# update your machine
-sudo apt update && sudo apt upgrade
-```
-
-```sh
-# run the script and follow the wizard
-curl -sSL https://install.pi-hole.net | sudo bash
-```
-
-```sh
-# after the installation you will be assigned admin pass which you can't change on GUI if you forget it
-# so in the terminal, change the default password
-
-pihole -a -p
-[sudo] password for angelo: 
-Enter New Password (Blank for no password): 
-Confirm Password: 
-  [✓] New password set
-```
-
-- reference article [HERE](https://www.osradar.com/install-pihole-on-ubuntu-20-04/)
