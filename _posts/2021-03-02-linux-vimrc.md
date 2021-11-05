@@ -1,12 +1,12 @@
 ---
 title: vimrc file
-tags: Linux
+tags: Linux & Mac
 ---
 
 ---
 
 # Linux
-## vimrc file modified for my purposes
+## ~/.vimrc file
 
 ---
 
@@ -88,14 +88,16 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 ```
 
+---
 # MAC
-## vimrc file modified for my purposes
+
+## ~/.vimrc file
 
 - I'm using molokai color theme so [this](https://www.vim.org/scripts/script.php?script_id=2340) is needed and copy it to your local folder ***(eq. ~/.vim/colors)***.
  
-```bash
+```sh
 set nocompatible
-syntax enable
+syntax on
 colorscheme molokai
 filetype off
 filetype plugin indent on
