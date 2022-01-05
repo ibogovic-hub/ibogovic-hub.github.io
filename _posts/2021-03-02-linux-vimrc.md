@@ -1,6 +1,6 @@
 ---
 title: vimrc file
-tags: Linux & Mac
+tags: Linux and Mac
 ---
 
 ---

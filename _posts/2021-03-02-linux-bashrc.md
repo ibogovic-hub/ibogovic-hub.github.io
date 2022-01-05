@@ -1,6 +1,6 @@
 ---
 title: .bashrc/.zshrc file
-tags: Linux & Mac
+tags: Linux and Mac
 ---
 
 ---
