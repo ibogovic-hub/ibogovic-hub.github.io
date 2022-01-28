@@ -3,52 +3,52 @@ title: nmap scanning
 tags: nmap
 ---
 
-#### basic scan of one IP
+### basic scan of one IP
 ```
 nmap 192.168.1.1
 ```
 
-#### basic scan of subnet
+### basic scan of subnet
 ```
 nmap 192.168.1.0/24
 ```
-#### create and scan from a file
+### create and scan from a file
 ```
 nmap -iL test.txt
 ```
 
-#### random scan and exclude IP
+### random scan and exclude IP
 ```
 nmap -iR 50
 ```
 
-#### exclude IP
+### exclude IP
 ```
 nmap 192.168.1.0/24 --exclude 192.168.1.100
 ```
 
-### export results to a file
-#### txt
+## export results to a file
+### txt
 ```
 nmap 192.168.1.0/24 -oN /root/output.txt
 ```
 
-#### xml 
+### xml 
 ```
 nmap 192.168.1.0/24 -oX /root/output.xml
 ```
 
-#### grepable file
+### grepable file
 ```
 nmap 192.168.1.0/24 -oG /root/output
 ```
 
-#### all format export
+### all format export
 ```
 nmap 192.168.1.0/24 -oA /root/output
 ```
 
-### Nmap Examples
+## Nmap Examples
 - Basic Nmap scanning examples, often used at the first stage of enumeration.
 ```
 nmap -sP 10.0.0.0/24
@@ -93,14 +93,14 @@ nmap -v -p 1-65535 -sV -O -sS -T5 target
 - Prints verbose output, runs stealth syn scan, T5 timing, OS and version detection + full port range scan.
 
 
-#### Nmap scan from file
+### Nmap scan from file
 ```
 nmap -iL ip-addresses.txt
 ```
 
 - Scans a list of IP addresses, you can add options before / after.
 
-#### Nmap output formats
+### Nmap output formats
 ```
 nmap -sV -p 139,445 -oG grep-output.txt 10.0.1.0/24
 ```
@@ -112,7 +112,7 @@ nmap -sS -sV -T5 10.0.1.99 --webxml -oX - | xsltproc --output file.html -
 
 - Export nmap output to HTML report.
 
-#### Nmap Netbios Examples
+### Nmap Netbios Examples
 ```
 nmap -sV -v -p 139,445 10.0.0.1/24
 ```
@@ -134,7 +134,7 @@ nmap --script-args=unsafe=1 --script smb-check-vulns.nse -p 445 target
 >***--script-args=unsafe=1 has the potential to crash servers / services
 Becareful when running this command.***
 
-#### Nmap Nikto Scan
+### Nmap Nikto Scan
 ```
 nmap -p80 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
@@ -147,7 +147,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 
 - Scans for http/https servers on port 80, 443 and pipes into Nikto for scanning.
 
-#### Script Scan
+### Script Scan
 ```
 -sC
 ```
@@ -177,7 +177,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Show help about scripts
 
-#### OS Detection
+### OS Detection
 ```
 -O
 ```
@@ -191,7 +191,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Guess OS more aggressively
 
-#### Timing and Performance
+### Timing and Performance
 - Options which take TIME are in seconds, or append 'ms' (milliseconds), 's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
 ```
 -T 0-5
@@ -235,7 +235,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Send packets no faster than NUMBER per second
 
-#### Firewalls IDS Evasion and Spoofing
+### Firewalls IDS Evasion and Spoofing
 ```
 -f; --mtu VALUE
 ```
@@ -282,7 +282,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Send packets with a bogus TCP/UDP/SCTP checksum
 
-#### Nmap Output Options
+### Nmap Output Options
 ```
 -oN
 ```
@@ -352,14 +352,14 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Prevent associating of XSL stylesheet w/XML output
 
-### Nmap Enumeration Examples
+## Nmap Enumeration Examples
 - The following are real world examples of Nmap enumeration.
 
-#### Enumerating Netbios
+### Enumerating Netbios
 - The following example enumerates Netbios on the target networks, the same process can be applied to other services by modifying ports / NSE scripts.
 - Detect all exposed Netbios servers on the subnet.
 
-#### Nmap find exposed Netbios servers
+### Nmap find exposed Netbios servers
 ```
 :# nmap -sV -v -p 139,445 10.0.1.0/24
 
@@ -377,7 +377,7 @@ Service detection performed. Please report any incorrect results at http://nmap.
 Nmap done: 256 IP addresses (1 hosts up) scanned in 28.74 seconds
 ```
 
-#### Nmap find Netbios name.
+### Nmap find Netbios name.
 ```
 :# nmap -sU --script nbstat.nse -p 137 10.0.1.12
 
@@ -394,7 +394,7 @@ Host script results:
 Nmap done: 256 IP addresses (1 hosts up) scanned in 28.74 seconds
 
 ```
-#### Check if Netbios servers are vulnerable to MS08-067
+### Check if Netbios servers are vulnerable to MS08-067
 ```
 :# nmap --script-args=unsafe=1 --script smb-check-vulns.nse -p 445 10.0.0.1
 
@@ -534,6 +534,7 @@ Specify a network interface --> ***nmap -e [interface] [target]***
 ### Nmap Scripting Engine  
 Execute individual scripts --> ***nmap --script [script.nse] [target]***  
 Execute multiple scripts —-> ***nmap --script [expression] [target]***  
+
 > Script categories —-> all, auth, default, discovery, external, intrusive, malware, safe, vuln  
   
 Execute scripts by category —-> ***nmap --script [category] [target]***  
