@@ -3,55 +3,53 @@ title: nmap scanning
 tags: nmap
 ---
 
-## basic scan of one IP
+#### basic scan of one IP
 ```
 nmap 192.168.1.1
 ```
 
-## basic scan of subnet
+#### basic scan of subnet
 ```
 nmap 192.168.1.0/24
 ```
-## create and scan from a file
+#### create and scan from a file
 ```
 nmap -iL test.txt
 ```
 
-## random scan and exclude IP
+#### random scan and exclude IP
 ```
 nmap -iR 50
 ```
 
-### exclude IP
+#### exclude IP
 ```
 nmap 192.168.1.0/24 --exclude 192.168.1.100
 ```
 
-## export results to a file
-### txt
+### export results to a file
+#### txt
 ```
 nmap 192.168.1.0/24 -oN /root/output.txt
 ```
 
-### xml 
+#### xml 
 ```
 nmap 192.168.1.0/24 -oX /root/output.xml
 ```
 
-### grepable file
+#### grepable file
 ```
 nmap 192.168.1.0/24 -oG /root/output
 ```
 
-### all format export
+#### all format export
 ```
 nmap 192.168.1.0/24 -oA /root/output
 ```
 
-## Nmap Examples
+### Nmap Examples
 - Basic Nmap scanning examples, often used at the first stage of enumeration.
-
-### COMMAND DESCRIPTION
 ```
 nmap -sP 10.0.0.0/24
 ```
@@ -95,14 +93,14 @@ nmap -v -p 1-65535 -sV -O -sS -T5 target
 - Prints verbose output, runs stealth syn scan, T5 timing, OS and version detection + full port range scan.
 
 
-### Nmap scan from file
+#### Nmap scan from file
 ```
 nmap -iL ip-addresses.txt
 ```
 
 - Scans a list of IP addresses, you can add options before / after.
 
-### Nmap output formats
+#### Nmap output formats
 ```
 nmap -sV -p 139,445 -oG grep-output.txt 10.0.1.0/24
 ```
@@ -114,8 +112,7 @@ nmap -sS -sV -T5 10.0.1.99 --webxml -oX - | xsltproc --output file.html -
 
 - Export nmap output to HTML report.
 
-### Nmap Netbios Examples
-- COMMAND	DESCRIPTION
+#### Nmap Netbios Examples
 ```
 nmap -sV -v -p 139,445 10.0.0.1/24
 ```
@@ -137,8 +134,7 @@ nmap --script-args=unsafe=1 --script smb-check-vulns.nse -p 445 target
 >***--script-args=unsafe=1 has the potential to crash servers / services
 Becareful when running this command.***
 
-### Nmap Nikto Scan
-- COMMAND	DESCRIPTION
+#### Nmap Nikto Scan
 ```
 nmap -p80 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
@@ -151,7 +147,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 
 - Scans for http/https servers on port 80, 443 and pipes into Nikto for scanning.
 
-### Script Scan
+#### Script Scan
 ```
 -sC
 ```
@@ -181,7 +177,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Show help about scripts
 
-### OS Detection
+#### OS Detection
 ```
 -O
 ```
@@ -195,7 +191,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Guess OS more aggressively
 
-### Timing and Performance
+#### Timing and Performance
 - Options which take TIME are in seconds, or append 'ms' (milliseconds), 's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
 ```
 -T 0-5
@@ -239,7 +235,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Send packets no faster than NUMBER per second
 
-### Firewalls IDS Evasion and Spoofing
+#### Firewalls IDS Evasion and Spoofing
 ```
 -f; --mtu VALUE
 ```
@@ -286,7 +282,7 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Send packets with a bogus TCP/UDP/SCTP checksum
 
-### Nmap Output Options
+#### Nmap Output Options
 ```
 -oN
 ```
@@ -356,10 +352,10 @@ nmap -p80,443 10.0.1.0/24 -oG - | nikto.pl -h -
 ```
 - Prevent associating of XSL stylesheet w/XML output
 
-## Nmap Enumeration Examples
+### Nmap Enumeration Examples
 - The following are real world examples of Nmap enumeration.
 
-### Enumerating Netbios
+#### Enumerating Netbios
 - The following example enumerates Netbios on the target networks, the same process can be applied to other services by modifying ports / NSE scripts.
 - Detect all exposed Netbios servers on the subnet.
 
@@ -381,7 +377,7 @@ Service detection performed. Please report any incorrect results at http://nmap.
 Nmap done: 256 IP addresses (1 hosts up) scanned in 28.74 seconds
 ```
 
-### Nmap find Netbios name.
+#### Nmap find Netbios name.
 ```
 :# nmap -sU --script nbstat.nse -p 137 10.0.1.12
 
@@ -398,7 +394,7 @@ Host script results:
 Nmap done: 256 IP addresses (1 hosts up) scanned in 28.74 seconds
 
 ```
-### Check if Netbios servers are vulnerable to MS08-067
+#### Check if Netbios servers are vulnerable to MS08-067
 ```
 :# nmap --script-args=unsafe=1 --script smb-check-vulns.nse -p 445 10.0.0.1
 
@@ -436,7 +432,7 @@ nmap -v -p 1-65535 -sV -O -sS -T4 --webxml -oX - | xsltproc --output file.html -
 ```
 nmap -T4 -A -v
 ```
-## Basic Scanning Techniques
+### Basic Scanning Techniques
 Scan a single target --> ***nmap [target]***  
 Scan multiple targets --> ***nmap [target1,target2,etc]***  
 Scan a list of targets —-> ***nmap -iL [list.txt]***  
@@ -447,7 +443,7 @@ Excluding targets from a scan --> ***nmap [targets] –exclude [targets]***
 Excluding targets using a list --> ***nmap [targets] –excludefile [list.txt]***  
 Perform an aggressive scan --> ***nmap -A [target]***  
 Scan an IPv6 target --> ***nmap -6 [target]***  
-## Discovery Options  
+### Discovery Options  
 Perform a ping scan only --> ***nmap -sP [target]***  
 Don’t ping --> ***nmap -PN [target]***  
 TCP SYN Ping --> ***nmap -PS [target]***  
@@ -465,7 +461,7 @@ Disable reverse DNS resolution --> ***nmap -n [target]***
 Alternative DNS lookup --> ***nmap –system-dns [target]***  
 Manually specify DNS servers --> ***nmap –dns-servers [servers] [target]***  
 Create a host list —-> ***nmap -sL [targets]***  
-## Advanced Scanning Options  
+### Advanced Scanning Options  
 TCP SYN Scan --> ***nmap -sS [target]***  
 TCP connect scan —-> ***nmap -sT [target]***  
 UDP scan —-> ***nmap -sU [target]***  
@@ -477,7 +473,7 @@ Custom TCP scan —-> ***nmap –scanflags [flags] [target]***
 IP protocol scan —-> ***nmap -sO [target]***  
 Send Raw Ethernet packets —-> ***nmap –send-eth [target]***  
 Send IP packets —-> ***nmap –send-ip [target]***  
-## Port Scanning Options  
+### Port Scanning Options  
 Perform a fast scan --> ***nmap -F [target]***  
 Scan specific ports —-> ***nmap -p [ports] [target]***  
 Scan ports by name —-> ***nmap -p [port name] [target]***  
@@ -485,14 +481,14 @@ Scan ports by protocol —-> ***nmap -sU -sT -p U:[ports],T:[ports] [target]***
 Scan all ports —-> ***nmap -p “*” [target]***  
 Scan top ports —–> ***nmap –top-ports [number] [target]***  
 Perform a sequential port scan —-> ***nmap -r [target]***  
-## Version Detection  
+### Version Detection  
 Operating system detection —-> ***nmap -O [target]***  
 Submit TCP/IP Fingerprints —-> ***http://www.nmap.org/submit/***  
 Attempt to guess an unknown —-> ***nmap -O –osscan-guess [target]***  
 Service version detection —-> ***nmap -sV [target]***  
 Troubleshooting version scans —-> ***nmap -sV –version-trace [target]***  
 Perform a RPC scan —-> ***nmap -sR [target]***  
-## Timing Options  
+### Timing Options  
 Timing Templates —-> ***nmap -T [0-5] [target]***  
 Set the packet TTL —-> ***nmap –ttl [time] [target]***  
 Minimum of parallel connections —-> ***nmap –min-parallelism [number] [target]***  
@@ -508,7 +504,7 @@ Maximum scan delay —-> ***nmap –max-scan-delay [time] [target]***
 Minimum packet rate —-> ***nmap –min-rate [number] [target]***  
 Maximum packet rate —-> ***nmap –max-rate [number] [target]***  
 Defeat reset rate limits —-> ***nmap –defeat-rst-ratelimit [target]***  
-## Firewall Evasion Techniques  
+### Firewall Evasion Techniques  
 Fragment packets —-> ***nmap -f [target]***  
 Specify a specific MTU —-> ***nmap –mtu [MTU] [target]***  
 Use a decoy —-> ***nmap -D RND: [number] [target]***  
@@ -518,14 +514,14 @@ Append random data —-> ***nmap –data-length [size] [target]***
 Randomize target scan order —-> ***nmap –randomize-hosts [target]***  
 Spoof MAC Address —-> ***nmap –spoof-mac [MAC|0|vendor] [target]***  
 Send bad checksums —-> ***nmap –badsum [target]***  
-## Output Options  
+### Output Options  
 Save output to a text file —-> ***nmap -oN [scan.txt] [target]***  
 Save output to a xml file --> ***nmap -oX [scan.xml] [target]***  
 Grepable output —-> ***nmap -oG [scan.txt] [target]***  
 Output all supported file types —-> ***nmap -oA [path/filename] [target]***  
 Periodically display statistics —-> ***nmap –stats-every [time] [target]***  
 133t output —-> ***nmap -oS [scan.txt] [target]***  
-## Troubleshooting and debugging  
+### Troubleshooting and debugging  
 Help --> ***nmap -h***  
 Display Nmap version —-> ***nmap -V***  
 Verbose output —-> ***nmap -v [target]***  
@@ -535,16 +531,16 @@ Only display open ports —-> ***nmap –open [target]***
 Trace packets --> ***nmap –packet-trace [target]***  
 Display host networking --> ***nmap –iflist***  
 Specify a network interface --> ***nmap -e [interface] [target]***  
-## Nmap Scripting Engine  
-Execute individual scripts --> ***nmap –script [script.nse] [target]***  
-Execute multiple scripts —-> ***nmap –script [expression] [target]***  
+### Nmap Scripting Engine  
+Execute individual scripts --> ***nmap --script [script.nse] [target]***  
+Execute multiple scripts —-> ***nmap --script [expression] [target]***  
 > Script categories —-> all, auth, default, discovery, external, intrusive, malware, safe, vuln  
   
-Execute scripts by category —-> ***nmap –script [category] [target]***  
-Execute multiple scripts categories —-> ***nmap –script [category1,category2, etc]***  
-Troubleshoot scripts —-> ***nmap –script [script] –script-trace [target]***  
-Update the script database —-> ***nmap –script-updatedb***  
-## Ndiff
+Execute scripts by category —-> ***nmap --script [category] [target]***  
+Execute multiple scripts categories —-> ***nmap --script [category1,category2, etc]***  
+Troubleshoot scripts —-> ***nmap --script [script] --script-trace [target]***  
+Update the script database —-> ***nmap --script-updatedb***  
+### Ndiff
 Comparison using Ndiff —-> ***ndiff [scan1.xml] [scan2.xml]***  
 Ndiff verbose mode —-> ***ndiff -v [scan1.xml] [scan2.xml]***  
 XML output mode —-> ***ndiff –xml [scan1.xm] [scan2.xml]***  
