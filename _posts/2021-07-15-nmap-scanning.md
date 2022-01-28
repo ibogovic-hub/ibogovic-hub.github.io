@@ -489,6 +489,7 @@ Service version detection —-> ***nmap -sV [target]***
 Troubleshooting version scans —-> ***nmap -sV –version-trace [target]***  
 Perform a RPC scan —-> ***nmap -sR [target]***  
 ### Timing Options  
+
 Timing Templates —-> ***nmap -T [0-5] [target]***  
 Set the packet TTL —-> ***nmap –ttl [time] [target]***  
 Minimum of parallel connections —-> ***nmap –min-parallelism [number] [target]***  
