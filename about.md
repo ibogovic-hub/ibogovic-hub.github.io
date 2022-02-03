@@ -188,7 +188,7 @@ key: page-about
 > The main responsibility Maintenance of network and client devices within the company.  
 
 - **Results achieved:**
-  - •	Configuration and maintenance of servers, firewalls and network equipment.
+  - Configuration and maintenance of servers, firewalls and network equipment.
 
 > **Used tools:**
   - Internal Bottomline Tools, Putty, Linux, Windows Server/Client, Cisco Firepower, Watchguard.
@@ -209,7 +209,7 @@ key: page-about
   - Testing devices and configuring for the roll-out.
   - Complete network and security revision of all affected points in this project.
 
-> **Used tools:**
+> **Used tools:**  
   - Internal Phoenix Tools, Putty, Linux, Windows Server/Client, Cisco devices, Fortigate, FortiManager, FortiAnalyzer, Ansible...
 
 ---
@@ -236,7 +236,7 @@ location.
   - Internal Siemens-Tools, Putty, Linux, Windows Server/Client, Cisco devices...
 
 ---
-## Project experience 3 - **Jogmo World GmbH**
+## Project experience - **Jogmo World GmbH**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
@@ -288,7 +288,7 @@ of an existing unit in case of misconfiguration or error.
   - Linux, Windows, Bash, Wi-Fi, Cisco, HP (Switches, Airwave, ClearPass), Fortigate, FortiAnalyzer, FortiManager, Microsoft TMG, Sophos, OpenBSD...
 
 ---
-## Project experience 5 – **Span d.o.o**
+## Project experience – **Span d.o.o**
 
 | Project Role | Time Span | Customer |
 | - | - | - |
