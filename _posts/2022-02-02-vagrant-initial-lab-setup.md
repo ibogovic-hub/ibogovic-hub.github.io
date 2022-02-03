@@ -125,3 +125,38 @@ ansible_ssh_private_key_file=/Users/bogovic/.vagrant.d/insecure_private_key
     - name: install dkms
       apt: name=dkms state=present
 ```
+
+## ansible ***"provision.yml"*** file
+
+```yml
+---
+- name: test
+  hosts: all
+  gather_facts: true
+  become: true
+  handlers:
+    - name: restart_sshd
+      service:
+        name: sshd
+        state: restarted
+  tasks:
+    - name: Create baggins user
+      user:
+        name: baggins
+        state: present
+        password: "{{ 'Pass123*?=' | password_hash('sha512') }}"
+        update_password: on_create
+        shell: /bin/bash
+    - name: Edit SSHD Config
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PasswordAuthentication '
+        insertafter: '#PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+      notify: restart_sshd
+    - name: Add sudo rights for baggins
+      copy:
+        dest: /etc/sudoers.d/baggins
+        content: "tux ALL=(root) NOPASSWD: ALL"
+        backup: true
+```
