@@ -50,13 +50,26 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 ### GUI on rhel server
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
-## Youtube-dl
+## Youtube-dl & yt-dlp
+- currently using yt-dlp since youtube-dl is broken  
 
+reference site [here](https://github.com/yt-dlp/yt-dlp)
 ```sh
+# yt-dlp
+brew install yt-dlp/taps/yt-dlp
+
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+
+sudo wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+
+# youtube-dl
 sudo wget <https://yt-dl.org/downloads/latest/youtube-dl> -O /usr/local/bin/youtube-dl
 sudo chmod a+x /usr/local/bin/youtube-dl
-youtube-dl -f bestvideo+bestaudio <https://youtu.be/KTji1hOICEI>
-youtube-dl -f bestvideo+bestaudio -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/watch?v=WJlfVjGt6Hg&list=PL1512BD72E7C9FFCA"
+
+yt-dlp -f bestvideo+bestaudio <https://youtu.be/KTji1hOICEI>
+yt-dlp -f bestvideo+bestaudio -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/watch?v=WJlfVjGt6Hg&list=PL1512BD72E7C9FFCA"
 --playlist-start NUMBER     Playlist video to start at (default is 1)
 
 --playlist-end NUMBER      Playlist video to end at (default is last)
@@ -73,13 +86,13 @@ mp3 --playlist-items 1-7,9-12,14-79,81-87,89-91,93-98,100-110,112-120 "https://w
 
 - Download YouTube playlist videos in separate directory indexed by video order in a playlist 
 
-youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' <https://www.youtube.com/playlist?list=PLwiyx1dc3P2JR9N8gQaQN_BCvlSlap7re>
+yt-dlp -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' <https://www.youtube.com/playlist?list=PLwiyx1dc3P2JR9N8gQaQN_BCvlSlap7re>
 
 - Download all playlists of YouTube channel/user keeping each playlist in separate directory:
 
-youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/user/TheLinuxFoundation/playlists"
+yt-dlp -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/user/TheLinuxFoundation/playlists"
 
-youtube-dl -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/c/GreenDay/playlists?view=71&sort=dd&shelf_id=3"
+yt-dlp -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "https://www.youtube.com/c/GreenDay/playlists?view=71&sort=dd&shelf_id=3"
 ```
 
 ## simplescreenrecorder
