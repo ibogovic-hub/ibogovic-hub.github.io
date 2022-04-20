@@ -27,7 +27,7 @@ sudo ln -s /usr/bin/python3 /usr/bin/python
 ### DNS settings - check public IP with CLI
 
 ```sh
-curl ifconfig.me
+curl ifconfig.io
 ```
 
 ### Crypt folder with cli
@@ -109,11 +109,6 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get update
 sudo apt-get install obs-studio
 ```
-
-### FortiClient
-
-[Forticlient](<https://hadler.me/linux/forticlient-sslvpn-deb-packages/>) as a .deb package  
-- It is also awailable on official Forti site [HERE](https://www.fortinet.com/support/product-downloads)
 
 ### change default sudo permission
 
