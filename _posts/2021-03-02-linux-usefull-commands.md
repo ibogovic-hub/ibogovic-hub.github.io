@@ -7,7 +7,7 @@ tags: Linux
 
 ## collection of .....
 
-so...here is a bunch of linux commands that I have collected over the years
+so...here is a bunch of linux ***"things"*** that I have collected over the years
 I'm not quite sure how usefull is this here but...who knows. ;)
 
 ---
@@ -49,6 +49,51 @@ Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
 
 ### GUI on rhel server
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
+
+
+___
+## key creation
+___
+```sh
+ssh-keygen \
+    -m PEM \
+    -t rsa \
+    -b 4096 \
+    -C “email@address.here \
+    -f ~/.ssh/name
+
+ssh-add ~/.ssh/ibogovic
+ssh-copy-id -i ~/.ssh/ibogovic.pub baggins@pi
+```
+[ref](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed) 
+
+___
+## netplan
+___
+```sh
+network:
+	ethernets:
+		ens160:
+			dhcp4: false
+			dhcp6: false
+			addresses:
+				- X.X.X.X
+			routes:
+				- to: default
+				- via: x.x.x.2
+			nameservers:
+			addresses:
+				- x.x.x.x
+	version: 2
+	renderer: networkd
+```
+```sh
+sudo netplan apply
+# In case you run into some issues execute:
+$ sudo netplan --debug apply
+```
+
+[source](https://netplan.io/examples/)
 
 ## Youtube-dl & yt-dlp
 - currently using yt-dlp since youtube-dl is broken  
@@ -638,7 +683,99 @@ The example above works with all types of brackets, single and double quotes. It
 
 [ref article](https://medium.com/swlh/beginning-vim-and-using-vim-in-other-text-editors-724e8da32daa)
 
-## Scan from PI
+___
+## raspberry pi
+___
+
+- /etc/resolv.conf
+```sh
+# A sample configuration for dhcpcd.
+# See dhcpcd.conf(5) for details.
+
+# Allow users of this group to interact with dhcpcd via the control socket.
+#controlgroup wheel
+
+# Inform the DHCP server of our hostname for DDNS.
+hostname
+
+# Use the hardware address of the interface for the Client ID.
+clientid
+# or
+# Use the same DUID + IAID as set in DHCPv6 for DHCPv4 ClientID as per RFC4361.
+# Some non-RFC compliant DHCP servers do not reply with this set.
+# In this case, comment out duid and enable clientid above.
+#duid
+
+# Persist interface configuration when dhcpcd exits.
+persistent
+
+# Rapid commit support.
+# Safe to enable by default because it requires the equivalent option set
+# on the server to actually work.
+option rapid_commit
+
+# A list of options to request from the DHCP server.
+option domain_name_servers, domain_name, domain_search, host_name
+option classless_static_routes
+# Respect the network MTU. This is applied to DHCP routes.
+option interface_mtu
+
+# Most distributions have NTP support.
+#option ntp_servers
+
+# A ServerID is required by RFC2131.
+require dhcp_server_identifier
+
+# Generate SLAAC address using the Hardware Address of the interface
+#slaac hwaddr
+# OR generate Stable Private IPv6 Addresses based from the DUID
+slaac private
+
+# Example static IP configuration:
+interface eth0
+static ip_address=192.168.1.254/24
+#static ip6_address=fd51:42f8:caae:d92e::ff/64
+static routers=192.168.1.1
+static domain_name_servers=1.1.1.1 9.9.9.9
+
+# It is possible to fall back to a static IP if DHCP fails:
+# define static profile
+#profile static_eth0
+#static ip_address=192.168.1.23/24
+#static routers=192.168.1.1
+#static domain_name_servers=192.168.1.1
+
+# fallback to static profile on eth0
+#interface eth0
+#fallback static_eth0
+```
+
+### Scan from PI
 ```sh
 sudo scanimage --format=jpeg --resolution=300 -p > output.jpg
+```
+
+## record session
+```sh
+# Simplest Way to Log Shell Sessions
+script simplescript.log
+
+# A single command
+script -c 'netstat -tupln' netstat.log
+
+# Add timing information, so you can replay the shell session later
+script myscript.log --timing=time.log
+
+# Replay a captured shell session (with timing info)
+scriptreplay -s myscript.log --timing=time.log
+scriptreplay -s myscript.log -t time.log
+```
+
+___
+### strace
+___
+```sh
+strace -ff -e trace=network -o output.txt [program]
+
+# follow forks to capture spawned threads and child processes and limit capture to network syscalls
 ```
