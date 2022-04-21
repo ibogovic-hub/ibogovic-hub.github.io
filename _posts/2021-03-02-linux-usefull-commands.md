@@ -688,6 +688,7 @@ ___
 ___
 
 - /etc/resolv.conf
+
 ```sh
 # A sample configuration for dhcpcd.
 # See dhcpcd.conf(5) for details.
@@ -749,6 +750,7 @@ static domain_name_servers=1.1.1.1 9.9.9.9
 #interface eth0
 #fallback static_eth0
 ```
+
 
 ### Scan from PI
 ```sh
