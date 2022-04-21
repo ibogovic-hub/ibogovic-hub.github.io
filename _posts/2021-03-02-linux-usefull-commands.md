@@ -781,3 +781,10 @@ strace -ff -e trace=network -o output.txt [program]
 
 # follow forks to capture spawned threads and child processes and limit capture to network syscalls
 ```
+---
+### rsync
+---
+
+```sh
+rsync -avzhp --exclude sshalert/venv sshalert user@remote.server
+```
