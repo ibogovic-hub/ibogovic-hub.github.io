@@ -1,9 +1,27 @@
 ---
-title: troubleshooting commands
+title: systemctl and journalctl
 tags: Linux
 ---
 
 >some commands that are usefull
+---
+# systemctl
+
+```sh
+# list all units / services
+systemctl list-unit-files
+
+# manipulate service
+systemctl status | start | enable | restart | stop service
+
+# start/stop the service at boot
+systemctl enable | disable service
+
+# check the defined targets
+systemctl list-units --type=target
+```
+---
+# journalctl
 
 ```sh
 # general log viewing
@@ -39,3 +57,17 @@ journalctl --since '10 min ago'
     Finally, relative times may be specified, prefixed with "-" or "+", referring to times before or after the current time, respectively.
 ```
 [ref-page](https://manpages.org/journalctl)
+
+## log manipulation
+```sh
+# check the log size
+journalctl --disk-usage
+
+# clean all logs older than two days
+# (d, h, m... -format)
+journalctl --vacuum-time=2d
+
+# clean all logs bigger than eq. 10M
+# (B, M, G...  -format)
+journalctl --vacuum-size=10M
+```
