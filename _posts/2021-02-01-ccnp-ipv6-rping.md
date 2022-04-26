@@ -1,6 +1,6 @@
 ---
 title: ipv6 and ripng
-tags: CCNP
+tags: Cisco
 ---
 
 ## ipv6 interface configuration  

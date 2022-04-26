@@ -1,6 +1,6 @@
 ---
 title: simple redistribution
-tags: CCNP
+tags: Cisco
 ---
 
 ## enable full redistribution EIGRP - OSPF

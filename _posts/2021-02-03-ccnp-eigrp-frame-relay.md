@@ -1,6 +1,6 @@
 ---
 title: eigrp frame relay
-tags: CCNP
+tags: Cisco
 ---
 
 ```

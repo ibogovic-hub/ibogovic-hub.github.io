@@ -1,6 +1,6 @@
 ---
 title: bgp-extended
-tags: CCNP
+tags: Cisco
 ---
 
 ## ***weight configuration***

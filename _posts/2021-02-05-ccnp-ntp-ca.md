@@ -1,6 +1,6 @@
 ---
 title: ntp and ca config
-tags: CCNP
+tags: Cisco
 ---
 
 ## R2 → as the CA Server

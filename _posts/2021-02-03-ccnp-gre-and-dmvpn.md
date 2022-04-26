@@ -1,6 +1,6 @@
 ---
 title: gre and dmvpn
-tags: CCNP
+tags: Cisco
 ---
 
 ## configure GRE and DMVPN on three sites

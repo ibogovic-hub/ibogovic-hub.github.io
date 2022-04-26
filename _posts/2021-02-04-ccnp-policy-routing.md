@@ -1,6 +1,6 @@
 ---
 title: policy routing
-tags: CCNP
+tags: Cisco
 ---
 
 ## route traffic from client 1 to ISP2

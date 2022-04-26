@@ -1,6 +1,6 @@
 ---
 title: dhcp configuraion
-tags: CCNP
+tags: Cisco
 ---
 
 

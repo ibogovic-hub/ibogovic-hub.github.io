@@ -1,6 +1,6 @@
 ---
 title: Advanced redistribution
-tags: CCNP
+tags: Cisco
 ---
 
 ## create specific seed metric and tags EIGRP and OSPF

@@ -1,6 +1,6 @@
 ---
 title: eigrp
-tags: CCNP
+tags: Cisco
 ---
 
 ## see all messages (u all - to cancel)

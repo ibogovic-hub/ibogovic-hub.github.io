@@ -1,4 +1,6 @@
 #!/bin/bash
 git add .
-git commit -m "latest commit"
+current="`date +'%Y-%m-%d %H:%M:%S'`"
+msg="Updated: $current"
+git commit -m "$msg"
 git push --all

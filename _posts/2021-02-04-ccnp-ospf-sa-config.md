@@ -1,6 +1,6 @@
 ---
 title: OSPF special area configuration
-tags: CCNP
+tags: Cisco
 ---
 
 ## redistribute static as E1 routes

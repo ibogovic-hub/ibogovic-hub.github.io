@@ -1,6 +1,6 @@
 ---
 title: ENARSI & ENCORE notes
-tags: CCNP
+tags: Cisco
 ---
 
 ---

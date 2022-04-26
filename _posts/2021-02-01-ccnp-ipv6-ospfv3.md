@@ -1,6 +1,6 @@
 ---
 title: ipv6 and ospfv3
-tags: CCNP
+tags: Cisco
 ---
 
 ![GNS3-config](/assets/images/Cisco/ipv6-and-ospfv3.png)

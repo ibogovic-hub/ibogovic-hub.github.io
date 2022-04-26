@@ -1,6 +1,6 @@
 ---
 title: router scripting
-tags: CCNP
+tags: Cisco
 ---
 
 ## TCL Script:
