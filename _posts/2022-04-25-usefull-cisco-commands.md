@@ -28,3 +28,19 @@ line cons 0
 line vty 0 15
     logging synchronous
 ```
+
+## configure DHCP
+```sh
+conf t
+# to exclude some IP's
+ip dhcp excluded-address 172.16.0.1 172.16.0.99
+ip dhcp excluded-address 172.16.0.200 172.16.0.254
+# define pool name and network
+ip dhcp pool PC-Pool
+    network 172.16.0.0 255.255.255.0
+# define gateway and dns
+    default-router 172.16.0.1
+    dns-server 172.16.0.2
+```
+
+## DMVPN
