@@ -5,20 +5,20 @@ tags: Cisco
 
 ## see all messages (u all - to cancel)
 
-```
+```sh
 debug eigrp packets
 debug eigrp packets query
 ```
 
 ## block sending on the interface:
 
-```
+```sh
 passive-interface eth0/1
 ```
 
 ## block sending on all:
 
-```
+```sh
 router eigrp 90
  variance 2
  network 10.1.0.0 0.0.255.255
@@ -43,7 +43,7 @@ interface Serial2/1
 
 ## loadbalance traffic with "variance" command:
 
-```
+```sh
 router eigrp 90
  variance 2 ← 
  network 10.1.0.0 0.0.255.255
@@ -56,21 +56,21 @@ router eigrp 90
 
 ## split horizont change if only one interface is in game
 
-```
+```sh
 conf t
 router eigrp 25
 no ip split-horizon eigrp 25
 ```
 
-## utilise 30% more bandwith
+## utilize 30% more bandwidth
 
-```
-ip bandwith-percent eigrp 25 80 (default 50%)
+```sh
+ip bandwidth-percent eigrp 25 80 (default 50%)
 ```
 
 ## configure authentication (check the clock)
 
-```
+```sh
 conf t
 key chain EIGRP_KEYS
 key 1
@@ -90,13 +90,13 @@ ip authentication key-chain eigrp 10 EIGRP_KEYS
 
 ## EIGRP IPv6 configuration
 
-```
+```sh
 conf t
 ipv6 unicast-routing
 ipv6 router eigrp 10
 router-id 1.1.1.1
 no shutdown
-exit
+end
 interface s2/0
 ipv6 eigrp 10
 end
@@ -104,12 +104,22 @@ end
 
 ## EIGRP named configuration
 
-```
+```sh
 conf t
-router eigrp CBT
+router eigrp NAMED
 address-family ipv4 unicast autonomous-system 10
 network 172.16.0.0 0.0.0.255
 af-interface s2/0
 passive-interface default
-exit
+end
+
+# or ipv6
+conf t
+router eigrp NAMED
+address-family ipv6 autonomous-system 10
+af-interface e0/1
+end
 ```
+### example
+![Eigrp-classic-vs-named](../assets/images/cisco/eigrp-named.png)
+
