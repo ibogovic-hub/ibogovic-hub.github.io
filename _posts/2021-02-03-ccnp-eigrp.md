@@ -122,6 +122,6 @@ end
 ```
 ### example
 ![Eigrp-classic-vs-named](../assets/images/cisco/eigrp-named.png)
-[[assets/images/cisco/eigrp-named.png]]
-<img src="assets/images/cisco/eigrp-named.png">
+![[assets/images/cisco/eigrp-named.png]]
+<img src="./assets/images/cisco/eigrp-named.png">
 
