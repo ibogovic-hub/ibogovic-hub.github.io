@@ -3,6 +3,8 @@ title: install script
 tags: Linux
 ---
 
+
+```sh
 #!/bin/bash
 
 #####################################################################################
@@ -188,3 +190,4 @@ while [[ 1 ]]; do
         read -n 1 line
 done
 clear
+```
