@@ -121,5 +121,5 @@ af-interface e0/1
 end
 ```
 ### example
-![Eigrp-classic-vs-named](../assets/images/cisco/eigrp-named.png)
+![Eigrp-classic-vs-named](/ibogovic-hub.github.io/assets/images/cisco/eigrp-named.png)
 
