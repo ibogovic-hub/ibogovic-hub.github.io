@@ -347,4 +347,4 @@ maintaining documentation.
     - Migration of Cisco Ironport WSA and ESA from S170 to S190 including Virtual 100.
 
 > **Used tools:**
-  - Linux/UNIX, MAC, Windows Server, Windows 7-10, Cisco, Huawei, Hp, Ruckus, Mikrotik, Bluecoat, Baracuda, Symantec, Windows DPM, VBA, Shell, PaloAlto, Fortinet, VoIP, SCOM...
+  - Linux/UNIX, MAC, Windows Server, Windows 7-10, Cisco, Huawei, Hp, Ruckus, Mikrotik, Bluecoat, Baracuda, Symantec, Windows DPM, VBA, Shell, PaloAlto, Fortinet, VoIP, SCOM.
