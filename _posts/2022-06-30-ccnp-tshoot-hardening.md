@@ -3,22 +3,22 @@ title: hardening
 tags: Cisco
 ---
 
-# must have
+## must have
 
 
-#### Create an Enable Secret Password
+### Create an Enable Secret Password
 
 ```sh
 conf t
 enable secret nekipass # first create an “enable secret” password
 ```
-#### Encrypt Passwords on the device„
+### Encrypt Passwords on the device„
 
 ```sh
 service password-encryption
 ```
 
-#### Use an external AAA server for User Authentication (radius)
+### Use an external AAA server for User Authentication (radius)
 
 ```sh
 enable secret nekipass #Create first an “enable secret” password
@@ -33,7 +33,7 @@ line con 0 # Apply AAA authentication to console port
 login authentication default
 ```
 
-#### Create separate local accounts for User Authentication
+### Create separate local accounts for User Authentication
 
 ```sh
 username john-admin secret pass1
@@ -41,7 +41,7 @@ username david-admin secret pass2
 username mary-admin secret pass3
 ```
 
-#### Configure Maximum Failed Authentication Attempts
+### Configure Maximum Failed Authentication Attempts
 
 ```sh
 config terminal
@@ -51,7 +51,7 @@ aaa local authentication attempts max-fail 5  # max 5 failed login attempts
 aaa authentication login default local
 ```
 
-#### Restrict Management Access to the devices to specific IPs only
+### Restrict Management Access to the devices to specific IPs only
 
 ```sh
 config terminal
@@ -60,7 +60,7 @@ line vty 0 15
 access-class 10 in  # Apply IP restrictions to all VTY lines (for Telnet or SSH)
 ```
 
-#### Enable Logging
+### Enable Logging
 
 ```sh
 config terminal
@@ -71,7 +71,7 @@ logging host 192.168.1.2 # Send logs to external log server
 logging source-interface ethernet 1/0  # Use Eth1/0 to send log messages
 ```
 
-#### Enable Network Time Protocol (NTP)
+### Enable Network Time Protocol (NTP)
 
 ```sh
 config terminal
@@ -79,7 +79,7 @@ ntp server 1.1.1.1
 ntp server 2.2.2.2
 ```
 
-#### Use Secure Management Protocols if possible
+### Use Secure Management Protocols if possible
 
 ```sh
 config terminal
@@ -93,7 +93,7 @@ line vty 0 15
 transport input ssh
 ```
 
-#### Restrict and Secure SNMP Access
+### Restrict and Secure SNMP Access
 
 ```sh
 config terminal
@@ -105,29 +105,29 @@ snmp-server community Xcv4#56&454sdS RW 12 # Create Read Write (RW) community st
 
 
 ## Hardening phase
-#### Configure AAA service:
+### Configure AAA service:
 ```sh
 aaa new-model
 ```
 
-#### Configure AAA Authentication for Login:
+### Configure AAA Authentication for Login:
 ```sh
 aaa authentication login default local-case
 ```
 
-#### Configure AAA Authentication for Enable Mode:
+### Configure AAA Authentication for Enable Mode:
 ```sh
 aaa authentication enable default enable
 ```
 
-#### Configure AAA Authentication for Local Console Line:
+### Configure AAA Authentication for Local Console Line:
 ```sh
 line console 0
 login authentication default
 exit
 ```
 
-#### Configure AAA Authentication for VTY Lines:
+### Configure AAA Authentication for VTY Lines:
 ```sh
 line vty 0 4
 login authentication default
@@ -137,33 +137,33 @@ login authentication default
 exit
 ```
 
-#### Set and secure passwords:
+### Set and secure passwords:
 ```sh
 service password-encryption
 enable secret 0 <password>
 ```
 
-#### Configure Local User and Encrypted Password:
+### Configure Local User and Encrypted Password:
 ```sh
 username <username> password <password>
 Note: Use the following syntax for version after 12.0(18)S, 12.1(8a)E, 12.2(8)T:
 username <username> secret <password>
 ```
 
-#### Configure SSH:
+### Configure SSH:
 ```sh
 hostname <device_hostname>
 domain-name <domain-name>
 crypto key generate rsa modulus 2048
 ```
 
-#### Configure SSH for Remote Device Access:
+### Configure SSH for Remote Device Access:
 ```sh
 ip ssh timeout 60
 ip ssh authentication-retries 3
 ```
 
-#### Configure VTY Transport SSH:
+### Configure VTY Transport SSH:
 ```sh
 line console 0
 transport input ssh
@@ -176,7 +176,7 @@ transport input ssh
 exit
 ```
 
-#### Configure Timeout for Login Sessions:
+### Configure Timeout for Login Sessions:
 ```sh
 line vty 0 4
 exec-timeout 5 0
@@ -186,7 +186,7 @@ exec-timeout 5 0
 exit
 ```
 
-#### Disable Auxiliary Port:
+### Disable Auxiliary Port:
 ```sh
 line aux 0
 no exec
@@ -195,7 +195,7 @@ transport input none
 exit
 ```
 
-#### Disable SNMP server (in-case not in use):
+### Disable SNMP server (in-case not in use):
 ```sh
 no snmp-server
 
@@ -204,126 +204,126 @@ no snmp-server community private
 no snmp-server community public
 ```
 
-#### Configure Clock Timezone – GMT:
+### Configure Clock Timezone – GMT:
 ```sh
 clock timezone GMT <hours>
 ```
 
-#### Disable Router Name and DNS Name Resolution (in-case not in use):
+### Disable Router Name and DNS Name Resolution (in-case not in use):
 ```sh
 no ip domain-lookup
 ```
 
-#### Disable CDP Run Globally:
+### Disable CDP Run Globally:
 ```sh
 no cdp run
 ```
 
-#### Disable PAD service (in-case not in use):
+### Disable PAD service (in-case not in use):
 ```sh
 no service pad
 ```
 
-#### Disable Finger Service:
+### Disable Finger Service:
 ```sh
 no service finger
 ```
 
-#### Disable Maintenance Operations Protocol (MOP):
+### Disable Maintenance Operations Protocol (MOP):
 ```sh
 interface <interface-id>
 no mop enabled
 exit
 ```
 
-#### Disable DHCP server (in-case not in use):
+### Disable DHCP server (in-case not in use):
 ```sh
 no service dhcp
 ```
 
-#### Disable IP BOOTP server (in-case not in use):
+### Disable IP BOOTP server (in-case not in use):
 ```sh
 no ip bootp server
 ```
 
-#### Disable Identification Service:
+### Disable Identification Service:
 ```sh
 no identd
 ```
 
-#### Disable IP HTTP Server (in-case not in use):
+### Disable IP HTTP Server (in-case not in use):
 ```sh
 no ip http server
 ```
 
-#### Disable Remote Startup Configuration:
+### Disable Remote Startup Configuration:
 ```sh
 no boot network
 no service config
 ```
 
-#### Configure TCP keepalives Services:
+### Configure TCP keepalives Services:
 ```sh
 service tcp-keepalives-in
 service tcp-keepalives-out
 ```
 
-#### Disable small-servers:
+### Disable small-servers:
 ```sh
 no service tcp-small-servers
 no service udp-small-servers
 ```
 
-#### Disable TFTP Server:
+### Disable TFTP Server:
 ```sh
 no tftp-server
 ```
 
-#### Configure Logging:
+### Configure Logging:
 ```sh
 logging on
 logging buffered 16000
 logging console critical
 ```
 
-#### Configure Service Timestamps for Debug and Log Messages:
+### Configure Service Timestamps for Debug and Log Messages:
 ```sh
 service timestamps debug datetime msec show-timezone localtime
 service timestamps log datetime msec show-timezone localtime
 ```
 
-#### Disable IP source-route:
+### Disable IP source-route:
 ```sh
 no ip source-route
 ```
 
-#### Disable Directed Broadcast:
+### Disable Directed Broadcast:
 ```sh
 interface <interface-id>
 no ip directed-broadcast
 exit
 ```
 
-#### Configure Unicast Reverse-Path Forwarding:
+### Configure Unicast Reverse-Path Forwarding:
 ```sh
 interface <interface-id>
 ip verify unicast reverse-path
 exit
 ```
 
-#### Disable IP Proxy ARP:
+### Disable IP Proxy ARP:
 ```sh
 interface <interface-id>
 no ip proxy-arp
 exit
 ```
 
-#### Disable Gratuitous-Arps:
+### Disable Gratuitous-Arps:
 ```sh
 no ip gratuitous-arps
 ```
 
-#### Configure switch port-security:
+### Configure switch port-security:
 ```sh
 switchport port-security
 switchport port-security violation shutdown
