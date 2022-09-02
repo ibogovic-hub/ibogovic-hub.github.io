@@ -1,7 +1,7 @@
-#########
+---
 title: ntp and CA
 tags: Cisco
-#########
+---
 
 ## NTP Cisco configuration
 
