@@ -54,6 +54,7 @@ conf t
   crypto key generate rsa general-keys modulus 4096 exportable
   crypto pki server The-CA-Server
   grant auto
+end
 ```
 
 - You will need to enter a password after the no shutdown
@@ -73,6 +74,7 @@ exit
 
   crypto pki authenticate My_CA
   crypto pki enroll My_CA
+end
 ```
 ### Wait until sync
 
@@ -96,4 +98,5 @@ end
 
 ```sh
 show crypto ca certificate My_CA
+end
 ```
