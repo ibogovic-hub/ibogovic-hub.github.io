@@ -202,10 +202,13 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 --> source [HERE](https://github.com/sindresorhus/pure)
 - adjust the ***path*** for pure in .zshrc file
 
+to install plugins in vim
+```sh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 Enter vim and :PlugUpdate
 Molokai - [molokai.vim](https://www.vim.org/scripts/download_script.php?src_id=9750)
+
 Install pure - brew install pure
 
-```sh
-```
