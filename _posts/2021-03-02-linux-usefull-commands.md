@@ -67,6 +67,23 @@ ssh-copy-id -i ~/.ssh/ibogovic.pub baggins@pi
 ```
 [ref](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed) 
 
+```sh
+# RSA – This algorithm uses the difficulty of factoring large numbers. A minimum of 2048 bits is recommended, but 4096 is considered significantly better.
+ssh-keygen -t rsa -b 4096
+# Here's a one liner for RSA based on recommended values: (without passphrase)
+ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/id_rsa -q -N ''
+# For adding to ssh agent automatically, you can use (RSA, no passphase)
+keyname='secretKey' ; comment='someone@email.com' ; ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/$keyname -q -N '' -C $comment ; eval `ssh-agent` ; ssh-add ~/.ssh/$keyname
+
+# ECDSA – Stands for Elliptic Curve Digital Signature Algorithm, which uses elliptic-curve cryptography
+ssh-keygen -t ecdsa -b 521
+
+# ed25519 – Fairly new algorithm which is intended to provide attack resistance comparable to quality 128-bit
+ssh-keygen -t ed25519 -a 100
+# Here's a one liner for Ed25519 based on recommended values: (without passphrase)
+ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519 -q -N ''
+```
+
 ___
 ## netplan
 ___
@@ -221,50 +238,6 @@ UUID=xxx /boot      ext2  defaults    0    2
 UUID="xxx" /xxx/xxx ext4 defaults,x-gvfs-show 0 0
 ```
 
-### Viber install
-
-```sh
-cd ~/Downloads && wget <http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu6.2_amd64.deb> && sudo dpkg -i libssl1.0.0_1.0.2n-1ubuntu6.2_amd64.deb
-cd ~/Downloads && wget <https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb>
-sudo chmod +x viber.deb && sudo dpkg -i viber.deb
-```
-
-### GNS3 FOR DEBIAN BUSTER
-
-```sh
-sudo apt install -y python3-pip python3-pyqt5 python3-pyqt5.qtsvg python3-pyqt5.qtwebsockets qemu qemu-kvm qemu-utils libvirt-clients libvirt-daemon-system virtinst wireshark xtightvncviewer apt-transport-https ca-certificates curl gnupg2 software-properties-common
-```
-
-## gns3
-
-```sh
-sudo add-apt-repository ppa:gns3/ppa
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install gns3-gui gns3-server gns3-iou
-
-# if you want to add docker support
-# - Remove any old versions:
-sudo apt remove docker docker-engine docker.io
-# - install GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-# - add repo:
-sudo add-apt-repository \
-"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) stable"
-## update and install docker
-sudo apt update
-sudo apt install docker-ce
-
-# add yourself to required groups and reboot:
-sudo usermod -aG ubridge <username> && \
-sudo usermod -aG libvirt <username> && \
-sudo usermod -aG kvm <username> && \
-sudo usermod -aG wireshark <username> && \
-sudo usermod -aG docker <username> && \
-sudo reboot
-
-```
 
 ### add missing key
 
@@ -282,17 +255,6 @@ sudo add-apt-repository ppa:giuspen/ppa
 deb <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
 deb-src <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
 <https://packages.debian.org/stretch/amd64/python-gtksourceview2/download>
-```
-
-### EWS
-
-```sh
-deb <http://deb.debian.org/debian/> buster-backports main
-deb <http://ftp.de.debian.org/debian> buster-backports main
-
-sudo apt update && sudo apt install evolution-ews -t buster-backports
-
-<https://extensions.gnome.org/extension/615/appindicator-support/>
 ```
 
 ### Reduce PDF size
@@ -368,201 +330,6 @@ find / -type f -name "*.pdf" -exec mv {} /home/<move-dir>/ 2>cp.err \;
 ```sh
 diff --brief --recursive --new-file dir1/ dir2/ # GNU long options
 diff -qrN /media/baggins/Mel - externi /media/baggins/My Book/MEL/externi-disk-backup # common short options
-```
-
-## GREP
-
-- When we execute the grep command with specified pattern, if its is matched, then it will display the line of file containing the pattern without modifying the contents of existing file.
-In this tutorial we will learn how to use Linux grep command with 14 practical examples,
-
-### Example:1
-
-- Search the pattern (word) in a file
-- Search the “linuxtechi” word in the file /etc/passwd file
-
-```sh
-root@Linux-world:~# grep linuxtechi /etc/passwd
-linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-```
-
-### Example:2
-
-- Search the pattern in the multiple files.
-
-```sh
-root@Linux-world:~# grep linuxtechi /etc/passwd /etc/shadow /etc/gshadow
-/etc/passwd:linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-/etc/shadow:linuxtechi:$6$DdgXjxlM$4flz4JRvefvKp0DG6re:16550:0:99999:7:::/etc/gshadow:adm:*::syslog,linuxtechi
-/etc/gshadow:cdrom:*::linuxtechi
-/etc/gshadow:sudo:*::linuxtechi
-/etc/gshadow:dip:*::linuxtechi
-/etc/gshadow:plugdev:*::linuxtechi
-/etc/gshadow:lpadmin:!::linuxtechi
-/etc/gshadow:linuxtechi:!::
-/etc/gshadow:sambashare:!::linuxtechi
-```
-
-### Example:3
-
-- List the name of those files which contain a specific pattern using -l option.
-
-```sh
-root@Linux-world:~# grep -l linuxtechi /etc/passwd /etc/shadow /etc/fstab /etc/mtab
-/etc/passwd
-/etc/shadow
-```
-
-### Example:4
-
-- Search the pattern in the file along with associated line number(s) using the -n option
-
-```sh
-root@Linux-world:~# grep -n linuxtechi /etc/passwd
-39:linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-root@Linux-world:~#root@Linux-world:~# grep -n root /etc/passwd /etc/shadow
-```
-
-### Example:5
-
-- Print the line excluding the pattern using -v option
-- List all the lines of the file /etc/passwd that does not contain specific word “linuxtechi”.
-
-```sh
-root@Linux-world:~# grep -v linuxtechi /etc/passwd
-```
-
-### Example:6
-
-- Display all the lines that starts with specific pattern using ^ symbol
-Bash shell treats caret symbol (^) as a special character which marks the beginning of line or a word.
-- Let’s display the lines which starts with “root” word in the file /etc/passwd.
-
-```sh
-root@Linux-world:~# grep ^root /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-```
-
-### Example:7
-
-- Display all the lines that ends with specific pattern using $ symbol
-- List all the lines of /etc/passwd that ends with “bash” word.
-
-```sh
-root@Linux-world:~# grep bash$ /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-root@Linux-world:~#Bash shell treats dollar ($) symbol as a special character which marks the end of line or word.
-```
-
-### Example:8
-
-- Search the pattern recursively using -r option
-
-```sh
-root@Linux-world:~# grep -r linuxtechi /etc/
-/etc/subuid:linuxtechi:100000:65536
-/etc/group:adm:x:4:syslog,linuxtechi
-/etc/group:cdrom:x:24:linuxtechi
-/etc/group:sudo:x:27:linuxtechi
-/etc/group:dip:x:30:linuxtechi
-/etc/group:plugdev:x:46:linuxtechi
-/etc/group:lpadmin:x:115:linuxtechi
-/etc/group:linuxtechi:x:1000:
-/etc/group:sambashare:x:131:linuxtechi
-/etc/passwd-:linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-/etc/passwd:linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-# Above command will search linuxtechi in the “/etc” directory recursively.
-```
-
-### Example:9
-
-- Search all the empty or blank lines of a file using grep
-
-```sh
-root@Linux-world:~# grep ^$ /etc/shadow
-root@Linux-world:~# As there is no empty line in /etc/shadow file , so nothing is displayed.
-```
-
-### Example:10
-
-- Search the pattern using ‘grep -i’ option
-- -i option in the grep command ignores the letter case i.e it will not discriminate upper case or lower case letters while searching
-- Lets take an example , i want to search “LinuxTechi” word in the passwd file.
-
-```sh
-nextstep4it@localhost:~$ grep -i LinuxTechi /etc/passwd
-linuxtechi:x:1001:1001::/home/linuxtechi:/bin/bash
-```
-
-- Note : In grep command,we can also do the search based on exact word using ‘-w’ option, example is shown below,
-
-```sh
-grep -w cook /mnt/my_dish.txt
-```
-
-- Above command will search and look for the lines which have “cook” word. It wont give results which has cooking.
-
-### Example:11
-
-- Search multiple patterns using -e option
-- For example i want to search ‘linuxtechi’ and ‘root’ word in a single grep command , then using -e option we can search multiple patterns.
-
-```sh
-root@Linux-world:~# grep -e "linuxtechi" -e "root" /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-linuxtechi:x:1000:1000:linuxtechi,,,:/home/linuxtechi:/bin/bash
-```
-
-or
-
-```sh
-root@Linux-world:~# grep -E "linuxtechi|root" /etc/passwd
-```
-
-### Example:12
-
-- Getting Search pattern from a file using “grep -f”
-- First create a search pattern file “grep_pattern” in your current working directory.
-- In my case i have put the below contents.
-
-```sh
-root@Linux-world:~# cat grep_pattern
-^linuxtechi
-root
-false$
-root@Linux-world:~# Now try to search using grep_pattern file.
-root@Linux-world:~# grep -f grep_pattern /etc/passwd
-```
-
-### Example:13
-
-- Count the number of matching patterns using -c option
-- Let take the above example, we can count the number of matching patterns using -c option in grep command.
-
-```sh
-root@Linux-world:~# grep -c -f grep_pattern /etc/passwd
-22
-```
-
-### Example:14
-
-- Display N number of lines before & after pattern matching
-- a) Display Four lines before pattern matching using -B option
-
-```sh
-root@Linux-world:~# grep -B 4 "games" /etc/passwd
-```
-
-- b) Display Four lines after pattern matching using -A option
-
-```sh
-root@Linux-world:~# grep -A 4 "games" /etc/passwd
-```
-
-- c) Display Four lines around the pattern matching using -C option
-
-```sh
-root@Linux-world:~# grep -C 4 "games" /etc/passwd
 ```
 
 ## VIM
