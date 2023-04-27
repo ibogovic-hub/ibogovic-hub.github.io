@@ -94,7 +94,13 @@ endif
 ## ~/.vimrc file
 
 - I'm using molokai color theme so [this](https://www.vim.org/scripts/script.php?script_id=2340) is needed and copy it to your local folder ***(eq. ~/.vim/colors)***.
- 
+
+do a 
+```sh
+wget https://github.com/tomasr/molokai/blob/master/colors/molokai.vim
+```
+ in folder ~/.vim/colors
+
 ```sh
 set nocompatible
 syntax on
@@ -156,4 +162,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 call plug#end()
+```
+install:
+```sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+and update plugins with:
+```sh
+:PlugInstall
 ```
