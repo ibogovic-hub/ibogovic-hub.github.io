@@ -8,22 +8,21 @@ tags: Linux
 so...here is a bunch of linux ***"things"*** that I have collected over the years
 I'm not quite sure how usefull is this here but...who knows. ;)
 
----
-
 - in case you have the problem with pyhthon after installing gns3 
-
 ```sh
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
 ## DNS settings - check public IP with CLI
 ---
+
 ```sh
 curl ifconfig.io
 ```
 
 ## GUI on RHEL server
 ---
+
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
 ## ssh key creation
