@@ -16,7 +16,8 @@ sudo apt install isc-dhcp-server vlan
 
 2. now we need to edit two files that will allow us to use dhcp ***isc-dhcp-server* file and *dhcpd.conf* file**
 
-## *isc-dhcp-server*  
+## *isc-dhcp-server*
+### isc-dhcp-server
 
 ```bash
 sudo vim /etc/default/isc-dhcp-server
