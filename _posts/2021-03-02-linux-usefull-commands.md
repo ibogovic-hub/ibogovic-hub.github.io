@@ -3,8 +3,6 @@ title: usefull linux commands
 tags: Linux
 ---
 
----
-
 ## collection of .....
 
 so...here is a bunch of linux ***"things"*** that I have collected over the years
@@ -12,60 +10,42 @@ I'm not quite sure how usefull is this here but...who knows. ;)
 
 ---
 
-- for something
-
-```sh
-localectl set-keymap map
-```
-
 - in case you have the problem with pyhthon after installing gns3 
 
 ```sh
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
-### DNS settings - check public IP with CLI
-
+## DNS settings - check public IP with CLI
+---
 ```sh
 curl ifconfig.io
 ```
 
-### Crypt folder with cli
-
-```sh
-7z a -p Fdirectory.7z /path/to/F
-```
-
-### Viber scaling workaround
-
-```sh
-sudo vim /usr/share/applications/viber.desktop
-Exec=env QT_SCALE_FACTOR=0.6 /opt/viber/Viber
-```
-
-### PIDGIN
-
-[Link_to_site for SIPE addin](https://sourceforge.net/p/sipe/wiki/Frequently%20Asked%20Questions/)
-
-### GUI on rhel server
+## GUI on RHEL server
+---
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
+## ssh key creation
+---
 
-___
-## key creation
-___
-```sh
 ssh-keygen \
     -m PEM \
-    -t rsa \
+    -t ed25519 \
     -b 4096 \
-    -C “email@address.here \
-    -f ~/.ssh/name
+    -C suse-admin@open-systems.com
 
-ssh-add ~/.ssh/ibogovic
-ssh-copy-id -i ~/.ssh/ibogovic.pub baggins@pi
+PermitRootLogin yes
+systemctl restart sshd
+PermitRootLogin without-password
+
+ssh-keygen -o -a 200 -t ed25519 -f ~/.ssh/file-name -C "some@email.address"
+
+- in more detail:
 ```
-[ref](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed) 
+[ref1](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed) 
+[ref2](https://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-a-password-prompt)
+[check-ubu-version](https://kinsta.com/knowledgebase/check-ubuntu-version/)
 
 ```sh
 # RSA – This algorithm uses the difficulty of factoring large numbers. A minimum of 2048 bits is recommended, but 4096 is considered significantly better.
@@ -84,7 +64,6 @@ ssh-keygen -t ed25519 -a 100
 ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519 -q -N ''
 ```
 
-___
 ## netplan
 ___
 ```sh
@@ -113,6 +92,7 @@ $ sudo netplan --debug apply
 [source](https://netplan.io/examples/)
 
 ## Youtube-dl & yt-dlp
+___
 - currently using yt-dlp since youtube-dl is broken  
 
 reference site [here](https://github.com/yt-dlp/yt-dlp)
@@ -157,29 +137,8 @@ yt-dlp -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "yo
 yt-dlp -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "your-playlist-link-here"
 ```
 
-## simplescreenrecorder
-
-```sh
-sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
-```
-
-## OBS Studio
-
-```sh
-sudo apt-get install ffmpeg
-sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt-get update
-sudo apt-get install obs-studio
-```
-
-### change default sudo permission
-
-```sh
-Visudo
-# <user> ALL=(ALL:ALL) ALL
-```
-
-### channel scan
+## channel scan
+___
 
 ```sh
 w_scan -c HR -X > channels.conf
@@ -187,12 +146,14 @@ w_scan -c HR -X > channels.conf
 ```
 
 ## Making a bootable installation disk 
+___
 
 ```sh
 dd if=/path/to/<image_name> of=/dev/fd0 rawrite.exe
 ```
 
 ## ffmpeg conversion
+___
 
 ```sh
 ffmpeg -i input.wav -vn -ar 48000 -ac 2 -ab 320k -f mp3 output.mp3
@@ -200,64 +161,22 @@ for i in *.webm; do ffmpeg -i "$i" -vn -ar 48000 -ac 2 -ab 320k -f mp3 "${i%.*}.
 ffmpeg -i *.mkv -vn -ar 48000 -ac 2 -ab 320k -f mp3 xxx.mp3
 ```
 
-### rdesktop
+## rdesktop
+___
 
 ```sh
 rdesktop -u lc-adm -d localhost -g 1440x840 192.168.194.79
 ```
 
-### dd
-
-```sh
-sudo dd if=/dev/urandom of=/dev/mmcblk0
-```
-
-### slow usb workaround
-
-```sh
-echo $((16*1024*1024)) > /proc/sys/vm/dirty_background_bytes
-echo $((48*1024*1024)) > /proc/sys/vm/dirty_bytes
-echo 0 > /proc/sys/vm/dirty_background_bytes
-echo 0 > /proc/sys/vm/dirty_bytes
-```
-
-### fstab edit
-
-```sh
-# /etc/fstab: static file system information
-#
-# Use 'blkid' to print the universally unique identifier for a
-# device; this may be used with UUID= as a more robust way to name devices
-# that works even if disks are added and removed. See fstab(5)
-#
-# <file system> <mount point>  <type> <options>    <dump> <pass>
-/dev/mapper/mordor--vg-root /        ext4  errors=remount-ro 0    1
-# /boot was on /dev/sda1 during installation
-UUID=xxx /boot      ext2  defaults    0    2
-/dev/mapper/xxx--vg-swap_1 none      swap  sw       0    0
-UUID="xxx" /xxx/xxx ext4 defaults,x-gvfs-show 0 0
-```
-
-
-### add missing key
+## add missing key
+___
 
 ```sh
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50
 ```
 
-## cherrytree
-
-```sh
-# oficial repo for ubuntu
-sudo add-apt-repository ppa:giuspen/ppa
-
-# for debian
-deb <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
-deb-src <http://ppa.launchpad.net/giuspen/ppa/ubuntu> eoan main
-<https://packages.debian.org/stretch/amd64/python-gtksourceview2/download>
-```
-
-### Reduce PDF size
+## Reduce PDF size
+___
 
 ```sh
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
@@ -269,20 +188,8 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
   -dPDFSETTINGS=/default selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
 ```
 
-## install dictionaries
-
-```sh
-sudo apt install aspell-hr firefox-esr-l10n-hr hunspell-hr hyphen-hr libreoffice-l10n-hr myspell-hr aspell-de firefox-esr-l10n-de hunspell-de-de hyphen-de libreoffice-l10n-de
-```
-
-### Fix missing printer driver on ubuntu
-- have it all :)
-
-```sh
-sudo apt install -y printer-driver-all-enforce printer-driver-all printer-driver-brlaser printer-driver-c2050 printer-driver-c2esp printer-driver-cjet printer-driver-cups-pdf printer-driver-dymo printer-driver-escpr printer-driver-foo2zjs-common printer-driver-foo2zjs printer-driver-fujixerox printer-driver-gutenprint printer-driver-hpcups printer-driver-hpijs printer-driver-indexbraille printer-driver-m2300w printer-driver-min12xxw printer-driver-oki printer-driver-pnm2ppa printer-driver-postscript-hp printer-driver-ptouch printer-driver-pxljr printer-driver-sag-gdi printer-driver-splix
-```
-
 ## Mounting vmware folders
+___
 
 ```sh
 sudo apt-get install open-vm-tools open-vm-tools-desktop
@@ -298,6 +205,7 @@ sudo nano /etc/fstab
 
 
 ## FIND
+___
 
 - How do you find all of the files owned by a user then copy those files to a temp folder?
 
@@ -332,8 +240,35 @@ diff --brief --recursive --new-file dir1/ dir2/ # GNU long options
 diff -qrN /media/baggins/Mel - externi /media/baggins/My Book/MEL/externi-disk-backup # common short options
 ```
 
-## VIM
+## grep
+---
 
+- find email addresses in a file
+```sh
+grep -oe "[a-zA-Z0-9._]\+@[a-zA-Z]\+.[a-zA-Z]\+" test.txt | uniq
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+grep -Rnw '/path/to/somewhere/' -e 'pattern'
+```
+[grep file](https://linuxconfig.org/how-to-find-a-string-or-text-in-a-file-on-linux)
+
+grep -Rnw . -e 'cvp.admin'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- replacing text in files
+```sh
+sed -i 's/string_1/string_2/g' *.txt
+find . -name "*.txt" |xargs sed -i "s/searched_Text/replacement_Text/g"
+
+# Here I use sed to replace every occurrence of the word "cybernetnews" with "cybernet" in every file with the extension, c, in the directory, /home/user/directory/.
+find /home/user/directory -name \*.c -exec sed -i "s/cybernetnews/cybernet/g" {} \;
+
+# A more generic variation where you search recursively from the directory of execution and operate on only regular, readable, writeable files:
+find ./ -type f -readable -writable -exec sed -i "s/cybernetnews/cybernet/g" {} \;
+```
+
+## VIM
+---
 - Invoke external binaries from within vim  
 
 ```sh
@@ -450,10 +385,8 @@ The example above works with all types of brackets, single and double quotes. It
 
 [ref article](https://medium.com/swlh/beginning-vim-and-using-vim-in-other-text-editors-724e8da32daa)
 
+## raspberi 
 ___
-## raspberry pi
-___
-
 - /etc/resolv.conf
 
 ```sh
@@ -519,12 +452,14 @@ static domain_name_servers=1.1.1.1 9.9.9.9
 ```
 
 
-### Scan from PI
+## Scan from PI
+---
 ```sh
 sudo scanimage --format=jpeg --resolution=300 -p > output.jpg
 ```
 
 ## record session
+---
 ```sh
 # Simplest Way to Log Shell Sessions
 script simplescript.log
@@ -540,16 +475,15 @@ scriptreplay -s myscript.log --timing=time.log
 scriptreplay -s myscript.log -t time.log
 ```
 
-___
-### strace
-___
+## strace
+---
 ```sh
 strace -ff -e trace=network -o output.txt [program]
 
 # follow forks to capture spawned threads and child processes and limit capture to network syscalls
 ```
----
-### rsync
+
+## rsync
 ---
 
 ```sh
