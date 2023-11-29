@@ -10,12 +10,12 @@ I'm not quite sure how usefull is this here but...who knows. ;)
 
 - in case you have the problem with pyhthon after installing gns3 
 
-```sh
+```
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
 ## DNS settings - check public IP with CLI
-```sh
+```
 curl ifconfig.io
 ```
 
@@ -23,7 +23,7 @@ curl ifconfig.io
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
 ## ssh key creation
-```sh
+```
 ssh-keygen \
     -m PEM \
     -t ed25519 \
@@ -43,7 +43,7 @@ ssh-keygen -o -a 200 -t ed25519 -f ~/.ssh/file-name -C "some@email.address"
 [ref2](https://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-a-password-prompt)
 [check-ubu-version](https://kinsta.com/knowledgebase/check-ubuntu-version/)
 
-```sh
+```
 # RSA – This algorithm uses the difficulty of factoring large numbers. A minimum of 2048 bits is recommended, but 4096 is considered significantly better.
 ssh-keygen -t rsa -b 4096
 # Here's a one liner for RSA based on recommended values: (without passphrase)
@@ -61,7 +61,7 @@ ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519 -q -N ''
 ```
 
 ## netplan
-```sh
+```
 network:
 	ethernets:
 		ens160:
@@ -78,7 +78,7 @@ network:
 	version: 2
 	renderer: networkd
 ```
-```sh
+```
 sudo netplan apply
 # In case you run into some issues execute:
 $ sudo netplan --debug apply
@@ -90,7 +90,7 @@ $ sudo netplan --debug apply
 - currently using yt-dlp since youtube-dl is broken  
 
 reference site [here](https://github.com/yt-dlp/yt-dlp)
-```sh
+```
 # yt-dlp
 brew install yt-dlp/taps/yt-dlp
 
@@ -132,35 +132,35 @@ yt-dlp -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s
 ```
 
 ## channel scan
-```sh
+```
 w_scan -c HR -X > channels.conf
 # vlc channels.conf
 ```
 
 ## Making a bootable installation disk 
-```sh
+```
 dd if=/path/to/<image_name> of=/dev/fd0 rawrite.exe
 ```
 
 ## ffmpeg conversion
-```sh
+```
 ffmpeg -i input.wav -vn -ar 48000 -ac 2 -ab 320k -f mp3 output.mp3
 for i in *.webm; do ffmpeg -i "$i" -vn -ar 48000 -ac 2 -ab 320k -f mp3 "${i%.*}.mp3"; done
 ffmpeg -i *.mkv -vn -ar 48000 -ac 2 -ab 320k -f mp3 xxx.mp3
 ```
 
 ## rdesktop
-```sh
+```
 rdesktop -u lc-adm -d localhost -g 1440x840 192.168.194.79
 ```
 
 ## add missing key
-```sh
+```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50
 ```
 
 ## Reduce PDF size
-```sh
+```
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
   -dPDFSETTINGS=/screen lower quality, smaller size. (72 dpi)
@@ -171,7 +171,7 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 ```
 
 ## Mounting vmware folders
-```sh
+```
 sudo apt-get install open-vm-tools open-vm-tools-desktop
 sudo apt-get install build-essential module-assistant linux-headers-virtual linux-image-virtual && dpkg-reconfigure open-vm-tools
 vmware-hgfsclient
@@ -187,7 +187,7 @@ sudo nano /etc/fstab
 ## FIND
 - How do you find all of the files owned by a user then copy those files to a temp folder?
 
-```sh
+```
 find / -user user -exec cp {} /tmp \;
 
 find /home/<user> -type f -exec grep -l <word> {} \; | xargs mv -t /home/<some-folder>/
@@ -195,32 +195,32 @@ find /home/<user> -type f -exec grep -l <word> {} \; | xargs mv -t /home/<some-f
 
 - find all files with extension .gif
 
-```sh
+```
 find /home/<user>/Downloads/ -type f -name "*.gif"
 ```
 
 - Find all gif's and copy them
 
-```sh
+```
 find ~/Downloads/ -type f -name "*.gif" -exec cp {} GIFS/ \;
 ```
 
 - find and move all .pdf files to somewhere
 
-```sh
+```
 find / -type f -name "*.pdf" -exec mv {} /home/<move-dir>/ 2>cp.err \;
 ```
 
 - If you also want to see differences for files that may not exist in either directory:
 
-```sh
+```
 diff --brief --recursive --new-file dir1/ dir2/ # GNU long options
 diff -qrN /media/baggins/Mel - externi /media/baggins/My Book/MEL/externi-disk-backup # common short options
 ```
 
 ## grep
 - find email addresses in a file
-```sh
+```
 grep -oe "[a-zA-Z0-9._]\+@[a-zA-Z]\+.[a-zA-Z]\+" test.txt | uniq
 grep -Rnw '/path/to/somewhere/' -e 'pattern'
 ```
@@ -231,7 +231,7 @@ grep -Rnw . -e 'cvp.admin'
 
 - replacing text in files
 
-```sh
+```
 sed -i 's/string_1/string_2/g' *.txt
 find . -name "*.txt" |xargs sed -i "s/searched_Text/replacement_Text/g"
 
@@ -245,19 +245,19 @@ find ./ -type f -readable -writable -exec sed -i "s/cybernetnews/cybernet/g" {} 
 ## VIM
 - Invoke external binaries from within vim  
 
-```sh
+```
 :!r ip route show | grep default | cut -f 3 -d " "
 ```
 
 - Insert existing file  
 
-```sh
+```
 :r /etc/passwd
 ```
 
 - Search and substitute (replace)  
 
-```sh
+```
 :%s/old/new/g
 :%s/old/new/gc --> to be prompted for a change
 ```
@@ -362,7 +362,7 @@ The example above works with all types of brackets, single and double quotes. It
 ## raspberi 
 - /etc/resolv.conf
 
-```sh
+```
 # A sample configuration for dhcpcd.
 # See dhcpcd.conf(5) for details.
 
@@ -426,12 +426,12 @@ static domain_name_servers=1.1.1.1 9.9.9.9
 
 
 ## Scan from PI
-```sh
+```
 sudo scanimage --format=jpeg --resolution=300 -p > output.jpg
 ```
 
 ## record session
-```sh
+```
 # Simplest Way to Log Shell Sessions
 script simplescript.log
 
@@ -447,13 +447,13 @@ scriptreplay -s myscript.log -t time.log
 ```
 
 ## strace
-```sh
+```
 strace -ff -e trace=network -o output.txt [program]
 
 # follow forks to capture spawned threads and child processes and limit capture to network syscalls
 ```
 
 ## rsync
-```sh
+```
 rsync -avzhp --exclude sshalert/venv sshalert user@remote.server
 ```
