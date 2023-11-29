@@ -9,25 +9,21 @@ so...here is a bunch of linux ***"things"*** that I have collected over the year
 I'm not quite sure how usefull is this here but...who knows. ;)
 
 - in case you have the problem with pyhthon after installing gns3 
+
 ```sh
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
 ## DNS settings - check public IP with CLI
----
-
 ```sh
 curl ifconfig.io
 ```
 
 ## GUI on RHEL server
----
-
 [Link to RHEL site](https://linuxconfig.org/install-gnome-gui-on-rhel-7-linux-server)
 
 ## ssh key creation
----
-
+```sh
 ssh-keygen \
     -m PEM \
     -t ed25519 \
@@ -39,9 +35,10 @@ systemctl restart sshd
 PermitRootLogin without-password
 
 ssh-keygen -o -a 200 -t ed25519 -f ~/.ssh/file-name -C "some@email.address"
+```
 
 - in more detail:
-```
+
 [ref1](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed) 
 [ref2](https://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-a-password-prompt)
 [check-ubu-version](https://kinsta.com/knowledgebase/check-ubuntu-version/)
@@ -64,7 +61,6 @@ ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519 -q -N ''
 ```
 
 ## netplan
-___
 ```sh
 network:
 	ethernets:
@@ -91,7 +87,6 @@ $ sudo netplan --debug apply
 [source](https://netplan.io/examples/)
 
 ## Youtube-dl & yt-dlp
-___
 - currently using yt-dlp since youtube-dl is broken  
 
 reference site [here](https://github.com/yt-dlp/yt-dlp)
@@ -137,23 +132,17 @@ yt-dlp -f bestaudio -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s
 ```
 
 ## channel scan
-___
-
 ```sh
 w_scan -c HR -X > channels.conf
 # vlc channels.conf
 ```
 
 ## Making a bootable installation disk 
-___
-
 ```sh
 dd if=/path/to/<image_name> of=/dev/fd0 rawrite.exe
 ```
 
 ## ffmpeg conversion
-___
-
 ```sh
 ffmpeg -i input.wav -vn -ar 48000 -ac 2 -ab 320k -f mp3 output.mp3
 for i in *.webm; do ffmpeg -i "$i" -vn -ar 48000 -ac 2 -ab 320k -f mp3 "${i%.*}.mp3"; done
@@ -161,22 +150,16 @@ ffmpeg -i *.mkv -vn -ar 48000 -ac 2 -ab 320k -f mp3 xxx.mp3
 ```
 
 ## rdesktop
-___
-
 ```sh
 rdesktop -u lc-adm -d localhost -g 1440x840 192.168.194.79
 ```
 
 ## add missing key
-___
-
 ```sh
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50
 ```
 
 ## Reduce PDF size
-___
-
 ```sh
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
@@ -188,8 +171,6 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 ```
 
 ## Mounting vmware folders
-___
-
 ```sh
 sudo apt-get install open-vm-tools open-vm-tools-desktop
 sudo apt-get install build-essential module-assistant linux-headers-virtual linux-image-virtual && dpkg-reconfigure open-vm-tools
@@ -204,8 +185,6 @@ sudo nano /etc/fstab
 
 
 ## FIND
-___
-
 - How do you find all of the files owned by a user then copy those files to a temp folder?
 
 ```sh
@@ -240,21 +219,18 @@ diff -qrN /media/baggins/Mel - externi /media/baggins/My Book/MEL/externi-disk-b
 ```
 
 ## grep
----
-
 - find email addresses in a file
 ```sh
 grep -oe "[a-zA-Z0-9._]\+@[a-zA-Z]\+.[a-zA-Z]\+" test.txt | uniq
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 grep -Rnw '/path/to/somewhere/' -e 'pattern'
 ```
+
 [grep file](https://linuxconfig.org/how-to-find-a-string-or-text-in-a-file-on-linux)
 
 grep -Rnw . -e 'cvp.admin'
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - replacing text in files
+
 ```sh
 sed -i 's/string_1/string_2/g' *.txt
 find . -name "*.txt" |xargs sed -i "s/searched_Text/replacement_Text/g"
@@ -267,7 +243,6 @@ find ./ -type f -readable -writable -exec sed -i "s/cybernetnews/cybernet/g" {} 
 ```
 
 ## VIM
----
 - Invoke external binaries from within vim  
 
 ```sh
@@ -385,7 +360,6 @@ The example above works with all types of brackets, single and double quotes. It
 [ref article](https://medium.com/swlh/beginning-vim-and-using-vim-in-other-text-editors-724e8da32daa)
 
 ## raspberi 
-___
 - /etc/resolv.conf
 
 ```sh
@@ -452,13 +426,11 @@ static domain_name_servers=1.1.1.1 9.9.9.9
 
 
 ## Scan from PI
----
 ```sh
 sudo scanimage --format=jpeg --resolution=300 -p > output.jpg
 ```
 
 ## record session
----
 ```sh
 # Simplest Way to Log Shell Sessions
 script simplescript.log
@@ -475,7 +447,6 @@ scriptreplay -s myscript.log -t time.log
 ```
 
 ## strace
----
 ```sh
 strace -ff -e trace=network -o output.txt [program]
 
@@ -483,8 +454,6 @@ strace -ff -e trace=network -o output.txt [program]
 ```
 
 ## rsync
----
-
 ```sh
 rsync -avzhp --exclude sshalert/venv sshalert user@remote.server
 ```
