@@ -67,8 +67,9 @@ journalctl -p 3 -xb
 b : since last boot (which is the current session)
 ```
 ### This table lists all the priority levels.
+  
 | Priority | Code |
-|---|---|
+| --- | --- |
 | 0 | emerg |
 | 1 | alert |
 | 2 | crit |
