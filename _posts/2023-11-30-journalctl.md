@@ -67,16 +67,16 @@ journalctl -p 3 -xb
 b : since last boot (which is the current session)
 ```
 ### This table lists all the priority levels.
-Priority | Code
----
-0	| emerg
-1	| alert
-2	| crit
-3	| err
-4	| warning
-5	| notice
-6	| info
-7	| debug
+| Priority | Code |
+|---|---|
+| 0 | emerg |
+| 1 | alert |
+| 2 | crit |
+| 3 | err |
+| 4 | warning |
+| 5 | notice |
+| 6 | info |
+| 7 | debug |
 
 ### You can also display logs for a range of severity. For example, if you want to see all the warning, notice and info logs from the current session, you can use:
 ```
