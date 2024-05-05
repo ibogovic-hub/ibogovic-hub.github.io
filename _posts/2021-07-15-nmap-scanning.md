@@ -557,3 +557,15 @@ nmap -v -A boweaver.com
 nmap -v -sn 192.168.0.0/16 10.0.0.0/8
 nmap -v -iR 10000 -Pn -p 80
 ```
+
+### more
+```sh  
+sudo nmap -sS {IP address}  # [this is for a TCP SYN scan]  
+sudo nmap -sA {IP address}  # [this is for a TCP ACK scan]  
+sudo nmap -sF {IP address}  # [this is for a TCP FIN scan]  
+sudo nmap -sT {IP address}  # [this is for a TCP connect scan, less stealthy]  
+sudo nmap -n {Ip address}   # [this is for a TCP null scan]  
+sudo nmap -sU {IP address}  # [this is for a UDP scan]  
+sudo nmap -sX {IP address}  # [this is for a Xmas with Urgent, FIN, and PSH bits set!]  
+```
+[nmap ref](https://www.cellstream.com/reference-reading/tipsandtricks/276-deeper-scanning-with-nmap)

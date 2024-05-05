@@ -457,3 +457,51 @@ strace -ff -e trace=network -o output.txt [program]
 ```
 rsync -avzhp --exclude sshalert/venv sshalert user@remote.server
 ```
+## openssl
+```sh
+# get the cert chain
+openssl s_client -connect monitoring.open.ch:443 -showcerts < /dev/null 2>/dev/null
+
+
+awk -v cmd='openssl x509 -noout -subject' '
+    /BEGIN/{close(cmd)};{print | cmd}' < /etc/ssl/certs/ca-certificates.crt
+```
+## file operations
+```sh
+# to create multiple files in those folders
+touch dir_{a..z}/{a..z}/file{0..5}.{log,dat}
+touch dir_{a..z}/file{0..5}.{log,dat}
+```
+## regex
+- Find IP address and
+```sh
+(\d+)[.](\d+)[.](\d+)[.](\d+.*) 
+# \d+ finds the any number before [.] which finds the "dot" specificaly  
+# .* selects the text inside () 
+# ()  allow us to access whatever is inside the parentheses. The first set of  parentheses may be accessed with \1 and the second set with \2. 
+# \1\r\n\2 will take whatever text comes after it, will then add a new line, and place the string "Item" on the new line. 
+```
+-  find string and delete after:
+```sh
+# (find 255.255. mask and delete the rest)
+  255.255..*
+```
+- find string and delete before:
+```sh
+# (find word test)
+ .*test
+```
+- find line containing a string and delete the whole line
+```sh
+# (find word “edit” and delete the line)
+.* edit.*\r?\n
+```
+- exclude all commented lines in the file
+```sh
+grep -Ev ^'(#|$)'
+```
+-  find FROM-->TO
+```sh
+(?s)(?<=FROM).*?(?=\TO)
+```
+![regex](/assets/images/regex.png)
