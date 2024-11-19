@@ -5,6 +5,7 @@ tags: Mac
 ---
 # MAC
 
+
 ## ~/.vimrc file
 
 - I'm using molokai color theme so [this](https://www.vim.org/scripts/download_script.php?src_id=9750) is needed and copy it to your local folder ***(eq. ~/.vim/colors)***.
@@ -88,4 +89,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 and update plugins with:
 ```sh
 :PlugInstall
+```
+
+---
+## zsh setup
+
+- install eza and starship
+```sh
+brew install eza starship
 ```
