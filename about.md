@@ -114,5 +114,7 @@ Cisco, Aruba, Ruckus, Starlink
 ---
 
 ## Additional Information
-Experience prior to 2017 available upon request (e.g., 2009–2017 with SPAN as Network & Security Engineer).
-Details on speciffic project (but limited company info) could be provided during interview.
+- Experience prior to 2017 available upon request (e.g., 2009–2017 with SPAN as Network & Security Engineer).
+- Details on speciffic project (but limited company info) could be provided during interview.  
+
+---
