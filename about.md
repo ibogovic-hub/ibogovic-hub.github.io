@@ -3,25 +3,10 @@ layout: article
 titles:
   # @start locale config
   en      : &EN       About
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
   zh-Hans : &ZH_HANS  关于
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
   zh-Hant : &ZH_HANT  關於
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
   ko      : &KO       소개
-  ko-KR   : *KO
   fr      : &FR       À propos
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
   # @end locale config
 key: page-about
 ---
@@ -31,9 +16,9 @@ Work Permits: All EU countries + Switzerland
 ---
 
 ## Professional Profile
-Highly experienced Senior Network & Security Consultant with over 20 years of expertise in designing, implementing, and managing secure and scalable network infrastructures.
-Proven track record in cybersecurity, governance, and compliance, with extensive experience in project management and training.
-Adept at leading complex projects and resolving challenges in high-pressure environments.
+Seasoned Senior Network & Security Consultant with two decades of expertise in designing, implementing, and optimizing secure and scalable network infrastructures.
+Demonstrates a proven record of success in cybersecurity, governance, and compliance, coupled with extensive experience in project management and delivering targeted training programs.
+Skilled at leading high-stakes projects and effectively resolving complex challenges in demanding environments.
 
 ---
 
@@ -92,16 +77,16 @@ Adept at leading complex projects and resolving challenges in high-pressure envi
 Cisco, HP, Huawei, Mikrotik | Routing, Switching, Troubleshooting | Firewalls: Fortinet, Palo Alto, CheckPoint, Watchguard
 
 **Operating Systems:**
-Linux (Ubuntu, RedHat), Windows Server (2008-2023)
+Linux (Ubuntu, RedHat, Oracle, SUSE etc.), Windows Server, Windows, OSIX
 
 **Programming & Automation:**
-Python, SQL, Ansible, Shell Scripting
+Python, Ansible, Shell Scripting, PowerShell
 
 **Virtualization & Containers:**
 VMware, Hyper-V, KVM, Docker
 
 **WiFi Solutions:**
-Cisco, Aruba, Ruckus
+Cisco, Aruba, Ruckus, Starlink
 
 ---
 
@@ -130,3 +115,4 @@ Cisco, Aruba, Ruckus
 
 ## Additional Information
 Experience prior to 2017 available upon request (e.g., 2009–2017 with SPAN as Network & Security Engineer).
+Details on speciffic project (but limited company info) could be provided during interview.
