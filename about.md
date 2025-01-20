@@ -26,15 +26,14 @@ titles:
 key: page-about
 ---
 ### Ivan Bogović
-Weinberg 1, 5634 Merenschwand, Switzerland
-bogovic@pm.me | +41 (0) 795 448 811
 Work Permits: All EU countries + Switzerland
-Date of Birth: 07.06.1982
 
 ---
 
 ## Professional Profile
-Highly experienced Senior Network & Security Consultant with over 20 years of expertise in designing, implementing, and managing secure and scalable network infrastructures. Proven track record in cybersecurity, governance, and compliance, with extensive experience in project management and training. Adept at leading complex projects and resolving challenges in high-pressure environments.
+Highly experienced Senior Network & Security Consultant with over 20 years of expertise in designing, implementing, and managing secure and scalable network infrastructures.
+Proven track record in cybersecurity, governance, and compliance, with extensive experience in project management and training.
+Adept at leading complex projects and resolving challenges in high-pressure environments.
 
 ---
 
@@ -42,7 +41,7 @@ Highly experienced Senior Network & Security Consultant with over 20 years of ex
 - **Networking:** Advanced knowledge with 15+ years of experience.
 - **Operating Systems:** Proficient in Linux (15+ years) and Windows (10+ years).
 - **Cybersecurity:** Expertise in firewalls, risk management, and compliance (8+ years).
-- **Languages:** Fluent in German, Croatian, and English.
+- **Languages:** German (B2), English (Business Fluent), Croatian (Native Speaker).
 - **Certifications:** Extensive list of industry certifications (detailed below).
 
 ---
