@@ -25,326 +25,109 @@ titles:
   # @end locale config
 key: page-about
 ---
-## Senior Consultant
-
----
-### Summary  
-
-> Already in the network academy and later as a network technician, I took on various tasks in the areas of networked systems, especially UNIX, IT security and data protection.  Professionally, I have been dealing with problems and tasks of network and information security since 2009. First practically with the planning and realization of network-oriented security solutions, later conceptually in the development of IT security solutions and the implementation of IT security audits according to ISO Rules, IS027000, PCI or customer-specific specifications. IT professional with over eleven years of experience in managing various devices for top companies in Croatia, Germany and now in Switzerland, excellent interpersonal skills and great attention to detail.
-
----
-
-### Expert Focus
-```
-- Governance, Risk Management, and Compliance.  
-- Firewall and network architecture management.  
-- Information security, incl. auditing and training.  
-- Setting up and managing tasks in difficult and stressful situations.  
-- Organizational development and project management.  
-```
----
-
-### Training  
-
-- **2009** 
-  - The training is in conjunction with my first job in Croatia. In the first year at the company, I specialized in network and security.
+### Ivan Bogović
+Weinberg 1, 5634 Merenschwand, Switzerland
+bogovic@pm.me | +41 (0) 795 448 811
+Work Permits: All EU countries + Switzerland
+Date of Birth: 07.06.1982
 
 ---
 
-### Certificates
----
-
-| YEAR | CERTIFICATE |
-| - | - |
-| 2021 | NSE4 Network Security Professional |
-| 2020 | Cisco Certified Specialist - Enterprise Core (CCS-Ecore) |
-| 2020 | CompTia A+ CE |
-| 2019 | Cyber Security Certified - Network |
-| 2018 | CCNP Switching |
-| 2017 | PCNSE Palo Alto Certified Network Security Engineer |
-| 2017 | NSA4 Fortigate Network Administrator |
-| 2016 | RHCSA Red Hat Certified System Administrator |
-| 2016 | MCSE Cloud Platform and Infrastructure |
-| 2015 | CCNA Security |
-| 2015 | MCSE Enterprise |
-| 2014 | CompTia Server+ |
-| 2014 | CompTia A+ |
-| 2014 | MCSE Server Infrastructure |
-| 2013 | MCSA Windows Server |
-| 2013 | MCP Microsoft Certified Professional |
-| 2012 | CCNA Voice |
-| 2012 | MCSA Windows Server |
-| 2011 | MCITP Enterprise |
-| 2010 | MCTS Windows Server |
-| 2009 | CCNA Cisco Certified Network Administrator (Outstanding Achievement Award from CISCO) |
+## Professional Profile
+Highly experienced Senior Network & Security Consultant with over 20 years of expertise in designing, implementing, and managing secure and scalable network infrastructures. Proven track record in cybersecurity, governance, and compliance, with extensive experience in project management and training. Adept at leading complex projects and resolving challenges in high-pressure environments.
 
 ---
 
-### Languages
-
-- **English** – Business level knowledge
-- **German** – B2
-- **Croatian** – Mother language
-
----
-
-### Knowledge
-
-#### Hardware
-```
-- HP Server
-- Red Hat Server
-- Networking:
-  - Cisco (Routers, Switches, AP’s, Firewalls)
-  - Hp (Routers, Switches, AP’s)
-  - Huawei
-  - Aruba (Wi-Fi, Airwave, ClearPass)
-  - Ruckus (Wi-Fi, Management)
-  - Mikrotik
-  - PaloAlto (Firewalls, Panorama)
-  - Fortigate (Fortigate, FortiAnalyzer, FortiManager, FortiWifi, FortiClient, FortiDDoS)
-    - More than 8 years of experience with Fortinet
-  - CheckPoint
-  - Juniper
-  - Watchguard
-- Thin clients / Tablets
-- Mobile Devices
-```
-#### Operating systems
-```
-- Linux / UNIX (Red Hat, Debian, Ubuntu, CentOS, Fedora, Kali, Parrot, Tails, Whonix)
-- Windows Server (2008 - 2019)
-- Windows (7 - 10)
-- MacOS
-```
-#### Programming languages
-```
-- csh und sh Script language
-- Basic knowledge in Python
-- Automatization with Ansible
-```
-#### Databases
-```
-- Basic knowledge SQL Containers
-```
-#### Containers
-```
-- Basic to middle level knowledge in Docker
-```
-#### Virtualization
-```
-- VMware vSphere
-- Hyper-V
-- KVM
-- Oracle
-- Vagrant
-```
-#### Backup-Software
-
-```
-- Symantec Backup Exec
-- Symantec NetBackup (Basics)
-- Microsoft DPM
-- Acronis
-```
-
-
-##### Network
-```
-- Routing
-- Switching
-- Troubleshooting
-- Security
-```
-
-#### Industry knowledge
-```
-- Enterprise, mid and small business
-- Online
-- Hybrid – Cloud (basic knowledge) / On-premise
-```
- 
-#### Industries
-```
-- Automotive
-- Banks
-- Service
-- Trade
-- Telecommunications
-- Industry
-- Associations & societies
-- Insurance
-```
----
-
-## Project experience – **Bottomline AG DACH**
-
-| Project Role | Time Span | Customer |
-| - | - | - |
-| Infrastructure Engineer | 12/2021 - current | Bottomline AG DACH |
-
-### Task
-
-> The main responsibility Maintenance of network and client devices within the company.  
-
-- **Results achieved:**
-  - Configuration and maintenance of servers, firewalls and network equipment.
-
-> **Used tools:**
-  - Internal Bottomline Tools, Putty, Linux, Windows Server/Client, Cisco Firepower, Watchguard.
-
----
-## Project experience – **Phoenix Pharma (IS4IT)**
-
-| Project Role | Time Span | Customer |
-| - | - | - |
-| Senior Consultant | 10/2020 – 12/2021 | Phoenix Pharma |
-
-### Task
-
-> The main responsibility for this client is to implement the SD-WAN solution in all locations.  
-
-- **Results achieved:**
-  - Project roll-out, preparing the pilot sites and writing project documentation.
-  - Testing devices and configuring for the roll-out.
-  - Complete network and security revision of all affected points in this project.
-
-> **Used tools:**  
-  - Internal Phoenix Tools, Putty, Linux, Windows Server/Client, Cisco devices, Fortigate, FortiManager, FortiAnalyzer, Ansible...
+## Core Competencies
+- **Networking:** Advanced knowledge with 15+ years of experience.
+- **Operating Systems:** Proficient in Linux (15+ years) and Windows (10+ years).
+- **Cybersecurity:** Expertise in firewalls, risk management, and compliance (8+ years).
+- **Languages:** Fluent in German, Croatian, and English.
+- **Certifications:** Extensive list of industry certifications (detailed below).
 
 ---
 
-## Project experience - **Siemens (Alten / Clear Group)**
+## Professional Experience
 
-| Project Role | Time Span | Customer |
-| - | - | - |
-| Senior Network Engineer | 02/2020 - 10/2020 | Siemens |
+### Senior Systems Engineer
+**Open Systems AG** (11/2022 – Present)
+- Technical lead for company Linux infrastructure.
+- Spearheaded critical projects including:
+  - Network infrastructure refresh (LAN, WAN).
+  - Implementation and maintenance of SUSE Manager.
+  - Veeam and NetApp system upgrades.
+  - Palo Alto and ZTNA integrations.
+- Oversaw the maintenance of three data center locations.
 
-### Task
+### Service Bureau Infrastructure Engineer
+**Bottomline AG DACH** (12/2021 – 11/2022)
+- Led the technical management of two data centers in Zurich.
+- Designed and maintained network architecture and PKI infrastructure.
+- Managed Windows Servers (AD, DHCP, SQL) and SWIFT systems.
+- Oversaw firewall infrastructure, including Watchguard and Firepower.
+- Prepared data center migration to Nutanix.
 
-> The main responsibility for this client was the support of the entire network.  
+### Senior Consultant
+**IS4IT / Phoenix Pharma** (10/2020 – 12/2021)
+- Conducted network and security audits.
+- Designed and implemented an SD-WAN project.
+- Led device testing and project documentation.
 
-- **Results achieved:**
-  - The maintenance of all Siemens customer sites and equipment.
-  - Focus on existing locations and in communication with Siemens customers and build a new
-location.
-  - Act as project manager and L3 support.
-  - For the VPN migration, a market research and investigation of current top tier solutions that could be implemented / upgraded into the Siemens VPN solution was required.
-  - After completion of the project, 5 top-tier VPN solutions were proposed, and project documentation was prepared.
+### Senior Network Engineer
+**Alten / Siemens** (02/2020 – 10/2020)
+- Managed Siemens customer sites and coordinated new locations.
+- Proposed and documented advanced VPN solutions.
+- Provided Level 3 support and acted as project manager.
 
-> **Used tools:**
-  - Internal Siemens-Tools, Putty, Linux, Windows Server/Client, Cisco devices...
-
----
-## Project experience - **Jogmo World GmbH**
-
-| Project Role | Time Span | Customer |
-| - | - | - |
-| Network Specialist | 06/2019 – 08/2019 | Jogmo World GmbH |
-
-### Task
-
-> Network revision, reconfiguration and new architecture.  
-
-- **Results achieved:**
-  - Complete network revision, as only one subnet was used.
-  - New network segmentation and security architecture.
-  - New firewall implementation and VPN creation.
-  - Network architecture plan for all 32 NHL arenas around the world.
-  - Simple implementation was planned so that all sites had a baseline that could be used to
-replace or reconfigure equipment.
-  - Scripts were created that allowed automatic configuration of a new unit or reconfiguration
-of an existing unit in case of misconfiguration or error.
-  - Vlan's created for each department, device network completely isolated, guest network separate.
-
-> **Used tools:**
-  - Linux, OpnSense, Windows, Bash, Python, Except, Wi-Fi, Thin clients, Raspberry Pi, FS Networks, Cisco, HP...
+### Firewall Specialist
+**Hemmersbach GmbH & Co. KG** (09/2017 – 06/2019)
+- Revised and implemented secure network environments.
+- Set up FortiAnalyzer and FortiManager for centralized monitoring.
+- Conducted internal training on new systems and designs.
 
 ---
-## Project experience - **Hemmersbach GmbH & Co. KG**
 
-| Project Role | Time Span | Customer |
-| - | - | - |
-| Firewall Specialist | 09/2017 – 06/2019 | Hemmersbach Gmbh & Co. KG |
+## Technical Expertise
 
-### Task
+**Networking & Security:**
+Cisco, HP, Huawei, Mikrotik | Routing, Switching, Troubleshooting | Firewalls: Fortinet, Palo Alto, CheckPoint, Watchguard
 
-> Network, firewall and Wi-Fi revision, new architecture and design.  
+**Operating Systems:**
+Linux (Ubuntu, RedHat), Windows Server (2008-2023)
 
-- **Results achieved:**
-  - A complete network audit was carried out in Hemmersbach.
-  - New network and security design and architecture planned and implemented.
-  - Microsoft TMG, Sophos and OpenBSD migrated to new Fortigate units.
-  - Firewalls migrated to Fortigate devices at all 5 sites.
-  - Assists with the migration of Web Apps /Proxy to F5.
-  - Monitoring of all units and logging set up on FortiAnalyzer.
-  - Setting up central management on FortiManager.
-  - New Aruba AP’s replaced old HP Wi-Fi AP’s.
-  - Wi-Fi monitoring and management set up on Airwave.
-  - WiFi authentication set up on ClearPass in combination with AD.
-  - Further training of colleagues with regard to new design and devices.
+**Programming & Automation:**
+Python, SQL, Ansible, Shell Scripting
 
-> **Used tools:**
-  - Linux, Windows, Bash, Wi-Fi, Cisco, HP (Switches, Airwave, ClearPass), Fortigate, FortiAnalyzer, FortiManager, Microsoft TMG, Sophos, OpenBSD...
+**Virtualization & Containers:**
+VMware, Hyper-V, KVM, Docker
+
+**WiFi Solutions:**
+Cisco, Aruba, Ruckus
 
 ---
-## Project experience – **Span d.o.o**
 
-| Project Role | Time Span | Customer |
-| - | - | - |
-| Network and Security Engineer | 06/2009 – 09/2017 | SPAN d.o.o (Croatia) |
+## Certifications
+- 2022: CCNP
+- 2021: NSE4 Network Security Professional
+- 2020: Cisco Certified Specialist - Enterprise Core
+- 2019: Cyber Security Certified - Network
+- 2018: CCNP Switching
+- 2017: PCNSE Palo Alto Certified Network Security Engineer
+- 2016: RHCSA Red Hat Certified System Administrator
+- Full list available upon request.
 
-### Task
+---
 
-> End user support, network maintenance, security maintenance, server maintenance, etc.
+## Education & Training
+- 2009: CCNA, Cisco Certified Network Administrator (Net Academy Croatia)
+- 1996–1999: School for Hospitality
 
-- **Results achieved:**
-  - During this period, various tasks were carried out for all Span customers worldwide.
-  - Maintenance of the server infrastructure (AD, DHCP, Hyper-V, Exchange etc.)
-  - End-user support and handling of all inquiries including proactive support.
-  - Creation of network and security concepts in-house and at the customer's premises.
-  - Support with presales/post activities.
-  - Responsible for companies carrying out network and security projects.
-  - Interacting with suppliers and customers, supporting the sales team in the technical
-evaluation of solutions, providing technical support and advice to local and international
-customers/clients.
-  - Supporting and advising clients and companies on new technologies, opportunities and best
-practices, as well as providing advice and support for validation and implementation.
-  - Always provide full guidance and support to team members, on an equal footing and
-maintain a friendly and professional approach within the team and the organization.
-  - Planning and executing the selection, installation, and configuration and testing of devices
-defining network policies and procedures, as well as setting up connections and firewalls.
-  - Maintain network performance through network monitoring and analysis, performance
-optimization, troubleshooting of network problems and escalation to the provider.
-  - Securing the network by developing network access, monitoring, control and evaluation,
-maintaining documentation.
-> Largest SPAN customers that I was working on:
-  - **McDonalds** (the entire world scale)
-    - Network and server maintenance
-  - **John Deere**
-    - Network and server maintenance
-  - **Atlantic Group** (the entire world scale)
-    - The main objective of this project was to replace a Cisco ASA and Sophos appliances, which were already limited and overloaded, with a variety of Palo Alto Networks appliances (PA-200, PA-500 and PA-3020) equipped with URL Filtering, Threat Prevention, Brightcloud, GlobalProtect and Wildfire are licensed.  These appliances are installed in active-passive high availability, enable all security profiles, enable vpn's site-to-site and client-to-site and are integrated with active directory.
-    - There were 8 sites planned for implementation.
-    - When the project was finished, all sites were connected and integrated with AD.
-    - All units were on the latest software versions.
-  - **Croatian Airport**
-    - End-user support, server maintenance, network maintenance and taking care of all customer needs.
-  - **OptimaPharm**
-    - Implementation and subsequent support of an FG60D to their existing system instead of Symantec AV.
-  - **Croatian Post**
-    - Maintenance, support and troubleshooting for any problems or questions the customer may have.  
-  Two PA-500D units in HA mode with latest software version
-  - **Ministry of Architecture**
-    - Maintenance, support and troubleshooting for any problems or questions the customer may have. PA-500D unit with latest software version.
-  - **Unikomerc**
-    - Implementation of two FG-30E devices in HA, replacing two ASA firewalls. Migration of all policies and VPN-s.
-  - **Croatian Highways**
-    - Maintenance and support of the FG60D
-  - **KBC Clinical Hospital**
-    - Migration from ASA Firewall and ACS to Fortigate FG-800D in HA mode
-  - **Diners Croatia**
-    - Migration of Cisco Ironport WSA and ESA from S170 to S190 including Virtual 100.
+---
 
-> **Used tools:**
-  - Linux/UNIX, MAC, Windows Server, Windows 7-10, Cisco, Huawei, Hp, Ruckus, Mikrotik, Bluecoat, Baracuda, Symantec, Windows DPM, VBA, Shell, PaloAlto, Fortinet, VoIP, SCOM.
+## Awards
+- 2009: Award for Outstanding Performance by Cisco
+
+---
+
+## Additional Information
+Experience prior to 2017 available upon request (e.g., 2009–2017 with SPAN as Network & Security Engineer).
