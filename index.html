@@ -1,259 +1,264 @@
 ---
 layout: article
-title: "Ivan Bogović"
-excerpt: "Manager, IT Engineering · Infrastructure · Security · Scalable Operations"
+title: "Ivan Bogović — IT Engineering Leader"
+excerpt: "Manager, IT Engineering · Infrastructure · Security · Scalable Operations · Zürich"
 article_header:
   type: overlay
   theme: dark
   background_color: "#0d1117"
   background_image:
-    gradient: "linear-gradient(135deg, rgba(13,17,23,0.85) 0%, rgba(26,26,46,0.75) 100%)"
-    src: /assets/images/joda.jpg
+    gradient: "linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #0d1117 100%)"
 show_title: false
+aside:
+  toc: false
 ---
 
 <style>
-.portfolio-section { margin: 2.5rem 0; }
-.portfolio-section h2 {
-  font-size: 1.4rem;
+/* Reset article padding for full-width feel */
+.hero__content { padding: 3rem 1.5rem; }
+
+/* Hero block */
+.pf-hero { text-align: center; padding: 1rem 0 .5rem; }
+.pf-hero h1 { font-size: 2.6rem; font-weight: 800; margin: 0 0 .5rem; letter-spacing: -.5px; }
+.pf-hero .pf-title { font-size: 1.1rem; color: #ff9500; margin: 0 0 .4rem; font-weight: 500; }
+.pf-hero .pf-sub { font-size: .9rem; opacity: .55; margin: 0 0 1.8rem; }
+.pf-btns a { margin: .3rem .4rem; display: inline-block; }
+
+/* Section layout */
+.pf-section { margin: 3rem 0; }
+.pf-section h2 {
+  font-size: 1.25rem;
   font-weight: 700;
-  border-bottom: 2px solid #ff9500;
-  padding-bottom: .4rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #ff9500;
+  border-bottom: 1px solid rgba(255,149,0,.3);
+  padding-bottom: .5rem;
   margin-bottom: 1.5rem;
 }
-.pillar-grid {
+
+/* Intro */
+.pf-intro { font-size: 1rem; line-height: 1.85; opacity: .82; max-width: 820px; }
+
+/* Expertise grid */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: .9rem;
+}
+.pf-card {
+  border: 1px solid rgba(255,149,0,.2);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255,255,255,.03);
+  transition: border-color .2s;
+}
+.pf-card:hover { border-color: rgba(255,149,0,.5); }
+.pf-card h4 { color: #ff9500; margin: 0 0 .45rem; font-size: .9rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.pf-card p { margin: 0; font-size: .83rem; line-height: 1.65; opacity: .68; }
+
+/* Timeline */
+.pf-timeline { border-left: 2px solid rgba(255,149,0,.4); padding-left: 1.5rem; }
+.pf-item { position: relative; margin-bottom: 2rem; }
+.pf-item:last-child { margin-bottom: 0; }
+.pf-dot {
+  position: absolute; left: -1.79rem; top: .35rem;
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid #ff9500; background: #ff9500;
+}
+.pf-dot.past { background: #0d1117; }
+.pf-date { font-size: .75rem; opacity: .45; margin: 0 0 .2rem; }
+.pf-role { margin: 0 0 .1rem; font-size: .97rem; font-weight: 700; }
+.pf-company { margin: 0 0 .45rem; font-size: .85rem; color: #ff9500; font-weight: 400; }
+.pf-desc { margin: 0; font-size: .82rem; line-height: 1.65; opacity: .65; }
+
+/* Certs */
+.pf-certs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  gap: .55rem;
 }
-.pillar {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,149,0,.25);
-  border-radius: 8px;
-  padding: 1.1rem 1.25rem;
-}
-.pillar h4 {
-  color: #ff9500;
-  margin: 0 0 .4rem;
-  font-size: .95rem;
-}
-.pillar p {
-  margin: 0;
-  font-size: .85rem;
-  line-height: 1.6;
-  opacity: .75;
-}
-.timeline { border-left: 3px solid #ff9500; padding-left: 1.5rem; }
-.timeline-item { position: relative; margin-bottom: 2rem; }
-.timeline-item:last-child { margin-bottom: 0; }
-.timeline-dot {
-  position: absolute;
-  left: -1.85rem;
-  top: .3rem;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #ff9500;
-}
-.timeline-dot.past { background: #444; }
-.timeline-date { font-size: .78rem; opacity: .55; margin: 0 0 .15rem; }
-.timeline-role { margin: 0 0 .1rem; font-size: 1rem; font-weight: 700; }
-.timeline-company { margin: 0 0 .4rem; font-size: .88rem; color: #ff9500; font-weight: 400; }
-.timeline-desc { margin: 0; font-size: .85rem; line-height: 1.65; opacity: .72; }
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: .6rem;
-}
-.cert-item {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 6px;
-  padding: .6rem 1rem;
-  font-size: .83rem;
-  opacity: .85;
-}
-.tag-cloud { display: flex; flex-wrap: wrap; gap: .4rem; }
-.tag {
-  background: rgba(255,149,0,.1);
-  border: 1px solid rgba(255,149,0,.35);
-  color: #ff9500;
-  border-radius: 4px;
-  padding: .2rem .6rem;
-  font-size: .78rem;
-}
-.blog-cta {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 10px;
-  margin-top: 2.5rem;
-}
-.blog-cta h3 { margin: 0 0 .6rem; }
-.blog-cta p { margin: 0 0 1.2rem; opacity: .7; font-size: .9rem; }
-.btn-primary {
-  display: inline-block;
-  background: #ff9500;
-  color: #000 !important;
-  padding: .55rem 1.4rem;
+.pf-cert {
+  font-size: .82rem;
+  padding: .55rem .9rem;
+  border: 1px solid rgba(255,255,255,.07);
   border-radius: 5px;
-  text-decoration: none !important;
-  font-weight: 700;
-  font-size: .9rem;
+  background: rgba(255,255,255,.03);
+  opacity: .82;
 }
-.hero-intro { text-align: center; }
-.hero-intro h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: .4rem; }
-.hero-intro .subtitle { font-size: 1.05rem; opacity: .8; margin-bottom: 1.4rem; }
-.hero-intro .location { font-size: .88rem; opacity: .55; margin-bottom: 1.6rem; }
-.hero-btns a { margin: .25rem .4rem; display: inline-block; }
+
+/* Tags */
+.pf-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.pf-tag {
+  font-size: .75rem;
+  padding: .2rem .6rem;
+  border: 1px solid rgba(255,149,0,.3);
+  border-radius: 4px;
+  color: #ff9500;
+  background: rgba(255,149,0,.07);
+}
+
+/* Blog CTA */
+.pf-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2.2rem;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px;
+  background: rgba(255,255,255,.02);
+}
+.pf-cta h3 { margin: 0 0 .6rem; font-size: 1.1rem; }
+.pf-cta p { margin: 0 0 1.3rem; font-size: .88rem; opacity: .6; }
+.pf-cta a {
+  background: #ff9500; color: #000 !important;
+  padding: .55rem 1.5rem; border-radius: 5px;
+  text-decoration: none !important; font-weight: 700; font-size: .88rem;
+}
 </style>
 
-<!-- HERO INTRO (rendered inside overlay) -->
-<div class="hero-intro">
+<!-- HERO -->
+<div class="pf-hero">
   <h1>Ivan Bogović</h1>
-  <p class="subtitle">Manager, IT Engineering &nbsp;·&nbsp; Open Systems AG</p>
-  <p class="location">📍 Zürich, Switzerland &nbsp;·&nbsp; Infrastructure · Security · Scalable Operations</p>
-  <div class="hero-btns">
-    <a href="/about.html" class="button button--success button--pill button--lg">About Me</a>
-    <a href="/archive.html" class="button button--outline-success button--pill button--lg">Technical Blog</a>
+  <p class="pf-title">Manager, IT Engineering · Open Systems AG</p>
+  <p class="pf-sub">📍 Zürich, Switzerland &nbsp;·&nbsp; Available across EU + Switzerland</p>
+  <div class="pf-btns">
+    <a href="/about.html" class="button button--success button--pill">About Me</a>
+    <a href="/archive.html" class="button button--outline-success button--pill">Technical Blog</a>
   </div>
 </div>
 
 ---
 
 <!-- WHAT I DO -->
-<div class="portfolio-section">
-  <h2>What I Do</h2>
-  <p style="font-size:1rem; line-height:1.8; opacity:.85;">
-    IT Engineering leader who translates complex infrastructure, cybersecurity and operational requirements into reliable, governed and scalable internal services. Currently leading Internal IT Engineering at <strong>Open Systems AG</strong> — combining service ownership, people leadership, architecture direction and senior decision-making for business-critical platforms deployed across <strong>180+ countries</strong>.
+<div class="pf-section">
+  <h2>Profile</h2>
+  <p class="pf-intro">
+    IT Engineering leader with 15+ years translating complex infrastructure and cybersecurity requirements into reliable, governed, and scalable internal services. Currently leading Internal IT Engineering at <strong>Open Systems AG</strong> — service ownership, people leadership, architecture direction and senior decision-making for business-critical platforms deployed across <strong>180+ countries</strong>.
   </p>
 </div>
 
 <!-- EXPERTISE -->
-<div class="portfolio-section">
-  <h2>Core Expertise</h2>
-  <div class="pillar-grid">
-    <div class="pillar">
+<div class="pf-section">
+  <h2>Expertise</h2>
+  <div class="pf-grid">
+    <div class="pf-card">
       <h4>Engineering Leadership</h4>
       <p>Team organisation, staffing, mentoring, delegation and delivery ownership across engineering and 24×7 operations.</p>
     </div>
-    <div class="pillar">
+    <div class="pf-card">
       <h4>Secure Connectivity</h4>
       <p>SASE, SD-WAN, SSE, ZTNA, FWaaS — Palo Alto, Fortinet, Cisco — design through production operation.</p>
     </div>
-    <div class="pillar">
+    <div class="pf-card">
       <h4>Infrastructure & Resilience</h4>
       <p>Linux, NetApp, Veeam, VMware, Azure, M365, Entra ID — datacentres, backup, storage and service lifecycle.</p>
     </div>
-    <div class="pillar">
+    <div class="pf-card">
       <h4>Operational Excellence</h4>
       <p>ITIL, ServiceNow, Incident & Change Management, 24×7 NOC/MC operations, documentation and runbooks.</p>
     </div>
-    <div class="pillar">
+    <div class="pf-card">
       <h4>Automation & Tooling</h4>
       <p>Python, Ansible, Terraform, SaltStack, Shell — repeatable delivery and infrastructure-as-code.</p>
     </div>
-    <div class="pillar">
+    <div class="pf-card">
       <h4>Governance & Risk</h4>
-      <p>Access control, endpoint hardening, audit-driven initiatives, DR planning and compliance-oriented delivery.</p>
+      <p>Access control, endpoint hardening, audit-driven initiatives, DR planning and compliance delivery.</p>
     </div>
   </div>
 </div>
 
 <!-- EXPERIENCE -->
-<div class="portfolio-section">
+<div class="pf-section">
   <h2>Experience</h2>
-  <div class="timeline">
+  <div class="pf-timeline">
 
-    <div class="timeline-item">
-      <span class="timeline-dot"></span>
-      <p class="timeline-date">Feb 2025 – Present · Zürich, Switzerland</p>
-      <h3 class="timeline-role">Manager, IT Engineering</h3>
-      <h4 class="timeline-company">Open Systems AG</h4>
-      <p class="timeline-desc">Leading Internal IT Engineering and Operations — four FTEs plus contractors. Accountable for service ownership, architecture direction, delivery planning, go-live readiness and operational handover. Driving resilient platforms across Linux, NetApp, Veeam, networking, firewalls and M365.</p>
+    <div class="pf-item">
+      <span class="pf-dot"></span>
+      <p class="pf-date">Feb 2025 – Present · Zürich, Switzerland</p>
+      <p class="pf-role">Manager, IT Engineering</p>
+      <p class="pf-company">Open Systems AG</p>
+      <p class="pf-desc">Leading Internal IT Engineering and Operations — four FTEs plus contractors. Accountable for service ownership, architecture direction, delivery planning, go-live readiness and operational handover across Linux, NetApp, Veeam, networking, firewalls and M365.</p>
     </div>
 
-    <div class="timeline-item">
-      <span class="timeline-dot past"></span>
-      <p class="timeline-date">Nov 2022 – Jan 2025 · Zürich, Switzerland</p>
-      <h3 class="timeline-role">Senior IT Systems Engineer</h3>
-      <h4 class="timeline-company">Open Systems AG</h4>
-      <p class="timeline-desc">Technical lead for Linux, Veeam, NetApp, networking and firewall services. Led LAN/WAN/Wi-Fi refresh and Cisco backbone modernisation. Certified Mission Control Engineer supporting 24×7 global operations across 180+ countries.</p>
+    <div class="pf-item">
+      <span class="pf-dot past"></span>
+      <p class="pf-date">Nov 2022 – Jan 2025 · Zürich, Switzerland</p>
+      <p class="pf-role">Senior IT Systems Engineer</p>
+      <p class="pf-company">Open Systems AG</p>
+      <p class="pf-desc">Technical lead for Linux, Veeam, NetApp, networking and firewall services. Led LAN/WAN/Wi-Fi refresh and Cisco backbone modernisation. Certified Mission Control Engineer supporting 24×7 global operations across 180+ countries.</p>
     </div>
 
-    <div class="timeline-item">
-      <span class="timeline-dot past"></span>
-      <p class="timeline-date">Dec 2021 – Nov 2022 · Switzerland</p>
-      <h3 class="timeline-role">Service Bureau Infrastructure Engineer</h3>
-      <h4 class="timeline-company">Bottomline AG DACH</h4>
-      <p class="timeline-desc">Managed two Zurich datacentres. Designed network architecture and PKI. Owned Windows Server (AD, DHCP, SQL), SWIFT systems and firewall infrastructure. Led datacentre migration to Nutanix.</p>
+    <div class="pf-item">
+      <span class="pf-dot past"></span>
+      <p class="pf-date">Dec 2021 – Nov 2022 · Switzerland</p>
+      <p class="pf-role">Service Bureau Infrastructure Engineer</p>
+      <p class="pf-company">Bottomline AG DACH</p>
+      <p class="pf-desc">Managed two Zurich datacentres. Designed network architecture and PKI. Owned Windows Server (AD, DHCP, SQL), SWIFT systems and firewall infrastructure. Led datacentre migration to Nutanix.</p>
     </div>
 
-    <div class="timeline-item">
-      <span class="timeline-dot past"></span>
-      <p class="timeline-date">Nov 2020 – Nov 2021 · Germany</p>
-      <h3 class="timeline-role">Senior Consultant – Security Infrastructure</h3>
-      <h4 class="timeline-company">IS4IT / Phoenix Pharma</h4>
-      <p class="timeline-desc">2nd-level Security Consultant across multiple firewall vendors. Delivered SD-WAN improvements, security audits and compliance-oriented infrastructure work.</p>
+    <div class="pf-item">
+      <span class="pf-dot past"></span>
+      <p class="pf-date">Nov 2020 – Nov 2021 · Germany</p>
+      <p class="pf-role">Senior Consultant – Security Infrastructure</p>
+      <p class="pf-company">IS4IT / Phoenix Pharma</p>
+      <p class="pf-desc">2nd-level Security Consultant across multiple firewall vendors. Delivered SD-WAN improvements, security audits and compliance-oriented infrastructure work.</p>
     </div>
 
-    <div class="timeline-item">
-      <span class="timeline-dot past"></span>
-      <p class="timeline-date">Nov 2019 – Oct 2020 · Germany</p>
-      <h3 class="timeline-role">Engineering Consultant / Senior Network Engineer</h3>
-      <h4 class="timeline-company">ALTEN / Siemens</h4>
-      <p class="timeline-desc">Network troubleshooting, VPN migration, firewall installation and new site rollouts across Siemens customer sites.</p>
+    <div class="pf-item">
+      <span class="pf-dot past"></span>
+      <p class="pf-date">Nov 2019 – Oct 2020 · Germany</p>
+      <p class="pf-role">Engineering Consultant / Senior Network Engineer</p>
+      <p class="pf-company">ALTEN / Siemens</p>
+      <p class="pf-desc">Network troubleshooting, VPN migration, firewall installation and new site rollouts across Siemens customer sites.</p>
     </div>
 
-    <div class="timeline-item">
-      <span class="timeline-dot past"></span>
-      <p class="timeline-date">Sep 2017 – Jun 2019 · Germany</p>
-      <h3 class="timeline-role">Firewall Specialist</h3>
-      <h4 class="timeline-company">Hemmersbach GmbH & Co. KG</h4>
-      <p class="timeline-desc">Fortinet migrations, Wi-Fi firewall implementations, FortiAnalyzer/FortiManager deployment and internal security training.</p>
+    <div class="pf-item">
+      <span class="pf-dot past"></span>
+      <p class="pf-date">Sep 2017 – Jun 2019 · Germany</p>
+      <p class="pf-role">Firewall Specialist</p>
+      <p class="pf-company">Hemmersbach GmbH & Co. KG</p>
+      <p class="pf-desc">Fortinet migrations, Wi-Fi firewall implementations, FortiAnalyzer/FortiManager deployment and internal security training.</p>
     </div>
 
-    <div class="timeline-item">
-      <span class="timeline-dot past"></span>
-      <p class="timeline-date">2009 – 2017 · Croatia / Europe</p>
-      <h3 class="timeline-role">Network & Security Engineer</h3>
-      <h4 class="timeline-company">SPAN d.d. and earlier roles</h4>
-      <p class="timeline-desc">8 years of progressive network and security engineering — Cisco routing/switching, firewall operations and customer-facing technical delivery across Croatia and Europe.</p>
+    <div class="pf-item">
+      <span class="pf-dot past"></span>
+      <p class="pf-date">2009 – 2017 · Croatia / Europe</p>
+      <p class="pf-role">Network & Security Engineer</p>
+      <p class="pf-company">SPAN d.d. and earlier roles</p>
+      <p class="pf-desc">8 years progressive network and security engineering — Cisco routing/switching, firewall operations and customer-facing technical delivery across Croatia and Europe.</p>
     </div>
 
   </div>
 </div>
 
 <!-- CERTIFICATIONS -->
-<div class="portfolio-section">
+<div class="pf-section">
   <h2>Certifications</h2>
-  <div class="cert-grid">
-    <div class="cert-item">🏅 <strong>MCSE: Cloud Platform & Infrastructure</strong> · Microsoft · 2016</div>
-    <div class="cert-item">🏅 <strong>MCSE: Server Infrastructure</strong> · Microsoft · 2013</div>
-    <div class="cert-item">🏅 <strong>RHCSA</strong> · Red Hat Enterprise Linux 7 · 2016</div>
-    <div class="cert-item">🏅 <strong>PCNSE</strong> · Palo Alto Networks · 2017</div>
-    <div class="cert-item">🏅 <strong>Cisco Certified Specialist – Enterprise Core</strong> · 2020</div>
-    <div class="cert-item">🏅 <strong>CCNA / CCNA R&S / CCNA Security</strong> · Cisco</div>
-    <div class="cert-item">🏅 <strong>NSE4 Network Security Professional</strong> · Fortinet · 2021</div>
-    <div class="cert-item">🏅 <strong>MCSA: Windows Server 2012 / 2008</strong> · Microsoft</div>
+  <div class="pf-certs">
+    <div class="pf-cert">🏅 <strong>MCSE: Cloud Platform &amp; Infrastructure</strong> · Microsoft · 2016</div>
+    <div class="pf-cert">🏅 <strong>MCSE: Server Infrastructure</strong> · Microsoft · 2013</div>
+    <div class="pf-cert">🏅 <strong>RHCSA</strong> · Red Hat Enterprise Linux 7 · Red Hat · 2016</div>
+    <div class="pf-cert">🏅 <strong>PCNSE</strong> · Palo Alto Networks · 2017</div>
+    <div class="pf-cert">🏅 <strong>Cisco Certified Specialist – Enterprise Core</strong> · Cisco · 2020</div>
+    <div class="pf-cert">🏅 <strong>CCNA / CCNA R&amp;S / CCNA Security</strong> · Cisco</div>
+    <div class="pf-cert">🏅 <strong>NSE4 Network Security Professional</strong> · Fortinet · 2021</div>
+    <div class="pf-cert">🏅 <strong>MCSA: Windows Server 2012 / 2008</strong> · Microsoft</div>
   </div>
 </div>
 
 <!-- TECH STACK -->
-<div class="portfolio-section">
-  <h2>Technology Stack</h2>
-  <div class="tag-cloud">
+<div class="pf-section">
+  <h2>Technology</h2>
+  <div class="pf-tags">
     {% assign tags = "Cisco,Palo Alto Networks,Fortinet,Juniper,WatchGuard,Linux,SUSE,Red Hat,Ubuntu,Windows Server,VMware,NetApp,Veeam,Azure,Microsoft 365,Entra ID,ServiceNow,Ansible,Terraform,SaltStack,Python,PowerShell,Bash,Docker,KVM,SASE,SD-WAN,ZTNA,SSE,FWaaS,ITIL,Incident Management,Change Management" | split: "," %}
-    {% for tag in tags %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
+    {% for tag in tags %}<span class="pf-tag">{{ tag }}</span>{% endfor %}
   </div>
 </div>
 
 <!-- BLOG CTA -->
-<div class="blog-cta">
+<div class="pf-cta">
   <h3>Technical Knowledge Base</h3>
-  <p>60+ articles covering Cisco, Fortinet, Linux, security tools, networking labs and infrastructure topics.</p>
-  <a href="/archive.html" class="btn-primary">Browse Articles →</a>
+  <p>60+ articles on Cisco, Fortinet, Linux, security tools, networking labs and infrastructure.</p>
+  <a href="/archive.html">Browse Articles →</a>
 </div>
