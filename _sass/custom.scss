@@ -1,3 +1,66 @@
-/* start custom scss snippet */
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
 
-/* end custom scss snippet */
+@import "main";
+
+/* =============================================
+   Ivan Bogović — Custom Styles
+   ============================================= */
+
+/* Avatar — round with orange ring */
+.author__avatar img,
+img[alt="Ivan Bogović"] {
+  border-radius: 50% !important;
+  border: 3px solid #ff9500 !important;
+}
+
+/* Header — slightly deeper dark */
+.header {
+  background: #0d1117 !important;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* Nav links — bolder */
+.navigation__item a {
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+/* Article cards — subtle hover lift */
+.card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+
+/* Code blocks — match tomorrow-night palette */
+pre, code {
+  border-radius: 6px !important;
+}
+
+/* Certification table — tighter */
+table {
+  font-size: .88rem;
+}
+
+/* Footer — match header */
+.footer {
+  border-top: 1px solid #1f2937;
+  background: #0d1117 !important;
+}
+
+/* Tag pills */
+.item__tags .item__tag {
+  border-radius: 4px !important;
+  font-size: .75rem !important;
+}
+
+/* Timeline dots on landing (via inline styles, no override needed) */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
