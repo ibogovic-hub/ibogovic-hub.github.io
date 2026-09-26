@@ -1,5 +1,5 @@
 ---
-title: Weekly recap: kernel root exploits, ISE and switch flaws, and a record patch month
+title: "Weekly recap: kernel root exploits, ISE and switch flaws, and a record patch month"
 tags: Security
 ---
 

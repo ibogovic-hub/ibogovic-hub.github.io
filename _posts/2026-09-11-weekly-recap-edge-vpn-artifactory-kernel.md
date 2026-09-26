@@ -1,5 +1,5 @@
 ---
-title: Weekly recap: edge VPN patches, a poisoned artifact store, and a kernel branch that quietly died
+title: "Weekly recap: edge VPN patches, a poisoned artifact store, and a kernel branch that quietly died"
 tags: Security
 ---
 

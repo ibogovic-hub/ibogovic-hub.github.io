@@ -1,5 +1,5 @@
 ---
-title: Weekly Recap: A Bgp Hijack In The Supply Chain, Eight Stable Kernels, And Agent Guardrails
+title: "Weekly Recap: A Bgp Hijack In The Supply Chain, Eight Stable Kernels, And Agent Guardrails"
 tags: Security
 ---
 
