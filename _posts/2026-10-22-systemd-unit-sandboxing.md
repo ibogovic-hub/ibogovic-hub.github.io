@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /2026/09/02/systemd-sandboxing-hardening.html
+  - /2026/10/08/systemd-service-sandboxing-audit.html
 title: "Sandboxing your own systemd units before they bite you"
 tags: Linux
 ---

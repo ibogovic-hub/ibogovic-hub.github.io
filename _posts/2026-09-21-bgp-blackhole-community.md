@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /2026/09/07/bgp-blackhole-community.html
 title: Stopping a volumetric flood with RTBH before your upstream picks up the phone
 tags: Cisco
 ---

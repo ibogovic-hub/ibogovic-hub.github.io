@@ -1,4 +1,9 @@
 ---
+redirect_from:
+  - /2026/09/09/ssh-ca-certificates.html
+  - /2026/09/16/ssh-ca-certificates.html
+  - /2026/10/07/short-lived-ssh-certificates.html
+  - /2026/10/14/short-lived-ssh-certificates.html
 title: "Replacing authorized_keys sprawl with SSH certificates"
 tags: Security
 ---

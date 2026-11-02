@@ -1,4 +1,12 @@
 ---
+redirect_from:
+  - /2026/09/04/prometheus-staleness-alerts.html
+  - /2026/09/18/alerting-on-silence.html
+  - /2026/09/25/alerting-on-absent-metrics.html
+  - /2026/10/02/alert-on-absent-metrics.html
+  - /2026/10/09/alert-on-absent-metrics.html
+  - /2026/10/16/alert-on-absent-metrics.html
+  - /2026/10/23/alert-on-absence-not-just-thresholds.html
 title: "Alerting on silence: catching the metrics that stop arriving"
 tags: Monitoring
 ---

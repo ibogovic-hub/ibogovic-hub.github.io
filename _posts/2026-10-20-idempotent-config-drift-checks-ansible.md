@@ -1,4 +1,8 @@
 ---
+redirect_from:
+  - /2026/09/22/ansible-check-mode-lies.html
+  - /2026/10/06/idempotent-ansible-check-mode-drift.html
+  - /2026/10/13/idempotent-ansible-check-mode-gates.html
 title: "Catching config drift with Ansible check mode before it catches you"
 tags: Automation
 ---

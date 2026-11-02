@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /2026/09/28/bfd-with-ospf-on-ios-xe.html
+  - /2026/10/12/bfd-with-ospf-fast-failure-detection.html
 title: "Fast failure detection with BFD and OSPF on IOS XE"
 tags: Cisco
 ---

@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /2026/10/05/eem-interface-flap-guard.html
+  - /2026/10/26/eem-interface-flap-guard.html
 title: "Catching flapping uplinks with EEM before users do"
 tags: Cisco
 ---

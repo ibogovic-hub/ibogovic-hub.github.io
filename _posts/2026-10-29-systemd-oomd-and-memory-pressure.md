@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /2026/09/10/systemd-oomd-vs-cgroup-limits.html
 title: "Stop letting the kernel OOM killer pick your victims: memory limits with systemd"
 tags: Linux
 ---
