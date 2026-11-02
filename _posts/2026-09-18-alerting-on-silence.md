@@ -51,7 +51,7 @@ Note the shape of `BackupStale`. It does not alert on "the backup failed" — it
 
 `absent()` has a sharp edge worth knowing: it returns a series with only the label matchers you wrote in the selector, not the labels of the missing data. If you write `absent(backup_last_success_timestamp_seconds)` with no matchers, the resulting alert has essentially no labels and tells you nothing about which instance is missing. For per-instance absence you need `absent_over_time()` against a known inventory, or better, a join against a target list:
 
-```promql
+```text
 count by (instance) (up{job="node"} == 1)
   unless
 count by (instance) (backup_last_success_timestamp_seconds)

@@ -51,7 +51,7 @@ For known-critical series, use `absent_over_time` so a single missed scrape does
 
 The limitation is that `absent()` only works when you name the series explicitly, and it loses per-instance labels. For a fleet, compare against what existed earlier:
 
-```promql
+```text
 count by (instance) (node_filesystem_avail_bytes offset 1h)
   unless
 count by (instance) (node_filesystem_avail_bytes)

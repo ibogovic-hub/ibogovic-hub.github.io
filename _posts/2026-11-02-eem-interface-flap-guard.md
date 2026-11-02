@@ -18,7 +18,7 @@ We do not want EEM to shut the interface automatically. On a single-homed branch
 
 ## The applet
 
-```cisco
+```text
 event manager environment _flap_if GigabitEthernet0/0/0
 !
 event manager applet UPLINK-FLAP-GUARD authorization bypass
@@ -49,7 +49,7 @@ A few notes from running variants of this in production:
 
 Do not deploy an applet you have never seen fire. In a lab, or during a maintenance window on a redundant link, bounce the interface:
 
-```cisco
+```text
 conf t
  interface GigabitEthernet0/0/0
   shutdown

@@ -17,7 +17,7 @@ BFD separates liveness detection from the routing protocol. It's a lightweight p
 
 On IOS XE, BFD timers are set per interface, and the routing protocol registers as a client. A minimal setup for a point-to-point WAN link:
 
-```cisco
+```text
 interface GigabitEthernet0/0/1
  description WAN-to-DC2
  ip address 10.255.0.1 255.255.255.252
@@ -38,7 +38,7 @@ I disable echo mode here because echo packets are looped back by the peer's forw
 
 ## Verification
 
-```cisco
+```text
 show bfd neighbors details
 show ip ospf interface GigabitEthernet0/0/1 | include BFD
 show ip ospf neighbor detail | include BFD
@@ -52,7 +52,7 @@ In `show bfd neighbors details`, check that the session is `Up`, that the regist
 
 **Dampening.** A flapping circuit with BFD flaps fast, and every flap triggers SPF. Configure `bfd dampening` (available on recent IOS XE releases), or at least make sure your SPF and LSA throttle timers are sane:
 
-```cisco
+```text
 router ospf 10
  timers throttle spf 50 200 5000
  timers throttle lsa 50 200 5000
