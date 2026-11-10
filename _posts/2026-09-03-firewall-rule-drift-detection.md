@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Detecting firewall rule drift before your auditor does
 tags: Security
 ---

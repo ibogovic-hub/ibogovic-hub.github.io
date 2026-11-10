@@ -114,15 +114,21 @@ aside:
   padding: .55rem 1.5rem; border-radius: 5px;
   text-decoration: none !important; font-weight: 700; font-size: .88rem;
 }
+.pf-post { text-decoration: none !important; color: inherit !important; display: block; }
+.pf-post-title { font-weight: 700; opacity: .95 !important; font-size: .95rem !important; margin: 0 0 .4rem !important; }
+.pf-latest { list-style: none; padding: 0; margin: 0; }
+.pf-latest li { padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+.pf-latest .pf-date { display: inline-block; min-width: 7.5rem; }
+a.pf-tag { text-decoration: none !important; }
 </style>
 
 <!-- HERO -->
 <div class="pf-hero">
   <h1>Ivan Bogović</h1>
-  <p class="pf-title">Manager, IT Engineering · Open Systems AG</p>
+  <p class="pf-title">IT Engineering Leader · Infrastructure · Security · Automation</p>
   <p class="pf-sub">📍 Zürich, Switzerland &nbsp;·&nbsp; Available across EU + Switzerland</p>
   <div class="pf-btns">
-    <a href="/about.html" class="button button--success button--pill">About Me</a>
+    <a href="/about.html" class="button button--success button--pill">About & CV</a>
     <a href="/archive.html" class="button button--outline-success button--pill">Technical Blog</a>
   </div>
 </div>
@@ -133,7 +139,7 @@ aside:
 <div class="pf-section">
   <h2>Profile</h2>
   <p class="pf-intro">
-    IT Engineering leader with 15+ years translating complex infrastructure and cybersecurity requirements into reliable, governed, and scalable internal services. Currently leading Internal IT Engineering at <strong>Open Systems AG</strong> — service ownership, people leadership, architecture direction and senior decision-making for business-critical platforms deployed across <strong>180+ countries</strong>.
+    IT Engineering leader with 15+ years translating complex infrastructure and cybersecurity requirements into reliable, governed, and scalable internal services. Currently leading internal IT engineering — service ownership, people leadership, architecture direction and senior decision-making for business-critical platforms deployed across <strong>180+ countries</strong>.
   </p>
 </div>
 
@@ -168,97 +174,47 @@ aside:
   </div>
 </div>
 
-<!-- EXPERIENCE -->
+<!-- FEATURED -->
 <div class="pf-section">
-  <h2>Experience</h2>
-  <div class="pf-timeline">
-
-    <div class="pf-item">
-      <span class="pf-dot"></span>
-      <p class="pf-date">Feb 2025 – Present · Zürich, Switzerland</p>
-      <p class="pf-role">Manager, IT Engineering</p>
-      <p class="pf-company">Open Systems AG</p>
-      <p class="pf-desc">Leading Internal IT Engineering and Operations — four FTEs plus contractors. Accountable for service ownership, architecture direction, delivery planning, go-live readiness and operational handover across Linux, NetApp, Veeam, networking, firewalls and M365.</p>
-    </div>
-
-    <div class="pf-item">
-      <span class="pf-dot past"></span>
-      <p class="pf-date">Nov 2022 – Jan 2025 · Zürich, Switzerland</p>
-      <p class="pf-role">Senior IT Systems Engineer</p>
-      <p class="pf-company">Open Systems AG</p>
-      <p class="pf-desc">Technical lead for Linux, Veeam, NetApp, networking and firewall services. Led LAN/WAN/Wi-Fi refresh and Cisco backbone modernisation. Certified Mission Control Engineer supporting 24×7 global operations across 180+ countries.</p>
-    </div>
-
-    <div class="pf-item">
-      <span class="pf-dot past"></span>
-      <p class="pf-date">Dec 2021 – Nov 2022 · Switzerland</p>
-      <p class="pf-role">Service Bureau Infrastructure Engineer</p>
-      <p class="pf-company">Bottomline AG DACH</p>
-      <p class="pf-desc">Managed two Zurich datacentres. Designed network architecture and PKI. Owned Windows Server (AD, DHCP, SQL), SWIFT systems and firewall infrastructure. Led datacentre migration to Nutanix.</p>
-    </div>
-
-    <div class="pf-item">
-      <span class="pf-dot past"></span>
-      <p class="pf-date">Nov 2020 – Nov 2021 · Germany</p>
-      <p class="pf-role">Senior Consultant – Security Infrastructure</p>
-      <p class="pf-company">IS4IT / Phoenix Pharma</p>
-      <p class="pf-desc">2nd-level Security Consultant across multiple firewall vendors. Delivered SD-WAN improvements, security audits and compliance-oriented infrastructure work.</p>
-    </div>
-
-    <div class="pf-item">
-      <span class="pf-dot past"></span>
-      <p class="pf-date">Nov 2019 – Oct 2020 · Germany</p>
-      <p class="pf-role">Engineering Consultant / Senior Network Engineer</p>
-      <p class="pf-company">ALTEN / Siemens</p>
-      <p class="pf-desc">Network troubleshooting, VPN migration, firewall installation and new site rollouts across Siemens customer sites.</p>
-    </div>
-
-    <div class="pf-item">
-      <span class="pf-dot past"></span>
-      <p class="pf-date">Sep 2017 – Jun 2019 · Germany</p>
-      <p class="pf-role">Firewall Specialist</p>
-      <p class="pf-company">Hemmersbach GmbH & Co. KG</p>
-      <p class="pf-desc">Fortinet migrations, Wi-Fi firewall implementations, FortiAnalyzer/FortiManager deployment and internal security training.</p>
-    </div>
-
-    <div class="pf-item">
-      <span class="pf-dot past"></span>
-      <p class="pf-date">2009 – 2017 · Croatia / Europe</p>
-      <p class="pf-role">Network & Security Engineer</p>
-      <p class="pf-company">SPAN d.d. and earlier roles</p>
-      <p class="pf-desc">8 years progressive network and security engineering — Cisco routing/switching, firewall operations and customer-facing technical delivery across Croatia and Europe.</p>
-    </div>
-
+  <h2>Start here</h2>
+  <div class="pf-grid">
+  {%- assign featured = site.posts | where: "featured", true -%}
+  {%- for post in featured limit: 4 -%}
+    <a class="pf-card pf-post" href="{{ post.url | relative_url }}">
+      <h4>{{ post.tags | first }}</h4>
+      <p class="pf-post-title">{{ post.title }}</p>
+      <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
+    </a>
+  {%- endfor -%}
   </div>
 </div>
 
-<!-- CERTIFICATIONS -->
+<!-- LATEST -->
 <div class="pf-section">
-  <h2>Certifications</h2>
-  <div class="pf-certs">
-    <div class="pf-cert">🏅 <strong>MCSE: Cloud Platform &amp; Infrastructure</strong> · Microsoft · 2016</div>
-    <div class="pf-cert">🏅 <strong>MCSE: Server Infrastructure</strong> · Microsoft · 2013</div>
-    <div class="pf-cert">🏅 <strong>RHCSA</strong> · Red Hat Enterprise Linux 7 · Red Hat · 2016</div>
-    <div class="pf-cert">🏅 <strong>PCNSE</strong> · Palo Alto Networks · 2017</div>
-    <div class="pf-cert">🏅 <strong>Cisco Certified Specialist – Enterprise Core</strong> · Cisco · 2020</div>
-    <div class="pf-cert">🏅 <strong>CCNA / CCNA R&amp;S / CCNA Security</strong> · Cisco</div>
-    <div class="pf-cert">🏅 <strong>NSE4 Network Security Professional</strong> · Fortinet · 2021</div>
-    <div class="pf-cert">🏅 <strong>MCSA: Windows Server 2012 / 2008</strong> · Microsoft</div>
-  </div>
+  <h2>Latest</h2>
+  <ul class="pf-latest">
+  {%- for post in site.posts limit: 6 -%}
+    <li><span class="pf-date">{{ post.date | date: "%d %b %Y" }}</span> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {%- endfor -%}
+  </ul>
 </div>
 
-<!-- TECH STACK -->
+<!-- TOPICS -->
 <div class="pf-section">
-  <h2>Technology</h2>
+  <h2>Topics</h2>
   <div class="pf-tags">
-    {% assign tags = "Cisco,Palo Alto Networks,Fortinet,Juniper,WatchGuard,Linux,SUSE,Red Hat,Ubuntu,Windows Server,VMware,NetApp,Veeam,Azure,Microsoft 365,Entra ID,ServiceNow,Ansible,Terraform,SaltStack,Python,PowerShell,Bash,Docker,KVM,SASE,SD-WAN,ZTNA,SSE,FWaaS,ITIL,Incident Management,Change Management" | split: "," %}
-    {% for tag in tags %}<span class="pf-tag">{{ tag }}</span>{% endfor %}
+  {%- assign sorted_tags = site.tags | sort -%}
+  {%- for t in sorted_tags -%}
+    {%- if t[1].size >= 3 -%}
+    <a class="pf-tag" href="{{ '/archive.html' | relative_url }}?tag={{ t[0] | url_encode }}">{{ t[0] }} · {{ t[1].size }}</a>
+    {%- endif -%}
+  {%- endfor -%}
   </div>
 </div>
 
 <!-- BLOG CTA -->
 <div class="pf-cta">
-  <h3>Technical Knowledge Base</h3>
-  <p>60+ articles on Cisco, Fortinet, Linux, security tools, networking labs and infrastructure.</p>
-  <a href="/archive.html">Browse Articles →</a>
+  <h3>All {{ site.posts.size }} articles</h3>
+  <p>Networking, security, Linux and automation. New posts on weekdays, a security recap on Fridays. <a href="{{ '/feed.xml' | relative_url }}" style="background:none;color:#ff9500 !important;padding:0;font-weight:400">RSS</a></p>
+  <a href="{{ '/archive.html' | relative_url }}">Browse Articles →</a>
 </div>

@@ -1,4 +1,5 @@
 ---
+featured: true
 title: A read-only MCP server for network devices
 tags: Automation
 ---

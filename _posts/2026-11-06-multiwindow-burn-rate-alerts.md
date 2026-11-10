@@ -1,4 +1,5 @@
 ---
+featured: true
 title: "Multiwindow burn-rate alerts instead of error-rate thresholds"
 tags: Monitoring
 ---

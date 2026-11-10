@@ -1,4 +1,5 @@
 ---
+featured: true
 redirect_from:
   - /2026/09/09/ssh-ca-certificates.html
   - /2026/09/16/ssh-ca-certificates.html
