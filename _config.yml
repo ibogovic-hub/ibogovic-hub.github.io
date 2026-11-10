@@ -22,9 +22,8 @@ author:
   type      : person
   name      : Ivan Bogović
   url       : https://ibogovic-hub.github.io
-  avatar    : assets/images/avatar.jpg
+  avatar    : assets/images/avatar-mark.png
   bio       : IT Engineering leader in Zürich. Infrastructure, security and automation, written up from real operations.
-  email     : bogovic@pm.me
   linkedin  : bogovic
   github    : ibogovic-hub
   telegram  : ibogovic

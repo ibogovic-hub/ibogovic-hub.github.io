@@ -10,7 +10,7 @@ aside:
 
 **Manager, IT Engineering · Open Systems AG · Zürich, Switzerland**
 
-📍 Zürich Area &nbsp;·&nbsp; 📧 [bogovic@pm.me](mailto:bogovic@pm.me) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/bogovic) &nbsp;·&nbsp; [GitHub](https://github.com/ibogovic-hub)
+📍 Zürich Area &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/bogovic) &nbsp;·&nbsp; [GitHub](https://github.com/ibogovic-hub)
 
 *Work authorisation: All EU countries + Switzerland*
 
