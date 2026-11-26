@@ -1,6 +1,6 @@
 # Ivan Bogović — Personal Portfolio & Technical Blog
 
-[ibogovic-hub.github.io](https://ibogovic-hub.github.io)
+[blog.bogovic.dev](https://blog.bogovic.dev)
 
 Personal portfolio and knowledge base of Ivan Bogović — IT Engineering Leader with 15+ years in infrastructure, network security, and scalable operations.
 

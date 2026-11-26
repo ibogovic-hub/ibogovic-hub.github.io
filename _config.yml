@@ -2,7 +2,7 @@
 ##############################
 text_skin: dark
 highlight_theme: tomorrow-night
-url     : https://ibogovic-hub.github.io
+url     : https://blog.bogovic.dev
 baseurl :
 show_date: true
 title   : Ivan Bogović
@@ -21,7 +21,7 @@ timezone: Europe/Zurich
 author:
   type      : person
   name      : Ivan Bogović
-  url       : https://ibogovic-hub.github.io
+  url       : https://blog.bogovic.dev
   avatar    : assets/images/avatar-mark.png
   bio       : IT Engineering leader in Zürich. Infrastructure, security and automation, written up from real operations.
   linkedin  : bogovic
