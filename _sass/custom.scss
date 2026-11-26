@@ -55,3 +55,8 @@ table {
 html {
   scroll-behavior: smooth;
 }
+
+/* Logo — light on dark header (matches bogovic.dev) */
+.header__brand svg g {
+  fill: rgba(255,255,255,.8);
+}
