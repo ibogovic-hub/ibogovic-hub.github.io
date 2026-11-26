@@ -8,5 +8,13 @@ header:
     url: /archive.html
 
   - titles:
+      en: Tools
+    url: https://bogovic.dev/
+
+  - titles:
+      en: How we test
+    url: https://bogovic.dev/how-we-test
+
+  - titles:
       en: About
     url: /about.html
