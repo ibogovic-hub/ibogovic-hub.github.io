@@ -4,7 +4,7 @@ header:
     url: /
 
   - titles:
-      en: Blog
+      en: Writing
     url: /archive.html
 
   - titles:
@@ -12,7 +12,7 @@ header:
     url: https://bogovic.dev/
 
   - titles:
-      en: How we test
+      en: How I test
     url: https://bogovic.dev/how-we-test
 
   - titles:

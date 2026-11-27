@@ -5,13 +5,13 @@
 /* Avatar — round with orange ring */
 .author__avatar img {
   border-radius: 50% !important;
-  border: 3px solid #ff9500 !important;
+  border: 3px solid #f0a24a !important;
 }
 
 /* Header — slightly deeper dark */
 .header {
-  background: #0d1117 !important;
-  border-bottom: 1px solid #1f2937;
+  background: #0c0b0a !important;
+  border-bottom: 1px solid #2a2622;
 }
 
 /* Nav links — bolder */
@@ -24,10 +24,7 @@
 .card {
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,.4);
-}
+
 
 /* Code blocks — rounded corners */
 pre, code {
@@ -41,8 +38,8 @@ table {
 
 /* Footer — match header */
 .footer {
-  border-top: 1px solid #1f2937;
-  background: #0d1117 !important;
+  border-top: 1px solid #2a2622;
+  background: #0c0b0a !important;
 }
 
 /* Tag pills */
@@ -60,3 +57,30 @@ html {
 .header__brand svg g {
   fill: rgba(255,255,255,.8);
 }
+@font-face{font-family:"Inter";src:url(/assets/fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";src:url(/assets/fonts/inter-ext.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";src:url(/assets/fonts/jbmono.woff2) format("woff2");font-weight:100 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";src:url(/assets/fonts/jbmono-ext.woff2) format("woff2");font-weight:100 800;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+/* ===== Amber theme layer (shared with bogovic.dev) ===== */
+:root{--bg:#0c0b0a;--panel:#151311;--line:#2a2622;--fg:#ece8e2;--mute:#a39d94;--dim:#8a8279;--acc:#f0a24a;--accd:#3a2810;--accb:#8a5a22;--sans:"Inter","Helvetica Neue",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+html,body,.root,.page__main,.layout--article,.layout--home,.layout--archive,.layout--page,.article__content{background-color:var(--bg)}
+body{color:var(--fg);font-family:var(--sans)}
+.page__main{background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:24px 24px}
+.main{background:var(--bg);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+h1,h2,h3,h4,h5,h6{color:var(--fg);letter-spacing:-.015em;font-family:var(--sans)}
+a{color:var(--acc)}a:hover{color:#ffc27a}
+code,pre,kbd,.article__info,.item__meta,.article__date,.navigation__item a,.item__tag,.site-info{font-family:var(--mono)!important}
+pre,div.highlight,.highlighter-rouge{background:var(--panel)!important;border:1px solid var(--line)}
+:not(pre)>code{background:var(--panel)!important;color:var(--fg)!important;border:1px solid var(--line)}
+blockquote{border-left-color:var(--acc)!important;color:var(--mute)}
+.button,.button--primary,a.button{background:var(--accd)!important;color:var(--acc)!important;border:1px solid var(--accb)!important;border-radius:3px!important;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem!important;box-shadow:none!important}
+.button:hover{border-color:var(--acc)!important;color:#ffc27a!important}
+.button--outline-primary,.button--secondary{background:transparent!important;color:var(--fg)!important;border-color:var(--line)!important}
+.navigation__item a{text-transform:uppercase;letter-spacing:.08em;font-size:.74rem;color:var(--mute)!important}
+.navigation__item--active a,.navigation__item a:hover{color:var(--acc)!important}
+.item__tag,.tag-button{background:transparent!important;border:1px solid var(--line)!important;color:var(--mute)!important}
+.tag-button--active,.tag-button:hover{border-color:var(--accb)!important;color:var(--acc)!important}
+.card{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:3px!important;box-shadow:none!important}
+.card:hover{transform:none;border-color:var(--accb)!important;box-shadow:none!important}
+hr{border-color:var(--line)}table th,table td{border-color:var(--line)!important}
+::selection{background:var(--accd);color:#ffc27a}
